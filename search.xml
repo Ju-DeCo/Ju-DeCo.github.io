@@ -59,182 +59,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML链接与导航</title>
-    <url>/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/</url>
-    <content><![CDATA[<!-- toc -->
-
-<h1 id="HTML链接与导航"><a href="#HTML链接与导航" class="headerlink" title="HTML链接与导航"></a>HTML链接与导航</h1><h2 id="1-基本链接"><a href="#1-基本链接" class="headerlink" title="1.基本链接"></a>1.基本链接</h2><p>​    创建链接使用 &lt;a&gt; 元素，应包含两部分：</p>
-<ul>
-<li><p>&lt;a&gt; 元素的 href 属性，即链接的目标，可以是某个网址或文件的路径</p>
-</li>
-<li><p>链接文本或图像，单击文本或图像将跳转到 href 属性指定的链接地址。</p>
-<p>语法如下</p>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;链接地址&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口位置&quot;</span>&gt;</span>链接文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>其中 target 属性指定链接在哪个窗口中打开，其4个可取值如下</p>
-<table>
-<thead>
-<tr>
-<th align="left">属性值</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">_blank</td>
-<td align="center">浏览器在一个新打开、未命名的窗口中载入目标</td>
-</tr>
-<tr>
-<td align="left">_self</td>
-<td align="center">默认目标，在当前窗口中加载目标地址</td>
-</tr>
-<tr>
-<td align="left">_parent</td>
-<td align="center">在父框架集中打开被链接文档</td>
-</tr>
-<tr>
-<td align="left">_top</td>
-<td align="center">在整个窗口中打开被链接文档</td>
-</tr>
-</tbody></table>
-<h6 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h6><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>下面链接都将打开百度<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;百度logo.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;80&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>浏览器显示如下</strong></p>
-<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-1.png" class title="链接与导航-1">
-
-<p>​    例子中给出的是百度的 URL 地址，URL(Uniform Resource Locator,统一资源定位符)是互联网上的标准地址，互联网上的每个文件都有唯一的URL，URL包含3个关键组成部分：</p>
-<ul>
-<li><p>协议(scheme)：指明文件将以何种方式传输。大多数Web页面使用 HTTP(HyperText Transfer Protocol,超文本传输协议)传输信息，因此大多数网页的地址以 “http://” 开头，而 “https://” 是 HTTP 的一种更安全形式。</p>
-</li>
-<li><p>主机地址(host address)：通常是网站的域名，如 baidu.com 。我们看到的以 “www” 为前缀实际并非域名的一部分。主机地址还可以是数字形式的IP地址。</p>
-</li>
-<li><p>文件路径(file path)：以一个正斜线(/)开头，然后以文件名结束。也可以没有文件名。</p>
-<p>如果没有提供文件名，Web服务器通常做以下3中反应：</p>
-<ol>
-<li>寻找默认位置并返回。</li>
-<li>提供指定目录下的文件列表。</li>
-<li>显示“无法找到页面”或“无法显示文件夹内文件”等信息。</li>
-</ol>
-</li>
-</ul>
-<h2 id="2-绝对地址和相对地址"><a href="#2-绝对地址和相对地址" class="headerlink" title="2.绝对地址和相对地址"></a>2.绝对地址和相对地址</h2><ul>
-<li><p>绝对地址：指向目标路径的完整描述，一般指向本站点外的文件或URL</p>
-</li>
-<li><p>相对地址：相对于当前页面的路径，一般指向本站点内的文件</p>
-<p>有如下几种类型的相对地址：</p>
-<ol>
-<li><p>同一目录：可以直接使用文件名进行引用 </p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">列如 index.html</span><br></pre></td></tr></table></figure></li>
-<li><p>子目录：若在TV中建一个页面，Music是其子目录，则可应用如下方式指向index.html链接</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Music/index.html  TV中页面访问Music中index.html</span><br></pre></td></tr></table></figure></li>
-<li><p>父目录：从目录中创建指向父目录的链接，可以使用 “../” 又称”上一级“符号。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">../index.html 访问父目录的index.html</span><br></pre></td></tr></table></figure></li>
-<li><p>从根目录出发：以“/”开头，表示根目录</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">/TV/Music/index.html  </span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<h2 id="3-lt-base-gt-标签"><a href="#3-lt-base-gt-标签" class="headerlink" title="3.&lt;base&gt;标签"></a>3.&lt;base&gt;标签</h2><p>​    当浏览器遇到相对地址时，会将URL地址转换为完整的绝对URL地址。&lt;base&gt;标签可以为页面指定基础地址，该标签没有关闭标签。基础地址的值在&lt;base&gt;标签的 href 属性中指定。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://www.example.com/&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    这时，如果页面有如下URL地址</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">TV/Music/index.html</span><br></pre></td></tr></table></figure>
-
-<p>则最终浏览器会请求如下绝对URL</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">http://www.example.com/TV/Music/index.html</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-链接到电子邮件地址"><a href="#4-链接到电子邮件地址" class="headerlink" title="4.链接到电子邮件地址"></a>4.链接到电子邮件地址</h2><p>​    此链接是一种特殊的超链接，单击该链接，会启动电子邮件程序并打开一个新邮件。</p>
-<p>​    方法是在&lt;a&gt;元素中设置 href 属性,开头以关键字 mailto 开始，然后是冒号，最后是电子邮件的地址。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com&quot;</span>&gt;</span>联系我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    以下是可用的电子邮件链接特性，方法是在邮件地址后附加一个问号并在之后以“名称/值”形式指定特性。</p>
-<table>
-<thead>
-<tr>
-<th align="center">特性</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">subject</td>
-<td align="center">为电子邮件添加主题行</td>
-</tr>
-<tr>
-<td align="center">body</td>
-<td align="center">向电子邮件主体中添加默认的消息内容</td>
-</tr>
-<tr>
-<td align="center">cc</td>
-<td align="center">向该地址抄送电子邮件。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
-</tr>
-<tr>
-<td align="center">bcc</td>
-<td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
-</tr>
-</tbody></table>
-<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#x31;&#50;&#x33;&#52;&#x35;&#x36;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#52;&#x35;&#x36;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;</a>“ 和 “<a href="mailto:&#54;&#x35;&#x34;&#x33;&#50;&#x31;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#54;&#x35;&#x34;&#x33;&#50;&#x31;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a>“</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>​    如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
-<p>​    如果需要在主体中换行，应该使用“%0D%0A”。</p>
-<h2 id="5-创建锚点链接"><a href="#5-创建锚点链接" class="headerlink" title="5.创建锚点链接"></a>5.创建锚点链接</h2><p>​    锚点链接也叫书签链接，用于跳转到页面特定段落。</p>
-<p>​    锚点链接创建有两步：</p>
-<ol>
-<li><p>创建命名锚点</p>
-<p>使用&lt;a&gt;标签的 id 或 name 属性。锚点名称区分大小写。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;top&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>链接到命名锚点    </p>
-<p>创建锚点后，使用&lt;a&gt;标签的 href 属性链接，href 属性需要与对应的锚点的 id 属性值相同，并且在值的前面加上“#”。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#top&quot;</span>&gt;</span>返回顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>除了可链接到当前网页中的锚点，还可以链接到其他页面的锚点，此时 href 属性值的格式为： 文件路径+文件名 #锚点名称。</p>
-</li>
-</ol>
-<h6 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h6><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>锚点链接<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;top&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#C4&quot;</span>&gt;</span> 查看 第 4 回 <span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 1 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 2 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 3 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;C4&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 4 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容内</span><br><span class="line">        容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 5 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 6 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 7 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内</span><br><span class="line">        容内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 8 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内</span><br><span class="line">        容内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#top&quot;</span>&gt;</span>返回顶部<span class="tag">&lt;<span class="name">top</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>浏览器显示如下</strong></p>
-<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-2.1.png" class title="链接与导航-2.1">
-
-<p><strong>点击“查看 第 4 回”后</strong></p>
-<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-2.2.png" class title="链接与导航-2.2">
-
-<p><strong>点击“返回顶部”后</strong></p>
-<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-2.1.png" class title="链接与导航-2.1">
-
-
-
-<p>除了上述方法，还可以直接为各小节标题添加 id 属性作为锚点，然后实现跳转。例如锚点 C4 的定义，可以修改为：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;C4&quot;</span>&gt;</span>第 4 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>HTML基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/03/09/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>HTML基础</title>
     <url>/2021/03/13/HTML%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<!-- toc -->
@@ -433,5 +257,181 @@
         <tag>HTML</tag>
         <tag>HTML基础</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>HTML链接与导航</title>
+    <url>/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/</url>
+    <content><![CDATA[<!-- toc -->
+
+<h1 id="HTML链接与导航"><a href="#HTML链接与导航" class="headerlink" title="HTML链接与导航"></a>HTML链接与导航</h1><h2 id="1-基本链接"><a href="#1-基本链接" class="headerlink" title="1.基本链接"></a>1.基本链接</h2><p>​    创建链接使用 &lt;a&gt; 元素，应包含两部分：</p>
+<ul>
+<li><p>&lt;a&gt; 元素的 href 属性，即链接的目标，可以是某个网址或文件的路径</p>
+</li>
+<li><p>链接文本或图像，单击文本或图像将跳转到 href 属性指定的链接地址。</p>
+<p>语法如下</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;链接地址&quot;</span> <span class="attr">target</span>=<span class="string">&quot;目标窗口位置&quot;</span>&gt;</span>链接文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中 target 属性指定链接在哪个窗口中打开，其4个可取值如下</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">_blank</td>
+<td align="center">浏览器在一个新打开、未命名的窗口中载入目标</td>
+</tr>
+<tr>
+<td align="left">_self</td>
+<td align="center">默认目标，在当前窗口中加载目标地址</td>
+</tr>
+<tr>
+<td align="left">_parent</td>
+<td align="center">在父框架集中打开被链接文档</td>
+</tr>
+<tr>
+<td align="left">_top</td>
+<td align="center">在整个窗口中打开被链接文档</td>
+</tr>
+</tbody></table>
+<h6 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h6><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>超链接<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>下面链接都将打开百度<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;百度logo.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;80&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>浏览器显示如下</strong></p>
+<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-1.png" class title="链接与导航-1">
+
+<p>​    例子中给出的是百度的 URL 地址，URL(Uniform Resource Locator,统一资源定位符)是互联网上的标准地址，互联网上的每个文件都有唯一的URL，URL包含3个关键组成部分：</p>
+<ul>
+<li><p>协议(scheme)：指明文件将以何种方式传输。大多数Web页面使用 HTTP(HyperText Transfer Protocol,超文本传输协议)传输信息，因此大多数网页的地址以 “http://” 开头，而 “https://” 是 HTTP 的一种更安全形式。</p>
+</li>
+<li><p>主机地址(host address)：通常是网站的域名，如 baidu.com 。我们看到的以 “www” 为前缀实际并非域名的一部分。主机地址还可以是数字形式的IP地址。</p>
+</li>
+<li><p>文件路径(file path)：以一个正斜线(/)开头，然后以文件名结束。也可以没有文件名。</p>
+<p>如果没有提供文件名，Web服务器通常做以下3中反应：</p>
+<ol>
+<li>寻找默认位置并返回。</li>
+<li>提供指定目录下的文件列表。</li>
+<li>显示“无法找到页面”或“无法显示文件夹内文件”等信息。</li>
+</ol>
+</li>
+</ul>
+<h2 id="2-绝对地址和相对地址"><a href="#2-绝对地址和相对地址" class="headerlink" title="2.绝对地址和相对地址"></a>2.绝对地址和相对地址</h2><ul>
+<li><p>绝对地址：指向目标路径的完整描述，一般指向本站点外的文件或URL</p>
+</li>
+<li><p>相对地址：相对于当前页面的路径，一般指向本站点内的文件</p>
+<p>有如下几种类型的相对地址：</p>
+<ol>
+<li><p>同一目录：可以直接使用文件名进行引用 </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">列如 index.html</span><br></pre></td></tr></table></figure></li>
+<li><p>子目录：若在TV中建一个页面，Music是其子目录，则可应用如下方式指向index.html链接</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Music/index.html  TV中页面访问Music中index.html</span><br></pre></td></tr></table></figure></li>
+<li><p>父目录：从目录中创建指向父目录的链接，可以使用 “../” 又称”上一级“符号。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">../index.html 访问父目录的index.html</span><br></pre></td></tr></table></figure></li>
+<li><p>从根目录出发：以“/”开头，表示根目录</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">/TV/Music/index.html  </span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h2 id="3-lt-base-gt-标签"><a href="#3-lt-base-gt-标签" class="headerlink" title="3.&lt;base&gt;标签"></a>3.&lt;base&gt;标签</h2><p>​    当浏览器遇到相对地址时，会将URL地址转换为完整的绝对URL地址。&lt;base&gt;标签可以为页面指定基础地址，该标签没有关闭标签。基础地址的值在&lt;base&gt;标签的 href 属性中指定。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://www.example.com/&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    这时，如果页面有如下URL地址</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">TV/Music/index.html</span><br></pre></td></tr></table></figure>
+
+<p>则最终浏览器会请求如下绝对URL</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">http://www.example.com/TV/Music/index.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-链接到电子邮件地址"><a href="#4-链接到电子邮件地址" class="headerlink" title="4.链接到电子邮件地址"></a>4.链接到电子邮件地址</h2><p>​    此链接是一种特殊的超链接，单击该链接，会启动电子邮件程序并打开一个新邮件。</p>
+<p>​    方法是在&lt;a&gt;元素中设置 href 属性,开头以关键字 mailto 开始，然后是冒号，最后是电子邮件的地址。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com&quot;</span>&gt;</span>联系我们<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    以下是可用的电子邮件链接特性，方法是在邮件地址后附加一个问号并在之后以“名称/值”形式指定特性。</p>
+<table>
+<thead>
+<tr>
+<th align="center">特性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">subject</td>
+<td align="center">为电子邮件添加主题行</td>
+</tr>
+<tr>
+<td align="center">body</td>
+<td align="center">向电子邮件主体中添加默认的消息内容</td>
+</tr>
+<tr>
+<td align="center">cc</td>
+<td align="center">向该地址抄送电子邮件。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
+</tr>
+<tr>
+<td align="center">bcc</td>
+<td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
+</tr>
+</tbody></table>
+<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#50;&#x33;&#52;&#53;&#54;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;">&#49;&#50;&#x33;&#52;&#53;&#54;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a>“ 和 “<a href="mailto:&#x36;&#x35;&#x34;&#51;&#x32;&#49;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#x36;&#x35;&#x34;&#51;&#x32;&#49;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a>“</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
+<p>​    如果需要在主体中换行，应该使用“%0D%0A”。</p>
+<h2 id="5-创建锚点链接"><a href="#5-创建锚点链接" class="headerlink" title="5.创建锚点链接"></a>5.创建锚点链接</h2><p>​    锚点链接也叫书签链接，用于跳转到页面特定段落。</p>
+<p>​    锚点链接创建有两步：</p>
+<ol>
+<li><p>创建命名锚点</p>
+<p>使用&lt;a&gt;标签的 id 或 name 属性。锚点名称区分大小写。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;top&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>链接到命名锚点    </p>
+<p>创建锚点后，使用&lt;a&gt;标签的 href 属性链接，href 属性需要与对应的锚点的 id 属性值相同，并且在值的前面加上“#”。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#top&quot;</span>&gt;</span>返回顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>除了可链接到当前网页中的锚点，还可以链接到其他页面的锚点，此时 href 属性值的格式为： 文件路径+文件名 #锚点名称。</p>
+</li>
+</ol>
+<h6 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h6><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>锚点链接<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;top&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#C4&quot;</span>&gt;</span> 查看 第 4 回 <span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 1 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 2 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 3 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;C4&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 4 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容内容内容内</span><br><span class="line">        容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 5 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 6 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 7 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内</span><br><span class="line">        容内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>第 8 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line">        内容内容内容内容内</span><br><span class="line">        容内容内容内容内容内容内容内容内容</span><br><span class="line">        内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">    <span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#top&quot;</span>&gt;</span>返回顶部<span class="tag">&lt;<span class="name">top</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>浏览器显示如下</strong></p>
+<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-2.1.png" class title="链接与导航-2.1">
+
+<p><strong>点击“查看 第 4 回”后</strong></p>
+<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-2.2.png" class title="链接与导航-2.2">
+
+<p><strong>点击“返回顶部”后</strong></p>
+<img src="/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA-2.1.png" class title="链接与导航-2.1">
+
+
+
+<p>除了上述方法，还可以直接为各小节标题添加 id 属性作为锚点，然后实现跳转。例如锚点 C4 的定义，可以修改为：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;C4&quot;</span>&gt;</span>第 4 回<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/03/09/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
