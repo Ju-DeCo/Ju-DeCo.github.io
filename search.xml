@@ -330,6 +330,278 @@
       </tags>
   </entry>
   <entry>
+    <title>HTML新增的功能元素、属性和事件</title>
+    <url>/2021/03/17/HTML%E6%96%B0%E5%A2%9E%E7%9A%84%E5%8A%9F%E8%83%BD%E5%85%83%E7%B4%A0%E3%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BA%8B%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="新增的功能元素"><a href="#新增的功能元素" class="headerlink" title="新增的功能元素"></a>新增的功能元素</h1><table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">video</td>
+<td align="center">定义视频</td>
+</tr>
+<tr>
+<td align="center">audio</td>
+<td align="center">定义音频</td>
+</tr>
+<tr>
+<td align="center">embed</td>
+<td align="center">用来插入各种多媒体，格式可为 MIDI、WAV、AIFF、AU、MP3等</td>
+</tr>
+<tr>
+<td align="center">canvas</td>
+<td align="center">表示图形，如图表、图像等。元素本身没有行为，仅提供一块画布</td>
+</tr>
+<tr>
+<td align="center">output</td>
+<td align="center">表示不同类型的输出</td>
+</tr>
+<tr>
+<td align="center">source</td>
+<td align="center">为媒介元素（video、audio等）定义资源</td>
+</tr>
+<tr>
+<td align="center">menu</td>
+<td align="center">菜单列表，使用 li 元素列举每一个菜单项</td>
+</tr>
+<tr>
+<td align="center">ruby</td>
+<td align="center">ruby 注释</td>
+</tr>
+<tr>
+<td align="center">rt</td>
+<td align="center">表示字符的解释或发音</td>
+</tr>
+<tr>
+<td align="center">rp</td>
+<td align="center">在ruby注释中使用，定义不支持 ruby 元素的浏览器所显示的内容</td>
+</tr>
+<tr>
+<td align="center">wbr</td>
+<td align="center">软换行，在浏览器窗口或父级元素的宽度不够是主动换行</td>
+</tr>
+<tr>
+<td align="center">command</td>
+<td align="center">命令按钮，如单选、复选等按钮</td>
+</tr>
+<tr>
+<td align="center">details</td>
+<td align="center">表示细节信息，可和 summary 元素配合使用</td>
+</tr>
+<tr>
+<td align="center">datalist</td>
+<td align="center">表示可选数据列表，和 input 元素配合使用，可制作输入值的下拉列表</td>
+</tr>
+<tr>
+<td align="center">datagrid</td>
+<td align="center">表示可选数据列表，以树形列表的形式显示</td>
+</tr>
+<tr>
+<td align="center">keygen</td>
+<td align="center">表示生成密钥</td>
+</tr>
+</tbody></table>
+<h1 id="新增的表单属性"><a href="#新增的表单属性" class="headerlink" title="新增的表单属性"></a>新增的表单属性</h1><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">autofocus</td>
+<td align="center">input、select、textarea 和 button 元素拥有，以指定属性的方式让元素在画面打开时自动获得焦点</td>
+</tr>
+<tr>
+<td align="center">placeholder</td>
+<td align="center">input(type=text)、textarea 元素拥有，提示用户可以输入的内容</td>
+</tr>
+<tr>
+<td align="center">form</td>
+<td align="center">input、output、select、textarea、button 与 fieldset 元素拥有，声明这些控件属于哪个表单，放置在表单外</td>
+</tr>
+<tr>
+<td align="center">required</td>
+<td align="center">指示输入字段的值是必需的</td>
+</tr>
+<tr>
+<td align="center">autocomplete、min、max、multiple、pattern、step</td>
+<td align="center">为 input 元素新增的属性，datalist 元素可以和 autocomplete 属性配合使用</td>
+</tr>
+<tr>
+<td align="center">formaction、formenctype、formmethod、formnovalidate、formtarget</td>
+<td align="center">input 和 button 元素拥有，重载 form 元素的 action、enctype、method、novalidate、target属性</td>
+</tr>
+<tr>
+<td align="center">novalidate</td>
+<td align="center">取消提交时进行的有关检查，表单可以被无条件提交</td>
+</tr>
+</tbody></table>
+<h1 id="新增的链接属性"><a href="#新增的链接属性" class="headerlink" title="新增的链接属性"></a>新增的链接属性</h1><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">media</td>
+<td align="center">规定目标 URL 为哪种类型的媒介和设备进行优化的，只能在 href 属性存在是使用</td>
+</tr>
+<tr>
+<td align="center">hreflang 和 rel</td>
+<td align="center">为 area 元素增加的属性，以便和 a、link 元素保持一致</td>
+</tr>
+<tr>
+<td align="center">sizes</td>
+<td align="center">为 link 元素增加的属性，可和 icon 元素结合使用，指定关联图标的大小</td>
+</tr>
+<tr>
+<td align="center">target</td>
+<td align="center">为 base 元素增加的属性，目的是和 a 元素保持一致</td>
+</tr>
+</tbody></table>
+<h1 id="新增的其他属性"><a href="#新增的其他属性" class="headerlink" title="新增的其他属性"></a>新增的其他属性</h1><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">reversed</td>
+<td align="center">为 ol 元素增加的属性，用于指定列表倒序显示</td>
+</tr>
+<tr>
+<td align="center">charset</td>
+<td align="center">为 meta 元素增加的属性</td>
+</tr>
+<tr>
+<td align="center">type 和 label</td>
+<td align="center">为 menu 元素增加的属性，label 属性为菜单定义可见的标注，type 属性让菜单能以上下文菜单、工具条和列表菜单的形式出现</td>
+</tr>
+<tr>
+<td align="center">scoped</td>
+<td align="center">为 style 元素增加的属性，规定样式的作用范围</td>
+</tr>
+<tr>
+<td align="center">async</td>
+<td align="center">为 script 元素增加的属性，定义脚本是否异步执行</td>
+</tr>
+<tr>
+<td align="center">manifest</td>
+<td align="center">为 html 元素增加的属性，开发离线 Web 应用程序是，与 API 结合使用，定义一个 URL，在这个 URL 上描述文档的缓存信息</td>
+</tr>
+<tr>
+<td align="center">sandbox、seamless、srcdoc</td>
+<td align="center">为 iframe 元素增加的属性，用来提高页面的安全性，以防止不信任的Web页面执行某些操作</td>
+</tr>
+</tbody></table>
+<h1 id="新增的事件"><a href="#新增的事件" class="headerlink" title="新增的事件"></a>新增的事件</h1><h2 id="window-对象和-body-对象"><a href="#window-对象和-body-对象" class="headerlink" title="window 对象和 body 对象"></a>window 对象和 body 对象</h2><table>
+<thead>
+<tr>
+<th align="center">事件</th>
+<th align="center">触发时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">beforeprint</td>
+<td align="center">即将开始打印之前触发</td>
+</tr>
+<tr>
+<td align="center">afterprint</td>
+<td align="center">打印结束后触发</td>
+</tr>
+<tr>
+<td align="center">resize</td>
+<td align="center">浏览器窗口大小发生改变时触发</td>
+</tr>
+<tr>
+<td align="center">error</td>
+<td align="center">页面加载出错时触发</td>
+</tr>
+<tr>
+<td align="center">offline</td>
+<td align="center">页面变成离线状态时触发</td>
+</tr>
+<tr>
+<td align="center">online</td>
+<td align="center">页面变成在线状态时触发</td>
+</tr>
+<tr>
+<td align="center">pageshow</td>
+<td align="center">页面加载时触发，类似于 load 事件，区别在于 load 事件在页面第一次加载时触发，而 pageshow 事件在每一次加载时触发，即从网页缓存中读取页面时只触发 pageshow 事件，不触发 load 事件</td>
+</tr>
+<tr>
+<td align="center">beforeunload</td>
+<td align="center">当前页面被关闭时触发，该事件通知浏览器显示一个用于询问用户是否确认离开本页面的确认窗口，可以设置窗口中的提示文字</td>
+</tr>
+<tr>
+<td align="center">hashchange</td>
+<td align="center">页面 URL 地址字符串中的哈希部分发生改变是触发</td>
+</tr>
+</tbody></table>
+<h2 id="任何元素"><a href="#任何元素" class="headerlink" title="任何元素"></a>任何元素</h2><table>
+<thead>
+<tr>
+<th align="center">事件</th>
+<th align="center">触发时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mousewheel</td>
+<td align="center">当鼠标指针悬停在元素上并滚动鼠标滚轮是触发</td>
+</tr>
+</tbody></table>
+<h2 id="任何容器元素"><a href="#任何容器元素" class="headerlink" title="任何容器元素"></a>任何容器元素</h2><table>
+<thead>
+<tr>
+<th align="center">事件</th>
+<th align="center">触发时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">scroll</td>
+<td align="center">当元素的滚动条被滚动时触发</td>
+</tr>
+</tbody></table>
+<h2 id="input-元素和-textarea-元素"><a href="#input-元素和-textarea-元素" class="headerlink" title="input 元素和 textarea 元素"></a>input 元素和 textarea 元素</h2><table>
+<thead>
+<tr>
+<th align="center">事件</th>
+<th align="center">触发时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">input</td>
+<td align="center">当用户修改文本框中的内容时触发，该事件与 change 事件的区：input 事件在元素尚未失去焦点时已触发，change 事件只在元素失去焦点时触发</td>
+</tr>
+</tbody></table>
+<h2 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h2><table>
+<thead>
+<tr>
+<th align="center">事件</th>
+<th align="center">触发时机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">reset</td>
+<td align="center">当用户按下表单元素中 type 类型为 reset 的 input 元素，或者在 JavaScript 脚本代码中执行表单对象的 reset 方法时触发</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML进阶</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML结构元素</title>
     <url>/2021/03/16/HTML%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0/</url>
     <content><![CDATA[<h1 id="HTML结构元素"><a href="#HTML结构元素" class="headerlink" title="HTML结构元素"></a>HTML结构元素</h1><p>​    在HTML5对分组元素进行扩展之前，最常用的组容器就是 div 元素。针对文章的不同部分，需要很多的 div 元素，HTML5引入了一些结构性元素改变了这种情况。</p>
@@ -446,24 +718,24 @@
 <h2 id="2-meter元素"><a href="#2-meter元素" class="headerlink" title="2. meter元素"></a>2. meter元素</h2><p>​    meter 元素用来定义已知范围或分数值内的标量测量，也被称为尺度。</p>
 <p>​    &lt;meter&gt;标签支持以下几个属性：</p>
 <ul>
-<li> min ：值域的最小边界值，默认为0</li>
-<li>max ：值域的上限边界值，默认为1</li>
-<li>value ：当前值，如果没有指定或者格式有误，值为0；如果给定的值不在最大最小值之间，值等于最靠近的一段</li>
-<li>low ：定义低值区间的上限值，如果设置了，就必须大于最小值，并不能超过 high 值和最大值；如果未设置或比最小值还小，low值就为最小值</li>
-<li>high ：定义高值区间的下限值，如果设置了，就必须小于最大值，同时必须大于 low 值和最小值；如果没设置或者比最大值还大，high 值即为最大值</li>
-<li>optimum ：该属性用来指示最优、最佳取值。必须在 min 和 max 内，当使用了 low 和 high 属性时，并且它介于最小值和 low 值之间，那么 lower 区间就被认为是更佳的取值范围</li>
+<li> <strong>min ：值域的最小边界值，默认为0</strong></li>
+<li><strong>max ：值域的上限边界值，默认为1</strong></li>
+<li><strong>value ：当前值，如果没有指定或者格式有误，值为0；如果给定的值不在最大最小值之间，值等于最靠近的一段</strong></li>
+<li><strong>low ：定义低值区间的上限值，如果设置了，就必须大于最小值，并不能超过 high 值和最大值；如果未设置或比最小值还小，low值就为最小值</strong></li>
+<li><strong>high ：定义高值区间的下限值，如果设置了，就必须小于最大值，同时必须大于 low 值和最小值；如果没设置或者比最大值还大，high 值即为最大值</strong></li>
+<li><strong>optimum ：该属性用来指示最优、最佳取值。必须在 min 和 max 内，当使用了 low 和 high 属性时，并且它介于最小值和 low 值之间，那么 lower 区间就被认为是更佳的取值范围</strong></li>
 </ul>
 <h2 id="3-time元素"><a href="#3-time元素" class="headerlink" title="3. time元素"></a>3. time元素</h2><p>​    time 元素用来定义时间或日期，该元素能以机器可读的方式对日期进行编码。</p>
 <p>​    time 元素有以下两个属性：</p>
 <ul>
-<li>datetime ：指定日期/时间，如果不指定，则由元素的内容给定日期/时间。datetime 属性值中如果同时有时间和日期，则日期和时间之间要用 T 分隔；在时间后面加上 Z，表示给机器编码是使用 UTC 标准时间</li>
-<li>pubdate ：布尔属性，指示 time 元素中的日期/时间是文档（或 article 元素）的发布日期</li>
+<li><strong>datetime ：指定日期/时间，如果不指定，则由元素的内容给定日期/时间。datetime 属性值中如果同时有时间和日期，则日期和时间之间要用 T 分隔；在时间后面加上 Z，表示给机器编码是使用 UTC 标准时间</strong></li>
+<li><strong>pubdate ：布尔属性，指示 time 元素中的日期/时间是文档（或 article 元素）的发布日期</strong></li>
 </ul>
 <h2 id="4-progress元素"><a href="#4-progress元素" class="headerlink" title="4. progress元素"></a>4. progress元素</h2><p>​    progress 元素用来显示一项任务的完成进度，为了能动态展示进度，通常需要使用 JavaScript 编写一个处理程序。</p>
 <p>​    progress 元素支持如下两属性：</p>
 <ul>
 <li>max ：该属性描述这个 progress 元素所表示的任务一共需要完成的工作</li>
-<li>value ：该属性用来指定进度条已完成的工作量，如果没设置该属性，则进度条的进度为&quot;不确定&quot;，在浏览器中会看到一个来回滚动的进度条</li>
+<li>value ：该属性用来指定进度条已完成的工作量，<span style="color:green;font-size:16px;"><strong>如果没设置该属性，则进度条的进度为&quot;不确定&quot;，在浏览器中会看到一个来回滚动的进度条</strong></span></li>
 </ul>
 <h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>行内语义元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span> 使用mark标记的文本：<span class="tag">&lt;<span class="name">mark</span>&gt;</span> 国庆节<span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span> 放假 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span> <span class="attr">min</span>=<span class="string">&quot;0&quot;</span> <span class="attr">max</span>=<span class="string">&quot;10&quot;</span>&gt;</span> 十分之三 <span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">&quot;0.77&quot;</span>&gt;</span> 77% <span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>每天早上<span class="tag">&lt;<span class="name">time</span>&gt;</span>9:00<span class="tag">&lt;/<span class="name">time</span>&gt;</span> 开始上班<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>我在 <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17&quot;</span>&gt;</span>星期三<span class="tag">&lt;/<span class="name">time</span>&gt;</span>有事<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-12&quot;</span>&gt;</span>日期：2021-03-12<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T19:38&quot;</span>&gt;</span>日期和时间用 T 分隔,2021-03-17 晚上7点<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T20:00z&quot;</span>&gt;</span>在时间后面加上z,表示给机器编码时使用 UTC 标准时间<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T20:00&quot;</span> <span class="attr">pubdate</span>&gt;</span>表示文章的发布时间<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>不带value值的进度条 <span class="tag">&lt;<span class="name">progress</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span> 来回滚动<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>带value值的进度条 <span class="tag">&lt;<span class="name">progress</span> <span class="attr">value</span>=<span class="string">&quot;35&quot;</span> <span class="attr">max</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -644,7 +916,7 @@
 <td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
 </tr>
 </tbody></table>
-<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#x31;&#x32;&#x33;&#52;&#53;&#x36;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#x6d;">&#x31;&#x32;&#x33;&#52;&#53;&#x36;&#64;&#113;&#x71;&#x2e;&#x63;&#x6f;&#x6d;</a>“ 和 “<a href="mailto:&#54;&#53;&#x34;&#x33;&#50;&#49;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#54;&#53;&#x34;&#x33;&#50;&#49;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a>“</p>
+<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#50;&#51;&#x34;&#x35;&#x36;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;">&#49;&#50;&#51;&#x34;&#x35;&#x36;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#109;</a>“ 和 “<a href="mailto:&#54;&#53;&#x34;&#51;&#x32;&#49;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#54;&#53;&#x34;&#51;&#x32;&#49;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>​    如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
