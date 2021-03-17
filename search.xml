@@ -415,6 +415,68 @@
       </tags>
   </entry>
   <entry>
+    <title>HTML行内语义元素</title>
+    <url>/2021/03/17/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<h1 id="HTML行内语义元素"><a href="#HTML行内语义元素" class="headerlink" title="HTML行内语义元素"></a>HTML行内语义元素</h1><p>行内语义元素主要完成对Web页面具体内容的引用和表述，这类元素如下</p>
+<table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">mark</td>
+<td align="center">定义有记号的文本</td>
+</tr>
+<tr>
+<td align="center">meter</td>
+<td align="center">表示特定范围内的数值</td>
+</tr>
+<tr>
+<td align="center">time</td>
+<td align="center">表示时间值</td>
+</tr>
+<tr>
+<td align="center">progress</td>
+<td align="center">表示进度条，可通过 max、min、step 等属性进行控制</td>
+</tr>
+</tbody></table>
+<h2 id="1-mark元素"><a href="#1-mark元素" class="headerlink" title="1. mark元素"></a>1. mark元素</h2><p>​    mark 元素用来标记一些不是特别需要强调的文本。如需突出显示文本，应使用&lt;em&gt;或&lt;strong&gt;标签。</p>
+<h2 id="2-meter元素"><a href="#2-meter元素" class="headerlink" title="2. meter元素"></a>2. meter元素</h2><p>​    meter 元素用来定义已知范围或分数值内的标量测量，也被称为尺度。</p>
+<p>​    &lt;meter&gt;标签支持以下几个属性：</p>
+<ul>
+<li> min ：值域的最小边界值，默认为0</li>
+<li>max ：值域的上限边界值，默认为1</li>
+<li>value ：当前值，如果没有指定或者格式有误，值为0；如果给定的值不在最大最小值之间，值等于最靠近的一段</li>
+<li>low ：定义低值区间的上限值，如果设置了，就必须大于最小值，并不能超过 high 值和最大值；如果未设置或比最小值还小，low值就为最小值</li>
+<li>high ：定义高值区间的下限值，如果设置了，就必须小于最大值，同时必须大于 low 值和最小值；如果没设置或者比最大值还大，high 值即为最大值</li>
+<li>optimum ：该属性用来指示最优、最佳取值。必须在 min 和 max 内，当使用了 low 和 high 属性时，并且它介于最小值和 low 值之间，那么 lower 区间就被认为是更佳的取值范围</li>
+</ul>
+<h2 id="3-time元素"><a href="#3-time元素" class="headerlink" title="3. time元素"></a>3. time元素</h2><p>​    time 元素用来定义时间或日期，该元素能以机器可读的方式对日期进行编码。</p>
+<p>​    time 元素有以下两个属性：</p>
+<ul>
+<li>datetime ：指定日期/时间，如果不指定，则由元素的内容给定日期/时间。datetime 属性值中如果同时有时间和日期，则日期和时间之间要用 T 分隔；在时间后面加上 Z，表示给机器编码是使用 UTC 标准时间</li>
+<li>pubdate ：布尔属性，指示 time 元素中的日期/时间是文档（或 article 元素）的发布日期</li>
+</ul>
+<h2 id="4-progress元素"><a href="#4-progress元素" class="headerlink" title="4. progress元素"></a>4. progress元素</h2><p>​    progress 元素用来显示一项任务的完成进度，为了能动态展示进度，通常需要使用 JavaScript 编写一个处理程序。</p>
+<p>​    progress 元素支持如下两属性：</p>
+<ul>
+<li>max ：该属性描述这个 progress 元素所表示的任务一共需要完成的工作</li>
+<li>value ：该属性用来指定进度条已完成的工作量，如果没设置该属性，则进度条的进度为&quot;不确定&quot;，在浏览器中会看到一个来回滚动的进度条</li>
+</ul>
+<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>行内语义元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span> 使用mark标记的文本：<span class="tag">&lt;<span class="name">mark</span>&gt;</span> 国庆节<span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span> 放假 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span> <span class="attr">min</span>=<span class="string">&quot;0&quot;</span> <span class="attr">max</span>=<span class="string">&quot;10&quot;</span>&gt;</span> 十分之三 <span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">&quot;0.77&quot;</span>&gt;</span> 77% <span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>每天早上<span class="tag">&lt;<span class="name">time</span>&gt;</span>9:00<span class="tag">&lt;/<span class="name">time</span>&gt;</span> 开始上班<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>我在 <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17&quot;</span>&gt;</span>星期三<span class="tag">&lt;/<span class="name">time</span>&gt;</span>有事<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-12&quot;</span>&gt;</span>日期：2021-03-12<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T19:38&quot;</span>&gt;</span>日期和时间用 T 分隔,2021-03-17 晚上7点<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T20:00z&quot;</span>&gt;</span>在时间后面加上z,表示给机器编码时使用 UTC 标准时间<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T20:00&quot;</span> <span class="attr">pubdate</span>&gt;</span>表示文章的发布时间<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>不带value值的进度条 <span class="tag">&lt;<span class="name">progress</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span> 来回滚动<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>带value值的进度条 <span class="tag">&lt;<span class="name">progress</span> <span class="attr">value</span>=<span class="string">&quot;35&quot;</span> <span class="attr">max</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="浏览器显示如下"><a href="#浏览器显示如下" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/17/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0.png" class title="HTML行内语义元素">]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML进阶</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML表格</title>
     <url>/2021/03/14/HTML%E8%A1%A8%E6%A0%BC/</url>
     <content><![CDATA[<!-- toc -->
@@ -582,7 +644,7 @@
 <td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
 </tr>
 </tbody></table>
-<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#50;&#x33;&#52;&#53;&#54;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#109;">&#49;&#50;&#x33;&#52;&#53;&#54;&#64;&#x71;&#113;&#46;&#99;&#x6f;&#109;</a>“ 和 “<a href="mailto:&#54;&#53;&#52;&#51;&#50;&#x31;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;">&#54;&#53;&#52;&#51;&#50;&#x31;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a>“</p>
+<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#50;&#x33;&#x34;&#x35;&#x36;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#49;&#50;&#x33;&#x34;&#x35;&#x36;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a>“ 和 “<a href="mailto:&#x36;&#x35;&#x34;&#51;&#50;&#49;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#x36;&#x35;&#x34;&#51;&#50;&#49;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a>“</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>​    如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
@@ -643,67 +705,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>HTML行内语义元素</title>
-    <url>/2021/03/17/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<h1 id="HTML行内语义元素"><a href="#HTML行内语义元素" class="headerlink" title="HTML行内语义元素"></a>HTML行内语义元素</h1><p>行内语义元素主要完成对Web页面具体内容的引用和表述，这类元素如下</p>
-<table>
-<thead>
-<tr>
-<th align="center">元素</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">mark</td>
-<td align="center">定义有记号的文本</td>
-</tr>
-<tr>
-<td align="center">meter</td>
-<td align="center">表示特定范围内的数值</td>
-</tr>
-<tr>
-<td align="center">time</td>
-<td align="center">表示时间值</td>
-</tr>
-<tr>
-<td align="center">progress</td>
-<td align="center">表示进度条，可通过 max、min、step 等属性进行控制</td>
-</tr>
-</tbody></table>
-<h2 id="1-mark元素"><a href="#1-mark元素" class="headerlink" title="1. mark元素"></a>1. mark元素</h2><p>​    mark 元素用来标记一些不是特别需要强调的文本。如需突出显示文本，应使用&lt;em&gt;或&lt;strong&gt;标签。</p>
-<h2 id="2-meter元素"><a href="#2-meter元素" class="headerlink" title="2. meter元素"></a>2. meter元素</h2><p>​    meter 元素用来定义已知范围或分数值内的标量测量，也被称为尺度。</p>
-<p>​    &lt;meter&gt;标签支持以下几个属性：</p>
-<ul>
-<li> min ：值域的最小边界值，默认为0</li>
-<li>max ：值域的上限边界值，默认为1</li>
-<li>value ：当前值，如果没有指定或者格式有误，值为0；如果给定的值不在最大最小值之间，值等于最靠近的一段</li>
-<li>low ：定义低值区间的上限值，如果设置了，就必须大于最小值，并不能超过 high 值和最大值；如果未设置或比最小值还小，low值就为最小值</li>
-<li>high ：定义高值区间的下限值，如果设置了，就必须小于最大值，同时必须大于 low 值和最小值；如果没设置或者比最大值还大，high 值即为最大值</li>
-<li>optimum ：该属性用来指示最优、最佳取值。必须在 min 和 max 内，当使用了 low 和 high 属性时，并且它介于最小值和 low 值之间，那么 lower 区间就被认为是更佳的取值范围</li>
-</ul>
-<h2 id="3-time元素"><a href="#3-time元素" class="headerlink" title="3. time元素"></a>3. time元素</h2><p>​    time 元素用来定义时间或日期，该元素能以机器可读的方式对日期进行编码。</p>
-<p>​    time 元素有以下两个属性：</p>
-<ul>
-<li>datetime ：指定日期/时间，如果不指定，则由元素的内容给定日期/时间。datetime 属性值中如果同时有时间和日期，则日期和时间之间要用 T 分隔；在时间后面加上 Z，表示给机器编码是使用 UTC 标准时间</li>
-<li>pubdate ：布尔属性，指示 time 元素中的日期/时间是文档（或 article 元素）的发布日期</li>
-</ul>
-<h2 id="4-progress元素"><a href="#4-progress元素" class="headerlink" title="4. progress元素"></a>4. progress元素</h2><p>​    progress 元素用来显示一项任务的完成进度，为了能动态展示进度，通常需要使用 JavaScript 编写一个处理程序。</p>
-<p>​    progress 元素支持如下两属性：</p>
-<ul>
-<li>max ：该属性描述这个 progress 元素所表示的任务一共需要完成的工作</li>
-<li>value ：该属性用来指定进度条已完成的工作量，如果没设置该属性，则进度条的进度为&quot;不确定&quot;，在浏览器中会看到一个来回滚动的进度条</li>
-</ul>
-<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>行内语义元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span> 使用mark标记的文本：<span class="tag">&lt;<span class="name">mark</span>&gt;</span> 国庆节<span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span> 放假 <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span> <span class="attr">min</span>=<span class="string">&quot;0&quot;</span> <span class="attr">max</span>=<span class="string">&quot;10&quot;</span>&gt;</span> 十分之三 <span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meter</span> <span class="attr">value</span>=<span class="string">&quot;0.77&quot;</span>&gt;</span> 77% <span class="tag">&lt;/<span class="name">meter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>每天早上<span class="tag">&lt;<span class="name">time</span>&gt;</span>9:00<span class="tag">&lt;/<span class="name">time</span>&gt;</span> 开始上班<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>我在 <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17&quot;</span>&gt;</span>星期三<span class="tag">&lt;/<span class="name">time</span>&gt;</span>有事<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-12&quot;</span>&gt;</span>日期：2021-03-12<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T19:38&quot;</span>&gt;</span>日期和时间用 T 分隔,2021-03-17 晚上7点<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T20:00z&quot;</span>&gt;</span>在时间后面加上z,表示给机器编码时使用 UTC 标准时间<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">time</span> <span class="attr">datetime</span>=<span class="string">&quot;2021-03-17T20:00&quot;</span> <span class="attr">pubdate</span>&gt;</span>表示文章的发布时间<span class="tag">&lt;/<span class="name">time</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>不带value值的进度条 <span class="tag">&lt;<span class="name">progress</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span> 来回滚动<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>带value值的进度条 <span class="tag">&lt;<span class="name">progress</span> <span class="attr">value</span>=<span class="string">&quot;35&quot;</span> <span class="attr">max</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="浏览器显示如下"><a href="#浏览器显示如下" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/17/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0.png" class title="HTML行内语义元素">]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>HTML进阶</tag>
-      </tags>
   </entry>
 </search>
