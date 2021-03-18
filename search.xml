@@ -1026,4 +1026,194 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>HTML表单--input元素</title>
+    <url>/2021/03/18/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<h1 id="HTML表单–input元素"><a href="#HTML表单–input元素" class="headerlink" title="HTML表单–input元素"></a>HTML表单–input元素</h1><p>​    在表单中，用户输入数据时使用的文本框、复选框等都是通过&lt;input&gt;元素创建的，该元素必须在&lt;form&gt;元素中使用，用来创建表单的输入元素，如果不在&lt;form&gt;中使用，那么输入元素不会被&lt;form&gt;元素收集并传给服务器。&lt;input&gt;元素是空的，所以一般不需要闭标签，通常直接在开标签的后面加一个斜线。</p>
+<p>​    &lt;input&gt;标签的 type 属性用来指定输入控件的类型，type 属性的值如下</p>
+<table>
+<thead>
+<tr>
+<th align="center">输入类型</th>
+<th align="center">type 类型</th>
+<th align="center">功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">文本框</td>
+<td align="center"><a href="#1">text</a></td>
+<td align="center">定义单行输入字段，用于在表单中输入字母、数字等内容，默认宽度为 20 个字符</td>
+</tr>
+<tr>
+<td align="center">单选按钮</td>
+<td align="center"><a href="#3">radio</a></td>
+<td align="center">定义单选按钮</td>
+</tr>
+<tr>
+<td align="center">复选框</td>
+<td align="center"><a href="#3">checkbox</a></td>
+<td align="center">定义复选框</td>
+</tr>
+<tr>
+<td align="center">密码框</td>
+<td align="center"><a href="#1">password</a></td>
+<td align="center">定义密码字段，输入的内容会以 &quot;*&quot; 或点的形式出现</td>
+</tr>
+<tr>
+<td align="center">提交按钮</td>
+<td align="center"><a href="#4">submit</a></td>
+<td align="center">定义&quot;提交&quot;按钮，用于将表单数据发送到服务器</td>
+</tr>
+<tr>
+<td align="center">可单击按钮</td>
+<td align="center"><a href="#4">button</a></td>
+<td align="center">定义普通可单击按钮，多用于通过 JavaScript 启动脚本</td>
+</tr>
+<tr>
+<td align="center">图像按钮</td>
+<td align="center"><a href="#4">image</a></td>
+<td align="center">定义图像形式的提交按钮</td>
+</tr>
+<tr>
+<td align="center">隐藏字段</td>
+<td align="center"><a href="#5">hidden</a></td>
+<td align="center">定义隐藏的输入字段</td>
+</tr>
+<tr>
+<td align="center">重置按钮</td>
+<td align="center"><a href="#4">reset</a></td>
+<td align="center">定义重置按钮，可通过单击该按钮来清除表单中的所有数据</td>
+</tr>
+<tr>
+<td align="center">文件域</td>
+<td align="center"><a href="#6">file</a></td>
+<td align="center">定义输入字段和浏览按钮，用于上传文件</td>
+</tr>
+<tr>
+<td align="center">e-mail 地址</td>
+<td align="center"><a href="#10">e-mail</a></td>
+<td align="center">用于输入单个电子邮件地址或电子邮件地址列表，多个电子邮件地址可以使用逗号分隔的列表形式输入</td>
+</tr>
+<tr>
+<td align="center">颜色选择框</td>
+<td align="center"><a href="#8">color</a></td>
+<td align="center">用于使用色盘选择颜色</td>
+</tr>
+<tr>
+<td align="center">日期</td>
+<td align="center"><a href="#7">date</a></td>
+<td align="center">用于输入日历日期</td>
+</tr>
+<tr>
+<td align="center">日期和时间</td>
+<td align="center"><a href="#7">datetime</a></td>
+<td align="center">用于输入国际标准时间的日期和时间</td>
+</tr>
+<tr>
+<td align="center">日期和时间</td>
+<td align="center"><a href="#7">datetime-local</a></td>
+<td align="center">用于输入本地日期和时间</td>
+</tr>
+<tr>
+<td align="center">年和月</td>
+<td align="center"><a href="#7">month</a></td>
+<td align="center">用于输入年份与月份</td>
+</tr>
+<tr>
+<td align="center">时间</td>
+<td align="center"><a href="#7">time</a></td>
+<td align="center">用于输入由时、分、秒以及小数秒组成的时间</td>
+</tr>
+<tr>
+<td align="center">星期</td>
+<td align="center"><a href="#7">week</a></td>
+<td align="center">用于输入有年份与周数构成的日期，例如 2021-W03，2021年第三周</td>
+</tr>
+<tr>
+<td align="center">数字输入框</td>
+<td align="center"><a href="#10">number</a></td>
+<td align="center">用于输入数字</td>
+</tr>
+<tr>
+<td align="center">数字滑块</td>
+<td align="center"><a href="#9">range</a></td>
+<td align="center">该控件通常以拖动的形式呈现，使用户可以从一个数字范围内选择取值</td>
+</tr>
+<tr>
+<td align="center">搜索文本框</td>
+<td align="center"><a href="#10">search</a></td>
+<td align="center">用于输入搜索关键词</td>
+</tr>
+<tr>
+<td align="center">文本框</td>
+<td align="center"><a href="#10">tel</a></td>
+<td align="center">用于输入电话号码</td>
+</tr>
+<tr>
+<td align="center">网站地址</td>
+<td align="center"><a href="#10">url</a></td>
+<td align="center">用于输入网站的 URL</td>
+</tr>
+</tbody></table>
+<h2 id="1-文本框和密码框"><a href="#1-文本框和密码框" class="headerlink" title="1. 文本框和密码框"></a><a id="1">1. 文本框和密码框</a></h2><p>​    当 type 属性值为 text 或 password 时，通常还会用到&lt;input&gt;元素的如下几个属性：</p>
+<ul>
+<li>name ：几乎所有的&lt;input&gt;元素要设置该属性，该属性的值就是向服务器发送的&quot;名称/值&quot;对中的名称部分</li>
+<li>value ：该属性用来设置文本框提供的初始值，在表单加载后能看到该值</li>
+<li>size ：设置文本框的宽度，以字符为单位，该属性不影响用户可输入的字符数量，如 size 属性的值为20，用户任然可以输入 40 个字符</li>
+<li>maxlength ：该属性用来指定用户在文本框内可以输入的最大字符数，输入达到最大后，再输入也不会有新的字符加入</li>
+<li>placeholder ：用来为文本框设置输入提示信息，当文本框处于未输入状态且未获得光标焦点时，模糊显示输入提示文字</li>
+<li>required ：该属性是布尔属性，如果元素是空的，则不允许提交，同时浏览器提示用户必须输入内容</li>
+</ul>
+<p>上述属性使用如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span> <span class="attr">name</span>=<span class="string">&quot;login&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;20&quot;</span> <span class="attr">palceholder</span>=<span class="string">&quot;请输入登录名&quot;</span> <span class="attr">required</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="浏览器显示如下"><a href="#浏览器显示如下" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/18/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0-1.png" class title="HTML表单input元素-1">
+
+<hr>
+
+<h2 id="2-autocomplete-属性和-datalist-元素"><a href="#2-autocomplete-属性和-datalist-元素" class="headerlink" title="2. autocomplete 属性和 datalist 元素"></a><a>2. autocomplete 属性和 datalist 元素</a></h2><p>​    autocomplete 属性可以允许网页作者控制是否缓存表单条目，将 autocomplete 设置为 off，则表示不保存表单值。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span> <span class="attr">name</span>=<span class="string">&quot;login&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span> <span class="attr">maxlength</span>=<span class="string">&quot;20&quot;</span> <span class="attr">palceholder</span>=<span class="string">&quot;请输入登录名&quot;</span> <span class="attr">required</span> <span class="attr">autocomplete</span>=<span class="string">&quot;off&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    如果 autocomplete 属性为 on，则可以显式的指定候补输入的数据列表，此时需要用到 datalist 元素和 list 属性。</p>
+<p>​    datalist 元素用于给输入框提供一个可选列表，该列表由 datalist 元素中的 option 元素创建，为了把 datalist 元素提供的列表绑定到某个输入框，需要使用 input 的 list 属性来引用 datalist 元素的 id。</p>
+<h5 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>datalist元素<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">&quot;roles&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;张三&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;李四&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;王五&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;login.aspx&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>角色名: <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;输入或选择一个角色&quot;</span> <span class="attr">required</span> <span class="attr">autocomplete</span>=<span class="string">&quot;on&quot;</span> <span class="attr">list</span>=<span class="string">&quot;roles&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;取消&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="浏览器显示如下-1"><a href="#浏览器显示如下-1" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/18/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0-2.png" class title="HTML表单input元素-2">
+
+<hr>
+
+<h2 id="3-复选框和单选按钮"><a href="#3-复选框和单选按钮" class="headerlink" title="3. 复选框和单选按钮"></a><a id="3">3. 复选框和单选按钮</a></h2><p>​    checkbox 属性创建的是复选框控件，radio 属性创建的是单选框控件。这两个控件都有开和关两种状态，并可以通过设置 checked 属性，指明页面加载后的初始状态，区别在于：</p>
+<ul>
+<li>当一组单选按钮共享同一名称时，只有其中之一可以被选定</li>
+<li>不应将单选按钮作为指定开或关的单一表单控件使用，因为当单一单选按钮被选定后，就无法通过界面操作再次失去选定；而复选框可以单独出现</li>
+<li>复选框也可以共享同一名称，作为复选框组出现，同一组中可以有多个复选框同时被选定</li>
+</ul>
+<h2 id="4-按钮"><a href="#4-按钮" class="headerlink" title="4. 按钮"></a><a id="4">4. 按钮</a></h2><ul>
+<li>submit ：创建单击时提交表单的按钮</li>
+<li>reset ：创建重置表单的按钮，点击后设置为页面载入时初始值的按钮</li>
+<li>button ：创建用于触发客户端脚本的按钮</li>
+<li>image ：创建带图片的提交按钮，单击后也会提交表单数据，通常需要把 src 属性和 alt 属性一起配合使用，还可以用 height 和 width属性指定图片的高和宽</li>
+</ul>
+<p>对于按钮控件需要注意以下几点：</p>
+<ol>
+<li>提交按钮和重置按钮都有默认显示的文本，也可通过 value 设置新的文本；而 type=”button”创建的按钮没有默认显示文本，必须使用 value 属性指定。</li>
+<li>如果提供了 name 属性，那么 value 属性的值会作为表单控件的&quot;名称/值&quot;对的一部分发送到服务器</li>
+<li>对于图片按钮，如果提供了 name 属性，那么单击后，发送的&quot;名称/值&quot;对中的&quot;值&quot;是用户单击图片按钮时的 x 及 y 坐标值对</li>
+<li>图片按钮的 alt 属性为图片提供替换文本，在图片无法找到是将显示该信息</li>
+</ol>
+<h5 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>表单按钮<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;login.aspx&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span>提交按钮<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;提交按钮&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">td</span>&gt;</span>重置按钮<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span>普通按钮<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">name</span>=<span class="string">&quot;mybtn&quot;</span> <span class="attr">value</span>=<span class="string">&quot;我的按钮&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> 图片按钮<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;image&quot;</span> <span class="attr">src</span>=<span class="string">&quot;1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Submit&quot;</span> <span class="attr">height</span>=<span class="string">&quot;40&quot;</span> <span class="attr">width</span>=<span class="string">&quot;40&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="浏览器显示如下-2"><a href="#浏览器显示如下-2" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/18/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0-3.png" class title="HTML表单input元素-3">
+
+<hr>
+
+<h2 id="5-隐藏字段"><a href="#5-隐藏字段" class="headerlink" title="5. 隐藏字段"></a><a id="5">5. 隐藏字段</a></h2><h2 id="6-文件上传控件"><a href="#6-文件上传控件" class="headerlink" title="6. 文件上传控件"></a><a id="6">6. 文件上传控件</a></h2><h2 id="7-日期和时间"><a href="#7-日期和时间" class="headerlink" title="7. 日期和时间"></a><a id="7">7. 日期和时间</a></h2><h2 id="8-颜色选择框"><a href="#8-颜色选择框" class="headerlink" title="8. 颜色选择框"></a><a id="8">8. 颜色选择框</a></h2><h2 id="9-数字滑块类型-range"><a href="#9-数字滑块类型-range" class="headerlink" title="9. 数字滑块类型 range"></a><a id="9">9. 数字滑块类型 range</a></h2><h2 id="10-其他特殊文本框"><a href="#10-其他特殊文本框" class="headerlink" title="10. 其他特殊文本框"></a><a id="10">10. 其他特殊文本框</a></h2>]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML表单</tag>
+      </tags>
+  </entry>
 </search>
