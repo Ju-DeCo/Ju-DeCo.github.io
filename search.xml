@@ -747,6 +747,60 @@
       </tags>
   </entry>
   <entry>
+    <title>HTML表单--创建表单</title>
+    <url>/2021/03/18/HTML%E8%A1%A8%E5%8D%95-%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h1 id="HTML表单–创建表单"><a href="#HTML表单–创建表单" class="headerlink" title="HTML表单–创建表单"></a>HTML表单–创建表单</h1><p>​    在网页中，用&lt;form&gt;和&lt;/form&gt;这对标签来创建表单，&lt;form&gt;元素通常是一些用来采集用户输入信息的表单控件，&lt;form&gt;元素不能嵌套使用，一般&lt;form&gt;标签应该至少带有 action 和 method 两个属性，还可包含以下属性：enctype、novalidate、target、autocomplete 和 accept-charset。</p>
+<h2 id="1-action-属性"><a href="#1-action-属性" class="headerlink" title="1. action 属性"></a>1. action 属性</h2><p>​    action 属性指明表单提交后对数据的处理，通常该属性的值是一个地址，也就是表单收集到的信息将要被传递到的地址。列如，对于登录表单，用户输入的登录名和密码信息可能被传送到 Web 服务器上一个以 ASP.NET 编写的页面，叫作 login.aspx。若该页面与当前页面在同一目录下，使用如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span> = <span class="string">&quot;login.aspx&quot;</span>&gt;</span>	</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-method-属性"><a href="#2-method-属性" class="headerlink" title="2. method 属性"></a>2. method 属性</h2><p>​    浏览器向服务器发送表单数据时可以使用两种方法：HTTP get 和 HTTP post。使用&lt;form&gt;标签的 method 属性指定使用哪一种方法，该属性的两种取值如下：</p>
+<ul>
+<li><strong>get ：使用 HTTP get 方法向服务器发送表单数据，表单数据被附加在&lt;form&gt;元素中有 action 属性指定的 URL 尾部。表单数据与 URL 之间使用问号分隔，在问号之后是各表单控件的&quot;名称/值&quot;对。&quot;名称/值&quot;对之间使用 &amp; 分隔。</strong></li>
+<li><strong>post ：使用 HTTP post 方法向服务器发送来自表单的数据，表单数据将在 HTTP 头部中透明的传送</strong></li>
+</ul>
+<h5 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>登录表单<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;login.aspx&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>登录名: <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>密码: <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;取消&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="浏览器显示如下"><a href="#浏览器显示如下" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/18/HTML%E8%A1%A8%E5%8D%95-%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95/HTML%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95-1.png" class title="HTML创建表单-1">
+
+<hr>
+
+<p>​    以 HTTP get 方法传递表单数据的一个好处是可以收藏地址，但该方法在发送诸如密码或信用卡细节等敏感信息时，不应该使用 HTTP get 方法。因为这些信息会成为 URL 的一部分，并且对所有人可见。<strong>以下情景不应该使用 HTTP get 方法：</strong></p>
+<ul>
+<li><p><strong>处理敏感信息</strong></p>
+</li>
+<li><p><strong>更新数据源</strong></p>
+</li>
+<li><p><strong>表单中包含文件上传控件，文件无法在 URL 中传递</strong></p>
+<p><strong>在使用 HTTP post 方法向服务器发送来自表单的数据时，表单数据将在 HTTP 头部中透明的传递。</strong></p>
+</li>
+</ul>
+<h2 id="3-id-和-name-属性"><a href="#3-id-和-name-属性" class="headerlink" title="3. id 和 name 属性"></a><strong>3. id 和 name 属性</strong></h2><p>​    id 属性唯一标识页面中的&lt;form&gt;元素。name 属性是 id 属性的前任，与 id 属性一样，取值在文档中应该保持唯一</p>
+<h2 id="4-enctype-属性"><a href="#4-enctype-属性" class="headerlink" title="4. enctype 属性"></a>4. enctype 属性</h2><p>​    如果使用 HTTP post 方法向服务器发送数据，则可以使用 enctype 属性指定浏览器在将数据发送到服务器之前对其进行编码，浏览器通常支持以下三种编码方式：</p>
+<ul>
+<li>application/x-www-form-urlencoded：这是大多数表单使用的标准方式，浏览器使用该方式是因为一些字符不能直接发到 Web 服务器，这些字符会被其他字符代替</li>
+<li>multipart/form-data：允许把数据分成部分再传送，每一个连续部分以其在表单中出现的顺序对应于一个表单控件，通常用于访问者需要向服务器上传文件</li>
+<li>text/plain：以纯文本形式不加修改的将数据发送至服务器</li>
+</ul>
+<p>如果没使用 enctype 属性，浏览器使用第一个值，一般情况，只有在表单允许用户向服务器上传文件，或用户有可能使用 ASCII 字符时，才需要使用该属性。</p>
+<h2 id="5-accept-charset-属性"><a href="#5-accept-charset-属性" class="headerlink" title="5. accept-charset 属性"></a>5. accept-charset 属性</h2><p>​    在创建网站时，开发人员不会将网站设计成能理解所有语言，该属性可以指定一系列用户能够输入，并且之后服务器可以处理的字符编码，该属性的值应该是一个有空格或逗号分隔的字符集列表。<span style="color:green;font-size:16px;"><strong>如果没设置该属性，那么任何字符集都是有效的。</strong></span></p>
+<p>​    下面代码将指明服务器可以接受 UTF-8 编码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">accept-charset=&quot;utf-8&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-novalidate-属性"><a href="#6-novalidate-属性" class="headerlink" title="6. novalidate 属性"></a>6. novalidate 属性</h2><p>​    该属性是一个布尔属性，用以指定表单在提交时是否进行校验，如果使用了该属性，则关闭对表单内所有元素的有效检验，如希望只取消对表单中少部分内容验证，可以在不需要验证的表单控件上使用该属性。</p>
+<h2 id="7-target-属性"><a href="#7-target-属性" class="headerlink" title="7. target 属性"></a>7. target 属性</h2><p>​    该属性指定一个命名窗口或关键字，用于处理表单提交，<span style="color:green;font-size:16px;"><strong>该属性的取值与 &lt;a&gt; 标签的 target 属性一样。</strong></span></p>
+<h2 id="8-autocomplete-属性"><a href="#8-autocomplete-属性" class="headerlink" title="8. autocomplete 属性"></a>8. autocomplete 属性</h2><p>​    该属性用来指明浏览器是否应该自动填写表单值。默认值为 on ，如果将它设置为 off ，则指明浏览器不应该自动填写任何内容。</p>
+<hr>]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML表单</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML表格</title>
     <url>/2021/03/14/HTML%E8%A1%A8%E6%A0%BC/</url>
     <content><![CDATA[<h1 id="HTML表格"><a href="#HTML表格" class="headerlink" title="HTML表格"></a>HTML表格</h1><h2 id="1-创建表格"><a href="#1-创建表格" class="headerlink" title="1.创建表格"></a>1.创建表格</h2><h3 id="1-1创建基本表格"><a href="#1-1创建基本表格" class="headerlink" title="1.1创建基本表格"></a>1.1创建基本表格</h3><p>​    <span style="color:green;font-size:16px;"><strong>HTML表格由4个标签创建，分别是表格标签&lt;table&gt;、行标签&lt;tr&gt;、表头标签&lt;th&gt;、和表格数据标签&lt;td&gt;。</strong></span> 表格中每一行都包含在一个 &lt;tr&gt; 元素中。</p>
@@ -910,7 +964,7 @@
 <td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
 </tr>
 </tbody></table>
-<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#x32;&#51;&#52;&#53;&#54;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#49;&#x32;&#51;&#52;&#53;&#54;&#x40;&#113;&#113;&#46;&#99;&#111;&#x6d;</a>“ 和 “<a href="mailto:&#x36;&#53;&#52;&#x33;&#50;&#49;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#x36;&#53;&#52;&#x33;&#50;&#49;&#x40;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a>“</p>
+<p>​    对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#x31;&#50;&#51;&#x34;&#53;&#x36;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;">&#x31;&#50;&#51;&#x34;&#53;&#x36;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a>“ 和 “<a href="mailto:&#x36;&#x35;&#52;&#51;&#x32;&#x31;&#64;&#x71;&#113;&#46;&#99;&#111;&#x6d;">&#x36;&#x35;&#52;&#51;&#x32;&#x31;&#64;&#x71;&#113;&#46;&#99;&#111;&#x6d;</a>“</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>​    如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
@@ -971,59 +1025,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>HTML表单--创建表单</title>
-    <url>/2021/03/18/HTML%E8%A1%A8%E5%8D%95-%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<h1 id="HTML表单–创建表单"><a href="#HTML表单–创建表单" class="headerlink" title="HTML表单–创建表单"></a>HTML表单–创建表单</h1><p>​    在网页中，用&lt;form&gt;和&lt;/form&gt;这对标签来创建表单，&lt;form&gt;元素通常是一些用来采集用户输入信息的表单控件，&lt;form&gt;元素不能嵌套使用，一般&lt;form&gt;标签应该至少带有 action 和 method 两个属性，还可包含以下属性：enctype、novalidate、target、autocomplete 和 accept-charset。</p>
-<h2 id="1-action-属性"><a href="#1-action-属性" class="headerlink" title="1. action 属性"></a>1. action 属性</h2><p>​    action 属性指明表单提交后对数据的处理，通常该属性的值是一个地址，也就是表单收集到的信息将要被传递到的地址。列如，对于登录表单，用户输入的登录名和密码信息可能被传送到 Web 服务器上一个以 ASP.NET 编写的页面，叫作 login.aspx。若该页面与当前页面在同一目录下，使用如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span> = <span class="string">&quot;login.aspx&quot;</span>&gt;</span>	</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-method-属性"><a href="#2-method-属性" class="headerlink" title="2. method 属性"></a>2. method 属性</h2><p>​    浏览器向服务器发送表单数据时可以使用两种方法：HTTP get 和 HTTP post。使用&lt;form&gt;标签的 method 属性指定使用哪一种方法，该属性的两种取值如下：</p>
-<ul>
-<li><strong>get ：使用 HTTP get 方法向服务器发送表单数据，表单数据被附加在&lt;form&gt;元素中有 action 属性指定的 URL 尾部。表单数据与 URL 之间使用问号分隔，在问号之后是各表单控件的&quot;名称/值&quot;对。&quot;名称/值&quot;对之间使用 &amp; 分隔。</strong></li>
-<li><strong>post ：使用 HTTP post 方法向服务器发送来自表单的数据，表单数据将在 HTTP 头部中透明的传送</strong></li>
-</ul>
-<h5 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>登录表单<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;login.aspx&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>登录名: <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>密码: <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;取消&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="浏览器显示如下"><a href="#浏览器显示如下" class="headerlink" title="浏览器显示如下"></a><span style="color:red;font-size:18px">浏览器显示如下</span></h6><img src="/2021/03/18/HTML%E8%A1%A8%E5%8D%95-%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95/HTML%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95-1.png" class title="HTML创建表单-1">
-
-<hr>
-
-<p>​    以 HTTP get 方法传递表单数据的一个好处是可以收藏地址，但该方法在发送诸如密码或信用卡细节等敏感信息时，不应该使用 HTTP get 方法。因为这些信息会成为 URL 的一部分，并且对所有人可见。<strong>以下情景不应该使用 HTTP get 方法：</strong></p>
-<ul>
-<li><p><strong>处理敏感信息</strong></p>
-</li>
-<li><p><strong>更新数据源</strong></p>
-</li>
-<li><p><strong>表单中包含文件上传控件，文件无法在 URL 中传递</strong></p>
-<p><strong>在使用 HTTP post 方法向服务器发送来自表单的数据时，表单数据将在 HTTP 头部中透明的传递。</strong></p>
-</li>
-</ul>
-<h2 id="3-id-和-name-属性"><a href="#3-id-和-name-属性" class="headerlink" title="3. id 和 name 属性"></a><strong>3. id 和 name 属性</strong></h2><p>​    id 属性唯一标识页面中的&lt;form&gt;元素。name 属性是 id 属性的前任，与 id 属性一样，取值在文档中应该保持唯一</p>
-<h2 id="4-enctype-属性"><a href="#4-enctype-属性" class="headerlink" title="4. enctype 属性"></a>4. enctype 属性</h2><p>​    如果使用 HTTP post 方法向服务器发送数据，则可以使用 enctype 属性指定浏览器在将数据发送到服务器之前对其进行编码，浏览器通常支持以下三种编码方式：</p>
-<ul>
-<li>application/x-www-form-urlencoded：这是大多数表单使用的标准方式，浏览器使用该方式是因为一些字符不能直接发到 Web 服务器，这些字符会被其他字符代替</li>
-<li>multipart/form-data：允许把数据分成部分再传送，每一个连续部分以其在表单中出现的顺序对应于一个表单控件，通常用于访问者需要向服务器上传文件</li>
-<li>text/plain：以纯文本形式不加修改的将数据发送至服务器</li>
-</ul>
-<p>如果没使用 enctype 属性，浏览器使用第一个值，一般情况，只有在表单允许用户向服务器上传文件，或用户有可能使用 ASCII 字符时，才需要使用该属性。</p>
-<h2 id="5-accept-charset-属性"><a href="#5-accept-charset-属性" class="headerlink" title="5. accept-charset 属性"></a>5. accept-charset 属性</h2><p>​    在创建网站时，开发人员不会将网站设计成能理解所有语言，该属性可以指定一系列用户能够输入，并且之后服务器可以处理的字符编码，该属性的值应该是一个有空格或逗号分隔的字符集列表。<span style="color:green;font-size:16px;"><strong>如果没设置该属性，那么任何字符集都是有效的。</strong></span></p>
-<p>​    下面代码将指明服务器可以接受 UTF-8 编码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">accept-charset=&quot;utf-8&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-novalidate-属性"><a href="#6-novalidate-属性" class="headerlink" title="6. novalidate 属性"></a>6. novalidate 属性</h2><p>​    该属性是一个布尔属性，用以指定表单在提交时是否进行校验，如果使用了该属性，则关闭对表单内所有元素的有效检验，如希望只取消对表单中少部分内容验证，可以在不需要验证的表单控件上使用该属性。</p>
-<h2 id="7-target-属性"><a href="#7-target-属性" class="headerlink" title="7. target 属性"></a>7. target 属性</h2><p>​    该属性指定一个命名窗口或关键字，用于处理表单提交，<span style="color:green;font-size:16px;"><strong>该属性的取值与 &lt;a&gt; 标签的 target 属性一样。</strong></span></p>
-<h2 id="8-autocomplete-属性"><a href="#8-autocomplete-属性" class="headerlink" title="8. autocomplete 属性"></a>8. autocomplete 属性</h2><p>​    该属性用来指明浏览器是否应该自动填写表单值。默认值为 on ，如果将它设置为 off ，则指明浏览器不应该自动填写任何内容。</p>
-<hr>]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>HTML表单</tag>
-      </tags>
   </entry>
 </search>
