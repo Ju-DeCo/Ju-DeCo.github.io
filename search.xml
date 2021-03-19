@@ -1451,4 +1451,69 @@
         <tag>button元素</tag>
       </tags>
   </entry>
+  <entry>
+    <title>HTML表单结构</title>
+    <url>/2021/03/19/HTML%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<h1 id="HTML表单结构"><a href="#HTML表单结构" class="headerlink" title="HTML表单结构"></a>HTML表单结构</h1><p>​    &lt;fieldset&gt;和&lt;legend&gt;两个元素可以将相关表单控件组织到一起</p>
+<ul>
+<li><strong>&lt;fieldset&gt;元素在表单控件组的四周添加边框</strong></li>
+<li><strong>&lt;legend&gt;元素用来为&lt;fieldset&gt;元素指定标题</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>组织表单结构<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;text.aspx&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">legend</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>个人信息<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span>姓名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;txtname&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span>电话：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;tel&quot;</span> <span class="attr">name</span>=<span class="string">&quot;telname&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span>E-mail：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;emname&quot;</span> <span class="attr">size</span>=<span class="string">&quot;20&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">legend</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>选择:<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">			9月10日是什么节？<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;answer&quot;</span> <span class="attr">value</span>=<span class="string">&quot;teacher&quot;</span>&gt;</span>教师节<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;answer&quot;</span> <span class="attr">value</span>=<span class="string">&quot;chongyang&quot;</span>&gt;</span>重阳节<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;answer&quot;</span> <span class="attr">value</span>=<span class="string">&quot;zhongqiu&quot;</span>&gt;</span>中秋节<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;answer&quot;</span> <span class="attr">value</span>=<span class="string">&quot;duanwu&quot;</span>&gt;</span>端午节<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">legend</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>简述题<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">&quot;tanswer&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;10&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;40&quot;</span>&gt;</span>简述 fieldset 元素的用法<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">legend</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>提交问卷<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;reset&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span>			</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/19/HTML%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84/HTML%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84.png" class title="HTML表单结构">
+
+<hr>
+
+<p>​    &lt;label&gt;元素为控件创建标签，对于大多数表单控件，必须为其提供标签。使用表格布局表单不算规范，应该使用&lt;label&gt;元素。</p>
+<h2 id="disabled-与-readonly-控件"><a href="#disabled-与-readonly-控件" class="headerlink" title="disabled 与 readonly 控件"></a>disabled 与 readonly 控件</h2><ul>
+<li><p><strong>readonly 属性用来防止用户更改表单控件的值，但仍然可以通过脚本更改，任何该控件的名称与值仍然将被发送至服务器</strong></p>
+</li>
+<li><p><strong>disabled 属性会禁用表单控件或&lt;fieldset&gt;元素中的表单控件组，从而使用户无法更改，但可使用脚本重新激活控件，若不激活，名称与值就不会被发送到服务器</strong></p>
+<p>readonly 属性在需要阻止访问者修改表单的某些数据时很有用，disabled 属性在用户完成某些操作前阻止用户与特定控件交互时用。以下表单控件不支持 readonly 属性：</p>
+<table>
+<thead>
+<tr>
+<th align="center">元素</th>
+<th align="center">元素</th>
+<th align="center">元素</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt;input type=”checkbox”&gt;</td>
+<td align="center">&lt;input type=”button”&gt;</td>
+<td align="center">&lt;keygen&gt;</td>
+</tr>
+<tr>
+<td align="center">&lt;input type=”radio”&gt;</td>
+<td align="center">&lt;input type=”color”&gt;</td>
+<td align="center">&lt;option&gt;</td>
+</tr>
+<tr>
+<td align="center">&lt;input type=”submit”&gt;</td>
+<td align="center">&lt;input type=”range”&gt;</td>
+<td align="center">&lt;optgroup&gt;</td>
+</tr>
+<tr>
+<td align="center">&lt;input type=”reset”&gt;</td>
+<td align="center">&lt;button&gt;</td>
+<td align="center">&lt;fieldset&gt;</td>
+</tr>
+<tr>
+<td align="center">&lt;input type=”file”&gt;</td>
+<td align="center">&lt;select&gt;</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<hr>]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>HTML表单</tag>
+      </tags>
+  </entry>
 </search>
