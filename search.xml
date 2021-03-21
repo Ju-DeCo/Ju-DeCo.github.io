@@ -1516,4 +1516,166 @@
         <tag>HTML表单</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网页中多媒体</title>
+    <url>/2021/03/21/%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%A4%9A%E5%AA%92%E4%BD%93/</url>
+    <content><![CDATA[<h1 id="向网页中添加图片"><a href="#向网页中添加图片" class="headerlink" title="向网页中添加图片"></a>向网页中添加图片</h1><h2 id="1-使用-lt-img-gt-元素"><a href="#1-使用-lt-img-gt-元素" class="headerlink" title="1. 使用&lt;img&gt;元素"></a>1. 使用&lt;img&gt;元素</h2><p>​    &lt;img&gt;元素是一个独立标签，该元素必须包含两个元素：src 和 alt 。src 属性指定图片的来源，值是个 URL；alt 属性是对图片进行描述的文本，图片无法显示就用该文本代替。除此之外，还常用带 width 和 height 属性，用来指定图片的宽和高，值通常以像素为单位，也可以是百分比。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;网站logo&quot;</span> <span class="attr">height</span>=<span class="string">&quot;40&quot;</span> <span class="attr">width</span>=<span class="string">&quot;40&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-使用图片作为链接"><a href="#2-使用图片作为链接" class="headerlink" title="2. 使用图片作为链接"></a>2. 使用图片作为链接</h2><p>​    将文本置于&lt;a&gt;开闭标签之间即可将图片作为链接</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;baidu.logo&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;百度一下&quot;</span> <span class="attr">widtd</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;100&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-使用图像映射"><a href="#3-使用图像映射" class="headerlink" title="3. 使用图像映射"></a>3. 使用图像映射</h2><p>​    除了一幅图像整体作为超链接外，还可以将一副图像分成几个部分，分别链接到不同页面，此时使用图像映射来实现。创建图像映射需要用到 &lt;map&gt; 和 &lt;area&gt;两个元素：</p>
+<ul>
+<li><strong>&lt;map&gt;元素用于定义客户端图像映射。图像映射指带有可单击区域的一幅图像，&lt;img&gt;中的 usemap 属性可引用&lt;map&gt;中的 id 或 name 属性，所以创建图像映射时，应同时向&lt;map&gt;添加 id 和 name 属性</strong></li>
+<li><strong>&lt;area&gt;元素用于定义图像映射中的区域，当用户单击这个区域时即可链接到指定的页面。&lt;area&gt;元素永远嵌套在&lt;map&gt;内部，通过 shape 属性指定所选区域的形状，通过 coords 属性指定区域的坐标</strong></li>
+</ul>
+<h5 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>图像映射<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">map</span> <span class="attr">id</span> =<span class="string">&quot;txiang&quot;</span> <span class="attr">name</span>=<span class="string">&quot;txiang&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">&quot;poly&quot;</span> <span class="attr">coords</span>=<span class="string">&quot;110,190,50,340,120,390,120,190&quot;</span> <span class="attr">href</span>=<span class="string">&quot;img/1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;1头像&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">&quot;circ&quot;</span> <span class="attr">coords</span>=<span class="string">&quot;180,230,45&quot;</span> <span class="attr">href</span>=<span class="string">&quot;img/2.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;2头像&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span>=<span class="string">&quot;polygon&quot;</span> <span class="attr">coords</span>=<span class="string">&quot;330,160,390,160,390,230,330,230&quot;</span> <span class="attr">href</span>=<span class="string">&quot;img/3.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;3头像&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">area</span> <span class="attr">shape</span> =<span class="string">&quot;rectangle&quot;</span> <span class="attr">coords</span>=<span class="string">&quot;205,270,300,387&quot;</span> <span class="attr">href</span>=<span class="string">&quot;img/4.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;4头像&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;img/17.jpg&quot;</span> <span class="attr">width</span>=<span class="string">&quot;600&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;头像&quot;</span> <span class="attr">ismap</span> <span class="attr">usemap</span>=<span class="string">&quot;#txiang&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%A4%9A%E5%AA%92%E4%BD%93/%E7%BD%91%E9%A1%B5%E5%A4%9A%E5%AA%92%E4%BD%93-1.png" class title="网页多媒体-1">
+
+<hr>
+
+<h6 id="单击某-lt-area-gt-区域后"><a href="#单击某-lt-area-gt-区域后" class="headerlink" title="单击某&lt;area&gt;区域后"></a><span style="color:red;font-size:18px">单击某&lt;area&gt;区域后</span></h6><img src="/2021/03/21/%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%A4%9A%E5%AA%92%E4%BD%93/%E7%BD%91%E9%A1%B5%E5%A4%9A%E5%AA%92%E4%BD%93-2.png" class title="网页多媒体-2">
+
+<hr>
+
+<p>area 元素的 shape 属性可取值如下：</p>
+<ul>
+<li><strong>rect 或 rectangle ：创建矩形图像区域</strong></li>
+<li><strong>circ 或 circle ：创建圆形图像区域</strong></li>
+<li><strong>poly 或 polygon ：创建多边形图像区域</strong></li>
+</ul>
+<p>相应的 coords 属性为图像区域的坐标，图像左上角为(0,0)，该属性格式说明如下：</p>
+<ul>
+<li><strong>矩形：“x1，y1，x2，y2”，分别为矩形左上角坐标 (x1,y1) 和右下角坐标 (x2,y2)</strong></li>
+<li><strong>圆形：“x，y，r”，分别为圆形坐标 (x,y) 和半径 r</strong></li>
+<li><strong>多边形：“x1，y1，x2，y2，x3，y3 … ”，分别为多边形的顺序顶点坐标</strong></li>
+</ul>
+<p>&lt;img&gt;使用的 ismap 属性是个布尔属性，该属性将图像定义为服务器端的图像映射，当单击一个服务器端的图像映射时，单击处的坐标会以 URL 查询字符串的形式发送到服务器。</p>
+<h1 id="为网页添加音频及视频"><a href="#为网页添加音频及视频" class="headerlink" title="为网页添加音频及视频"></a>为网页添加音频及视频</h1><h2 id="1-使用-lt-audio-gt-元素"><a href="#1-使用-lt-audio-gt-元素" class="headerlink" title="1. 使用&lt;audio&gt;元素"></a>1. 使用&lt;audio&gt;元素</h2><p>​    &lt;audio&gt;用于定义声音，比如音乐或其他音频流。该属性目前支持3种文件格式：MP3、WAV、Ogg。可以在&lt;audio&gt;和&lt;/audio&gt;之间放置文本，当浏览器不支持该元素时显示。该元素的常用属性如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">autoplay</td>
+<td align="center">布尔属性，在加载完成后马上播放音频</td>
+</tr>
+<tr>
+<td align="center">controls</td>
+<td align="center">布尔属性 ，控制是否显示音频控件</td>
+</tr>
+<tr>
+<td align="center">loop</td>
+<td align="center">布尔属性，循环播放音频</td>
+</tr>
+<tr>
+<td align="center">muted</td>
+<td align="center">布尔属性，将音频输出为静音</td>
+</tr>
+<tr>
+<td align="center">preload</td>
+<td align="center">规定是否在页面加载后载入音频，取值有如下3个：Auto（当页面加载后载入整个音频），meta（当页面加载后只载入元数据）,none（当页面加载后不在音频）。如果设置了 autoplay 属性，则忽略 preload 属性</td>
+</tr>
+<tr>
+<td align="center">src</td>
+<td align="center">指定音频文件的 URL</td>
+</tr>
+</tbody></table>
+<p>​    &lt;source&gt;元素用来为媒体元素定义媒体资源，通过 src 属性指定媒体文件的 URL，通过 type 属性指定媒体资源的 MIME 类型。<span style="color:green;font-size:16px;"><strong>如果不确定浏览器支持的音频格式，则可不使用 src 属性，而使用多个 &lt;source&gt;元素链接不同的音频文件，浏览器将使用第一个支持的音频文件。 </strong></span></p>
+<h5 id="例1-1"><a href="#例1-1" class="headerlink" title="例1"></a>例1</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>播放音频<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;mp3/黄霄雲 - 星辰大海.mp3&quot;</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">preload</span>=<span class="string">&quot;auto&quot;</span>&gt;</span></span><br><span class="line">		您的浏览器不支持<span class="symbol">&amp;lt;</span>audio<span class="symbol">&amp;gt;</span>元素</span><br><span class="line">	<span class="tag">&lt;/<span class="name">audio</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">source</span> <span class="attr">type</span>=<span class="string">&quot;audio/mpeg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;mp3/大籽 - 白月光与朱砂痣.mp3&quot;</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">		您的浏览器不支持<span class="symbol">&amp;lt;</span>audio<span class="symbol">&amp;gt;</span>元素</span><br><span class="line">	<span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下-1"><a href="#效果如下-1" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%A4%9A%E5%AA%92%E4%BD%93/%E7%BD%91%E9%A1%B5%E5%A4%9A%E5%AA%92%E4%BD%93-3.png" class title="网页多媒体-3">
+
+<hr>
+
+<h2 id="2-使用-lt-video-gt-元素"><a href="#2-使用-lt-video-gt-元素" class="headerlink" title="2. 使用&lt;video&gt;元素"></a>2. 使用&lt;video&gt;元素</h2><p>​    &lt;video&gt;元素提供播放、暂停和音量控件来控制视频，同时提供 width 和 height 属性来控制视频的尺寸，如果没设置这些属性，浏览器就不会在加载时保留特定的空间。在&lt;video&gt;标签对之间插入的内容被提供给不支持&lt;video&gt;元素的浏览器显示。&lt;video&gt;元素拥有和&lt;audio&gt;元素类似的方法，属性和事件。&lt;video&gt;元素的方法、属性和事件也可使用 JavaScript 进行控制。</p>
+<h5 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>播放视频<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span> <span class="attr">controls</span> <span class="attr">src</span>=<span class="string">&quot;mp4/大籽-白月光与朱砂痣 (歌词版)(蓝光).mp4&quot;</span>&gt;</span></span><br><span class="line">		浏览器不支持<span class="symbol">&amp;lt;</span>video<span class="symbol">&amp;gt;</span>元素</span><br><span class="line">	<span class="tag">&lt;/<span class="name">video</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">height</span>=<span class="string">&quot;400&quot;</span> <span class="attr">controls</span> <span class="attr">src</span>=<span class="string">&quot;mp4/九尾-阿yueyue《云与海》(超清).mp4&quot;</span> <span class="attr">loop</span>&gt;</span></span><br><span class="line">		浏览器不支持<span class="symbol">&amp;lt;</span>video<span class="symbol">&amp;gt;</span>元素</span><br><span class="line">	<span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下-2"><a href="#效果如下-2" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%A4%9A%E5%AA%92%E4%BD%93/%E7%BD%91%E9%A1%B5%E5%A4%9A%E5%AA%92%E4%BD%93-4.png" class title="网页多媒体-4">
+
+<hr>
+
+<h2 id="3-使用-lt-embed-gt-元素"><a href="#3-使用-lt-embed-gt-元素" class="headerlink" title="3. 使用&lt;embed&gt;元素"></a>3. 使用&lt;embed&gt;元素</h2><p>​    &lt;embed&gt;元素可以播放音频、视频和Flash动画等，该元素用法与&lt;audio&gt;和&lt;video&gt;类似，&lt;embed&gt;标签定义了一个容器，用来嵌入外部应用或互动程序（插件）。</p>
+<h5 id="例3"><a href="#例3" class="headerlink" title="例3"></a>例3</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>播放视频<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>audio:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;mp3/黄霄雲 - 星辰大海.mp3&quot;</span> <span class="attr">controls</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>embed:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span>=<span class="string">&quot;mp3/黄霄雲 - 星辰大海.mp3&quot;</span> <span class="attr">controls</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>video:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">&quot;mp4/大籽-白月光与朱砂痣 (歌词版)(蓝光).mp4&quot;</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;200&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>embed:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span>=<span class="string">&quot;mp4/大籽-白月光与朱砂痣 (歌词版)(蓝光).mp4&quot;</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="string">&quot;200&quot;</span> <span class="attr">height</span>=<span class="string">&quot;200&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下-3"><a href="#效果如下-3" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%A4%9A%E5%AA%92%E4%BD%93/%E7%BD%91%E9%A1%B5%E5%A4%9A%E5%AA%92%E4%BD%93-5.png" class title="网页多媒体-5">
+
+<hr>
+
+<h2 id="4-在网页中嵌入腾讯视频"><a href="#4-在网页中嵌入腾讯视频" class="headerlink" title="4. 在网页中嵌入腾讯视频"></a>4. 在网页中嵌入腾讯视频</h2><p>​    在腾讯视频网站任意打开一个想要嵌入的视频，在浏览器的地址栏得到播放地址：<a href="https://v.qq.com/x/cover/m441e3rjq9kwpsc/m00253deqqo.html">https://v.qq.com/x/cover/m441e3rjq9kwpsc/m00253deqqo.html</a> 在这个地址中我们需要的是文件名  m00253deqqo.html ，其中 m00253deqqo 是视频的 vid。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://v.qq.com/iframe/player.html?vid=m00253deqqo&quot;</span> <span class="attr">allowfullscreen</span>=<span class="string">&quot;&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">height</span>=<span class="string">&quot;350&quot;</span> <span class="attr">width</span>=<span class="string">&quot;500&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    <span style="color:green;font-size:16px;"><strong>&lt;iframe&gt;元素自身与视频没有任何关系，该元素也叫“内联框架”，是一种特殊的元素，可以使用 src 属性在一个网页中嵌入另一个网页，通过修改 vid 改变要嵌入的视频。</strong></span></p>
+<hr>]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>网页多媒体</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在HTML中使用CSS</title>
+    <url>/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/</url>
+    <content><![CDATA[<h1 id="在-HTML-中使用-CSS"><a href="#在-HTML-中使用-CSS" class="headerlink" title="在 HTML 中使用 CSS"></a>在 HTML 中使用 CSS</h1><h2 id="1-CSS简介"><a href="#1-CSS简介" class="headerlink" title="1. CSS简介"></a>1. CSS简介</h2><p>​    CSS 的中文全称是层叠样式表（Cascading Style Sheets）,是一种用来表现 HTML 或 XML 等文件样式的编程语言。CSS 不仅可静态修饰网页，还可以配合各种脚本语言动态对网页中元素进行格式化。</p>
+<h2 id="2-内联样式"><a href="#2-内联样式" class="headerlink" title="2. 内联样式"></a>2. 内联样式</h2><p>​    如果只是简单的对某个元素单独定义样式，可以使用内联样式。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:50px;font-family: 楷体;color:green;background:red;&quot;</span>&gt;</span>内联样式<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/HTML%E4%B8%ADCSS-1.png" class title="HTML中CSS-1">
+
+<hr>
+
+<p>style 属性的值是若干个 CSS 属性/值对。CSS 规则要求属性名后面紧跟一个冒号，然后是属性值，每一个样式规则以分号结束，最后一个样式规则的结尾可以不加分号。</p>
+<h2 id="3-定义内部样式表"><a href="#3-定义内部样式表" class="headerlink" title="3. 定义内部样式表"></a>3. 定义内部样式表</h2><p>​    CSS 样式是通过 &lt;style&gt;标签嵌入页面中的，&lt;style&gt;元素位于&lt;head&gt;元素内，用于在网页内包含样式规则。在使用&lt;style&gt;元素是，尽管并非强制，但应该永远带有 type 属性，且属性值为 “text/css”。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;GB2312&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">color</span>:red;</span></span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">50px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-链接外部样式表"><a href="#4-链接外部样式表" class="headerlink" title="4. 链接外部样式表"></a>4. 链接外部样式表</h2><p>​    将共同的样式抽取出来，保存为一个独立的 CSS 文件，通过在文档的 &lt;head&gt; 部分使用&lt;link&gt;元素，引用外部样式表。&lt;link&gt;元素用于在网页中描述两个文档间关系，并且该元素永远是空元素，当与样式表一同使用时，必须带有两个属性：rel 和 href 。rel 属性用于指定包含链接的文档与链接指向文档间的关系，值为“stylesheet”；href 属性用于指定链接指向的文档的 URL。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-导入外部样式表"><a href="#5-导入外部样式表" class="headerlink" title="5. 导入外部样式表"></a>5. 导入外部样式表</h2><p>​    导入外部链接样式表的语法是@import，然后是关键字 url 和要导入的外部样式表的 URL，最后以分号结束，@import 指令必须在&lt;style&gt;标签中使用，而且必须在样式表中所有其他类型的规则之前使用。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">@import url(mystyle.css)</span><br></pre></td></tr></table></figure>
+
+<p>@import 和 link 的区别在于：</p>
+<ul>
+<li>&lt;link&gt;是 XHTML 标签，除了加载 CSS 外，还可以定义 RSS 等其他事务，@import 只能加载 CSS</li>
+<li>链接引用 CSS 时，在页面载入时同时加载；@import 需要页面完全载入后才加载</li>
+<li>&lt;link&gt;无兼容问题，@import 在低版本的浏览器不支持</li>
+<li>&lt;link&gt;标签支持使用 JavaScript 控制 DOM 以改变样式，而 @import 不支持</li>
+</ul>
+<h2 id="6-CSS继承"><a href="#6-CSS继承" class="headerlink" title="6. CSS继承"></a>6. CSS继承</h2><p>​    大多数元素可以从父元素那里继承样式属性，但是有些样式属性（例如边框）不可以继承，对于可以继承样式规则的属性，也可以重新定义，覆盖继承的值。在使用 CSS 继承时，需要重点关注 font-size 属性，虽然也继承，但对于不同标签，继承的效果不同。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>font-size 属性继承<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">body</span>&#123;</span></span><br><span class="line">			font-size=&quot;20px&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>字体大小为20px<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>字体大小为40px<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下-1"><a href="#效果如下-1" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/HTML%E4%B8%ADCSS-2.png" class title="HTML中CSS-2">
+
+<hr>
+
+<p>​    虽然都继承了&lt;body&gt;属性，但&lt;h1&gt;属性变成40px，因为&lt;h1&gt;元素的默认样式如下 2em（200%），如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">	display: block;</span><br><span class="line">	font-size:2em;</span><br><span class="line">	-webkit-margin-before: 0.67em;</span><br><span class="line">	-webkit-margin-after: 0.67em;</span><br><span class="line">	-webkit-margin-start: 0px;</span><br><span class="line">	-webkit-margin-end: 0px;</span><br><span class="line">	font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-！important-指示符"><a href="#7-！important-指示符" class="headerlink" title="7. ！important 指示符"></a>7. ！important 指示符</h2><p>​    如果某个特定的规则不希望被其他规则覆盖，那么可以使用！important 指示符。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">	color:red !important;</span><br><span class="line">	font-size:12px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    当使用！important 指示符是，要确认放在样式规则的最后，否则会被忽略。</p>
+<h2 id="8-CSS优先级"><a href="#8-CSS优先级" class="headerlink" title="8. CSS优先级"></a>8. CSS优先级</h2><p>样式的优先级如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">内联样式 &gt; 内部样式表 &gt; 外部样式表</span><br></pre></td></tr></table></figure>
+
+<p>同一个样式表中定义的样式，使用不同的选择器也可能存在叠加，选择器的优先级如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ID 选择器 &gt; 类选择器 &gt; 标签选择器</span><br></pre></td></tr></table></figure>
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>CSS基础</tag>
+      </tags>
+  </entry>
 </search>
