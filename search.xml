@@ -1186,21 +1186,21 @@
     <url>/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/</url>
     <content><![CDATA[<h1 id="在-HTML-中使用-CSS"><a href="#在-HTML-中使用-CSS" class="headerlink" title="在 HTML 中使用 CSS"></a>在 HTML 中使用 CSS</h1><h2 id="1-CSS简介"><a href="#1-CSS简介" class="headerlink" title="1. CSS简介"></a>1. CSS简介</h2><p>​    CSS 的中文全称是层叠样式表（Cascading Style Sheets）,是一种用来表现 HTML 或 XML 等文件样式的编程语言。CSS 不仅可静态修饰网页，还可以配合各种脚本语言动态对网页中元素进行格式化。</p>
 <h2 id="2-内联样式"><a href="#2-内联样式" class="headerlink" title="2. 内联样式"></a>2. 内联样式</h2><p>​    如果只是简单的对某个元素单独定义样式，可以使用内联样式。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:50px;font-family: 楷体;color:green;background:red;&quot;</span>&gt;</span>内联样式<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:50px;font-family: 楷体;color:green;background-color:red;&quot;</span>&gt;</span>内联样式<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/HTML%E4%B8%ADCSS-1.png" class title="HTML中CSS-1">
 
 <hr>
 
 <p>style 属性的值是若干个 CSS 属性/值对。CSS 规则要求属性名后面紧跟一个冒号，然后是属性值，每一个样式规则以分号结束，最后一个样式规则的结尾可以不加分号。</p>
-<h2 id="3-定义内部样式表"><a href="#3-定义内部样式表" class="headerlink" title="3. 定义内部样式表"></a>3. 定义内部样式表</h2><p>​    CSS 样式是通过 &lt;style&gt;标签嵌入页面中的，&lt;style&gt;元素位于&lt;head&gt;元素内，用于在网页内包含样式规则。在使用&lt;style&gt;元素是，尽管并非强制，但应该永远带有 type 属性，且属性值为 “text/css”。</p>
+<h2 id="3-定义内部样式表"><a href="#3-定义内部样式表" class="headerlink" title="3. 定义内部样式表"></a>3. 定义内部样式表</h2><p>​    CSS 样式是通过 &lt;style&gt;标签嵌入页面中的，&lt;style&gt;元素位于&lt;head&gt;元素内，用于在网页内包含样式规则。在使用&lt;style&gt;元素时，尽管并非强制，但应该永远带有 type 属性，且属性值为 “text/css”。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;GB2312&quot;</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">color</span>:red;</span></span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">50px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="4-链接外部样式表"><a href="#4-链接外部样式表" class="headerlink" title="4. 链接外部样式表"></a>4. 链接外部样式表</h2><p>​    将共同的样式抽取出来，保存为一个独立的 CSS 文件，通过在文档的 &lt;head&gt; 部分使用&lt;link&gt;元素，引用外部样式表。&lt;link&gt;元素用于在网页中描述两个文档间关系，并且该元素永远是空元素，当与样式表一同使用时，必须带有两个属性：rel 和 href 。rel 属性用于指定包含链接的文档与链接指向文档间的关系，值为“stylesheet”；href 属性用于指定链接指向的文档的 URL。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;mystyle.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="5-导入外部样式表"><a href="#5-导入外部样式表" class="headerlink" title="5. 导入外部样式表"></a>5. 导入外部样式表</h2><p>​    导入外部链接样式表的语法是@import，然后是关键字 url 和要导入的外部样式表的 URL，最后以分号结束，@import 指令必须在&lt;style&gt;标签中使用，而且必须在样式表中所有其他类型的规则之前使用。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">@import url(mystyle.css)</span><br></pre></td></tr></table></figure>
+<h2 id="5-导入外部样式表"><a href="#5-导入外部样式表" class="headerlink" title="5. 导入外部样式表"></a>5. 导入外部样式表</h2><p>​    导入外部链接样式表的语法是@import，然后是关键字 url 和要导入的外部样式表的 URL，最后以分号结束，<span style="color:green;font-size:16px;"><strong>@import 指令必须在&lt;style&gt;标签中使用，而且必须在样式表中所有其他类型的规则之前使用。</strong></span></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> url(mystyle.css)</span><br></pre></td></tr></table></figure>
 
 <p>@import 和 link 的区别在于：</p>
 <ol>
@@ -1209,7 +1209,7 @@
 <li><strong>&lt;link&gt;无兼容问题，@import 在低版本的浏览器不支持</strong></li>
 <li><strong>&lt;link&gt;标签支持使用 JavaScript 控制 DOM 以改变样式，而 @import 不支持</strong></li>
 </ol>
-<h2 id="6-CSS继承"><a href="#6-CSS继承" class="headerlink" title="6. CSS继承"></a>6. CSS继承</h2><p>​    大多数元素可以从父元素那里继承样式属性，但是有些样式属性（例如边框）不可以继承，对于可以继承样式规则的属性，也可以重新定义，覆盖继承的值。在使用 CSS 继承时，需要重点关注 font-size 属性，虽然也继承，但对于不同标签，继承的效果不同。</p>
+<h2 id="6-CSS继承"><a href="#6-CSS继承" class="headerlink" title="6. CSS继承"></a>6. CSS继承</h2><p>​    大多数元素可以从父元素那里继承样式属性，但是有些样式属性（例如边框）不可以继承，对于可以继承样式规则的属性，也可以重新定义，覆盖继承的值。<span style="color:green;font-size:16px;"><strong>在使用 CSS 继承时，需要重点关注 font-size 属性，虽然也继承，但对于不同标签，继承的效果不同。</strong></span></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>font-size 属性继承<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">body</span>&#123;</span></span><br><span class="line">			font-size=&quot;20px&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>字体大小为20px<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>字体大小为40px<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h6 id="效果如下-1"><a href="#效果如下-1" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/HTML%E4%B8%ADCSS-2.png" class title="HTML中CSS-2">
@@ -1219,10 +1219,10 @@
 <p>​    虽然都继承了&lt;body&gt;属性，但&lt;h1&gt;属性变成40px，因为&lt;h1&gt;元素的默认样式如下 2em（200%），如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">	display: block;</span><br><span class="line">	font-size:2em;</span><br><span class="line">	-webkit-margin-before: 0.67em;</span><br><span class="line">	-webkit-margin-after: 0.67em;</span><br><span class="line">	-webkit-margin-start: 0px;</span><br><span class="line">	-webkit-margin-end: 0px;</span><br><span class="line">	font-weight: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="7-！important-指示符"><a href="#7-！important-指示符" class="headerlink" title="7. ！important 指示符"></a>7. ！important 指示符</h2><p>​    如果某个特定的规则不希望被其他规则覆盖，那么可以使用！important 指示符。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">p&#123;</span><br><span class="line">	color:red !important;</span><br><span class="line">	font-size:12px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-！important-指示符"><a href="#7-！important-指示符" class="headerlink" title="7. ！important 指示符"></a>7. ！important 指示符</h2><p><span style="color:green;font-size:16px;"><strong>    如果某个特定的规则不希望被其他规则覆盖，那么可以使用！important 指示符。</strong></span></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red <span class="meta">!important</span>;</span><br><span class="line">	<span class="attribute">font-size</span>:<span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>​    当使用！important 指示符是，要确认放在样式规则的最后，否则会被忽略。</p>
+<p>​    <span style="color:green;font-size:16px;"><strong>当使用！important 指示符时，要确认放在样式规则的最后，否则会被忽略。</strong></span></p>
 <h2 id="8-CSS优先级"><a href="#8-CSS优先级" class="headerlink" title="8. CSS优先级"></a>8. CSS优先级</h2><p>样式的优先级如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">内联样式 &gt; 内部样式表 &gt; 外部样式表</span><br></pre></td></tr></table></figure>
 
@@ -1676,6 +1676,70 @@
         <tag>HTML表单</tag>
         <tag>input元素</tag>
         <tag>button元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS基本选择器和属性选择器</title>
+    <url>/2021/03/22/CSS%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="CSS基本选择器和属性选择器"><a href="#CSS基本选择器和属性选择器" class="headerlink" title="CSS基本选择器和属性选择器"></a>CSS基本选择器和属性选择器</h1><h2 id="1-基本选择器"><a href="#1-基本选择器" class="headerlink" title="1. 基本选择器"></a>1. 基本选择器</h2><h3 id="1-1-标签选择器"><a href="#1-1-标签选择器" class="headerlink" title="1.1 标签选择器"></a>1.1 标签选择器</h3><p>​    标签选择器直接将 HTML 标签作为选择器，如果要将相同的规则应用于多个标签，则可用逗号分隔。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    一种特殊的标签选择器是通用选择器，用一个 (*) 表示，表示匹配文档中全部标签。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-类选择器"><a href="#1-2-类选择器" class="headerlink" title="1.2 类选择器"></a>1.2 类选择器</h3><p>​    类选择器能够将规则与一个或多个包含 class 属性的元素相匹配，class 属性的值匹配类选择器中指定的值。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.nature</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:green;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>​    在英文句号前添加限定标签只对该元素匹配的 class 生效。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.nature</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    如果对多个类编写相同的样式规则，可用逗号操作符按顺序排列类名即可。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.first</span>,<span class="selector-class">.last</span>,<span class="selector-class">.middle</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-ID选择器"><a href="#1-3-ID选择器" class="headerlink" title="1.3 ID选择器"></a>1.3 ID选择器</h3><p>​    ID 选择器只作用于 HTML 元素的 id 属性，并使用“#”进行标识。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#first</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>:green;</span><br><span class="line">	<span class="attribute">text-align</span>:center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-属性选择器"><a href="#2-属性选择器" class="headerlink" title="2. 属性选择器"></a>2. 属性选择器</h2><h3 id="2-1-CSS-2-0属性选择器"><a href="#2-1-CSS-2-0属性选择器" class="headerlink" title="2.1 CSS 2.0属性选择器"></a>2.1 CSS 2.0属性选择器</h3><h4 id="一-选取带有指定属性的元素"><a href="#一-选取带有指定属性的元素" class="headerlink" title="(一) 选取带有指定属性的元素"></a>(一) 选取带有指定属性的元素</h4><p>​    选取带有指定属性的元素，不论属性的值是什么，这里使用通用选择器选择所有标签，然后过滤出包含 title 属性的元素。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="selector-attr">[title]</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    也可以限定具体的标签类型，例如：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    如果需要根据多个属性进行选择，只需要将属性选择器链接在一起即可。要将同时包含 href 和 title 属性的超链接文本设置为红色：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href]</span><span class="selector-attr">[title]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二-选取带有指定属性和属性值的元素"><a href="#二-选取带有指定属性和属性值的元素" class="headerlink" title="(二) 选取带有指定属性和属性值的元素"></a>(二) 选取带有指定属性和属性值的元素</h4><p>​    为了进一步缩小范围，可以限定属性的具体值。将百度的超链接变成红色：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href=<span class="string">&quot;http://www.baidu.com&quot;</span>]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    如果要限定多个属性的具体值，可把多个属性-值 选择器链接在一起。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href=<span class="string">&quot;http://www.baidu.com&quot;</span>]</span><span class="selector-attr">[title=<span class="string">&quot;百度一下&quot;</span>]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="三-选取属性值中包含指定词汇的元素"><a href="#三-选取属性值中包含指定词汇的元素" class="headerlink" title="(三) 选取属性值中包含指定词汇的元素"></a>(三) 选取属性值中包含指定词汇的元素</h4><p>​    如果需要根据词汇列表的某个词汇进行选择，需要使用波浪号(~)。这里的属性值必须是一个以空格符分隔的列表。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[title~=<span class="string">&quot;bar&quot;</span>]</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span>:<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    <span style="color:green;font-size:16px;"><strong>对于下面两个超链接，只有第一个可以匹配</strong></span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">title</span>=<span class="string">&quot;bar bar1 bar2&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">title</span>=<span class="string">&quot;bar1 bar2 bar3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="四-选取带有指定值开头的属性值的元素"><a href="#四-选取带有指定值开头的属性值的元素" class="headerlink" title="(四) 选取带有指定值开头的属性值的元素"></a>(四) 选取带有指定值开头的属性值的元素</h4><p>​    下面规则会选择 lang 属性等于 en 或 en- 开头的所有元素。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*<span class="selector-attr">[lang|=<span class="string">&quot;en&quot;</span>]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-CSS-3-属性选择器"><a href="#2-2-CSS-3-属性选择器" class="headerlink" title="2.2 CSS 3 属性选择器"></a>2.2 CSS 3 属性选择器</h3><p>​    CSS 3 遵循通用编码规则，选用 ^、$ 和 * 这三个通用匹配运算符。</p>
+<ol>
+<li><strong>[abc^=”def”]：选择 abc 属性值以 “def” 开头的所有元素</strong></li>
+<li><strong>[abc$=”def”]：选择 abc 属性值以 “def” 结尾的所有元素</strong></li>
+<li><em><em>[abc</em>=”def”]：选择 abc 属性中包含子串 “def” 的所有元素</em>*</li>
+</ol>
+<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>属性选择器<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">margin</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-size</span>: <span class="number">25px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-tag">p</span><span class="selector-attr">[class]</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">font-size</span>: italic;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-tag">p</span><span class="selector-attr">[class=first]</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">font</span>-<span class="attribute">width</span>: bold;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">padding-left</span>: <span class="number">30px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-attr">[href^=<span class="string">&quot;http:&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">img/1.jpg</span>) no-repeat;</span></span><br><span class="line"><span class="css">    <span class="attribute">background-size</span>: <span class="number">25px</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-attr">[href$=<span class="string">&quot;doc&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">img/2.jpg</span>) no-repeat;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="css"><span class="selector-tag">a</span><span class="selector-attr">[href$=<span class="string">&quot;txt&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">img/3.jpg</span>) no-repeat;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;first&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;1.doc&quot;</span>&gt;</span>DOC文件<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;1.txt&quot;</span>&gt;</span>TXT文件<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;last&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.baidu.com&quot;</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/22/CSS%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8.png" class title="CSS基本选择器">
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>CSS选择器</tag>
       </tags>
   </entry>
 </search>
