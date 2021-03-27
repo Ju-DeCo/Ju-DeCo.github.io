@@ -168,7 +168,7 @@
 <p>也可以限定具体的标签类型，例如：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>如果需要根据多个属性进行选择，只需要将属性选择器链接在一起即可。要将<span style="color:green;font-size:16px;"><strong>同时包含 href 和 title 属性</strong></span>的超链接文本设置为红色：</p>
+<p>如果需要根据多个属性进行选择，只需要将属性选择器链接在一起即可。要将<span style="color:green;font-size:16px"><strong>同时包含 href 和 title 属性</strong></span>的超链接文本设置为红色：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-attr">[href]</span><span class="selector-attr">[title]</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="二-选取带有指定属性和属性值的元素"><a href="#二-选取带有指定属性和属性值的元素" class="headerlink" title="(二) 选取带有指定属性和属性值的元素"></a>(二) 选取带有指定属性和属性值的元素</h4><p>为了进一步缩小范围，可以限定属性的具体值。将百度的超链接变成红色：</p>
@@ -1945,14 +1945,14 @@
 <td align="center">指定文本行文方向</td>
 </tr>
 </tbody></table>
-<h2 id="1-color-属性"><a href="#1-color-属性" class="headerlink" title="1. color 属性"></a><a id="1">1. color 属性</a></h2><h3 id="1-1-十六进制颜色代码"><a href="#1-1-十六进制颜色代码" class="headerlink" title="1.1 十六进制颜色代码"></a>1.1 十六进制颜色代码</h3><p>将 3 个介于 00 和 FF 之间的十六进制数链接起来设置颜色值，若十六进制的 3 组数各自成对，则可简写为 3 位。</p>
+<h2 id="1-color-属性"><a href="#1-color-属性" class="headerlink" title="1. color 属性"></a><a id="1">1. color 属性</a></h2><h3 id="1-1-十六进制颜色代码"><a href="#1-1-十六进制颜色代码" class="headerlink" title="1.1 十六进制颜色代码"></a>1.1 十六进制颜色代码</h3><p>将 3 个介于 00 和 FF 之间的十六进制数链接起来设置颜色值，<span style="color:green;font-size:16px"><strong>若十六进制的 3 组数各自成对，则可简写为 3 位。</strong></span></p>
 <h3 id="1-2-颜色关键字"><a href="#1-2-颜色关键字" class="headerlink" title="1.2 颜色关键字"></a>1.2 颜色关键字</h3><p><strong>(1) 颜色名称 ：直接使用颜色的英文单词，例如 red、bule、orange 等</strong></p>
 <p><strong>(2) transparent ：用来表示文本的颜色纯透明，可近似认为是 rgba(0,0,0,0)</strong></p>
 <p><strong>(3) currentColor ：指当前的文字颜色</strong></p>
 <h3 id="1-3-RGB-模式"><a href="#1-3-RGB-模式" class="headerlink" title="1.3 RGB 模式"></a>1.3 RGB 模式</h3><p>通过组合不同的红色(R)、绿色(G)、蓝色(B) 分量创造出的颜色被称为 RGB 模式的颜色。使用方法如下：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">rgb(x%,y%,z%)</span><br><span class="line">rgb(<span class="selector-tag">a</span>,<span class="selector-tag">b</span>,c)</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-4-RGBA-模式"><a href="#1-4-RGBA-模式" class="headerlink" title="1.4 RGBA 模式"></a>1.4 RGBA 模式</h3><p>在 RGB 模式的基础上增加了 alpha 通道，用来设置颜色的透明度，alpha 值的范围为 0~1。0 表示完全透明，1表示完全不透明。使用方法如下：</p>
+<h3 id="1-4-RGBA-模式"><a href="#1-4-RGBA-模式" class="headerlink" title="1.4 RGBA 模式"></a>1.4 RGBA 模式</h3><p>在 RGB 模式的基础上增加了 alpha 通道，用来设置颜色的透明度，<span style="color:green;font-size:16px"><strong>alpha 值的范围为 0~1。0 表示完全透明，1表示完全不透明。</strong></span>使用方法如下：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">rgba(r,g,<span class="selector-tag">b</span>,<span class="selector-tag">a</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="1-5-HSL-模式"><a href="#1-5-HSL-模式" class="headerlink" title="1.5 HSL 模式"></a>1.5 HSL 模式</h3><p>HSL 模式通过色调(H)、饱和度(S)、亮度(L)三个颜色通道的变化以及它们的相互叠加来得到各式各样的颜色，使用方法如下：</p>
@@ -2007,7 +2007,7 @@
 <td align="center">将文本底部及图片底部与行内最低文本的底部对齐</td>
 </tr>
 </tbody></table>
-<p>除了上表中的取值，该属性的值还可以是 inherit、长度值或百分比值。inherit 表示从父元素继承 vertical-align 属性的值，也可使用行高属性（line-height）的百分比值来排列元素，长度值和百分比值可以是负值。</p>
+<p>除了上表中的取值，该属性的值还可以是 inherit、长度值或百分比值。inherit 表示从父元素继承 vertical-align 属性的值，也可使用行高属性（line-height）的百分比值来排列元素，<span style="color:green;font-size:16px"><strong>长度值和百分比值可以是负值。</strong></span></p>
 <h2 id="4-text-decoration-属性"><a href="#4-text-decoration-属性" class="headerlink" title="4. text-decoration 属性"></a><a id="4">4. text-decoration 属性</a></h2><p>text-decoration 属性用来添加文本修饰，取值如下：</p>
 <table>
 <thead>
@@ -2039,7 +2039,7 @@
 
 <hr>
 
-<h2 id="5-text-indent-属性"><a href="#5-text-indent-属性" class="headerlink" title="5. text-indent 属性"></a><a id="5">5. text-indent 属性</a></h2><p>text-indent 属性用来为块级元素设置首行缩进量，对行内标记无效。该属性的值还可以使用负值，表示向前凸出相应的大小或字符。</p>
+<h2 id="5-text-indent-属性"><a href="#5-text-indent-属性" class="headerlink" title="5. text-indent 属性"></a><a id="5">5. text-indent 属性</a></h2><p>text-indent 属性用来为块级元素设置首行缩进量，对行内标记无效。<span style="color:green;font-size:16px"><strong>该属性的值还可以使用负值，表示向前凸出相应的大小或字符。</strong></span></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-indent</span>:<span class="number">30px</span>; 	<span class="comment">/*缩进30像素*/</span></span><br><span class="line"><span class="attribute">text-indent</span>:<span class="number">2em</span>;	<span class="comment">/*缩进两个字符*/</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="6-text-shadow-属性"><a href="#6-text-shadow-属性" class="headerlink" title="6. text-shadow 属性"></a><a id="6">6. text-shadow 属性</a></h2><p>text-shadow 属性用来创建投影，该属性的值共有 4 个参数：</p>
@@ -2050,7 +2050,7 @@
 <p><strong>(2) y-offset ：垂直阴影，值为正向下偏移，为负向上偏移</strong></p>
 <p><strong>(3) blur ：可选参数，表示阴影的模糊程度，单位可为 px、em 或百分比等。该参数的值不能为负，值越大阴影越模糊</strong></p>
 <p><strong>(4) color ：可选参数，表示阴影的颜色</strong></p>
-<p>也可以使用 text-shadow 属性给文字指定多个阴影，并且针对每个阴影使用不同的颜色。例如：</p>
+<p><span style="color:green;font-size:16px"><strong>也可以使用 text-shadow 属性给文字指定多个阴影，并且针对每个阴影使用不同的颜色。</strong></span>例如：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">text-shadow</span>:<span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> white,<span class="number">0</span> -<span class="number">5px</span> <span class="number">5px</span> red,<span class="number">2px</span> -<span class="number">10px</span> <span class="number">6px</span> blue;</span><br></pre></td></tr></table></figure>
 
 <p>当 text-shadow 属性的值为值列表时，阴影效果会按照给定的值的顺序应用到元素的文本上，有可能出现相互覆盖的现象。</p>
@@ -2061,7 +2061,7 @@
 <hr>
 
 <h2 id="7-text-transform-属性"><a href="#7-text-transform-属性" class="headerlink" title="7. text-transform 属性"></a><a id="7">7. text-transform 属性</a></h2><p>text-transform 属性用来指定元素内容的大小写形式，主要针对英文字母，可能的取值：none、captialize(大写每个单词的首字母)、uppercase(全部大写)、lowercase(全部小写)。</p>
-<h2 id="8-letter-spacing-和-word-spacing-属性"><a href="#8-letter-spacing-和-word-spacing-属性" class="headerlink" title="8. letter-spacing 和 word-spacing 属性"></a><a id="8">8. letter-spacing 和 word-spacing 属性</a></h2><p>letter-spacing 属性用来设置字符间的距离（字距），word-spacing 属性用来设置单词间的距离，该属性对中文没有影响，而 letter-spacing 可以影响中文的文字间距。</p>
+<h2 id="8-letter-spacing-和-word-spacing-属性"><a href="#8-letter-spacing-和-word-spacing-属性" class="headerlink" title="8. letter-spacing 和 word-spacing 属性"></a><a id="8">8. letter-spacing 和 word-spacing 属性</a></h2><p>letter-spacing 属性用来设置字符间的距离（字距），<span style="color:green;font-size:16px"><strong>word-spacing 属性用来设置单词间的距离，该属性对中文没有影响，而 letter-spacing 可以影响中文的文字间距。</strong></span></p>
 <h5 id="例3"><a href="#例3" class="headerlink" title="例3"></a>例3</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS设置字符和单词间距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		.two&#123;</span><br><span class="line"><span class="css">			<span class="attribute">letter-spacing</span>:<span class="number">3px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">text-transform</span>:capitalize;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.three&#123;</span><br><span class="line"><span class="css">			<span class="attribute">letter-spacing</span>:<span class="number">0.5em</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.four&#123;</span><br><span class="line"><span class="css">			<span class="attribute">letter-spacing</span>:-<span class="number">2px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">word-spacing</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span> this is a test for letter ans word spacing.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span> this is a test for letter ans word spacing.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span> this is a test for letter ans word spacing.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span> this is a test for letter ans word spacing.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>测试中文的字符和单词间距<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;two&quot;</span>&gt;</span>测试中文的字符和单词间距<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;three&quot;</span>&gt;</span>测试中文的字符和单词间距<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;four&quot;</span>&gt;</span>测试中文的字符和单词间距<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h6 id="效果如下-2"><a href="#效果如下-2" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/26/CSS%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96/CSS%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96-3.png" class title="CSS文本格式化-3">
@@ -2098,7 +2098,7 @@
 </tr>
 </tbody></table>
 <h2 id="10-text-overflow-属性"><a href="#10-text-overflow-属性" class="headerlink" title="10. text-overflow 属性"></a><a id="10">10. text-overflow 属性</a></h2><p>文本溢出属性 text-overfolw 用来设置是否使用省略标记(…)标识对象内文本的溢出，该属性取值有两个：ellipsis(显示省略标记) 和 clip(不显示省略标记，而是将溢出的部分剪裁掉)。</p>
-<p>单独使用 text-overflow 属性无法以省略号表示多余文本，还需定义如下内容：</p>
+<p><span style="color:green;font-size:16px"><strong>单独使用 text-overflow 属性无法以省略号表示多余文本，还需定义如下内容：</strong></span></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">white-space</span>:nowrap;		<span class="comment">/*强制文本在一行中显示*/</span></span><br><span class="line"><span class="attribute">overflow</span>:hidden;		<span class="comment">/*将溢出内容隐藏*/</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="例4"><a href="#例4" class="headerlink" title="例4"></a>例4</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>text-overflow<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		.overflow&#123;</span><br><span class="line"><span class="css">			<span class="attribute">width</span>:<span class="number">200px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">height</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border</span>:<span class="number">1px</span> solid gray;	</span></span><br><span class="line"><span class="css">			<span class="attribute">text-overflow</span>:ellipsis;	</span></span><br><span class="line"><span class="css">			<span class="attribute">overflow</span>:hidden;	</span></span><br><span class="line"><span class="css">			<span class="attribute">white-space</span>:nowrap;	</span></span><br><span class="line">		&#125;	</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;overflow&quot;</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2204,6 +2204,109 @@
       <tags>
         <tag>CSS</tag>
         <tag>文本字体</tag>
+        <tag>font</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS设置元素背景</title>
+    <url>/2021/03/27/CSS%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF/</url>
+    <content><![CDATA[<h1 id="CSS-设置元素背景"><a href="#CSS-设置元素背景" class="headerlink" title="CSS 设置元素背景"></a>CSS 设置元素背景</h1><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="#1">background-color</a></td>
+<td align="center">指定背景颜色</td>
+</tr>
+<tr>
+<td align="center"><a href="#2">background-image</a></td>
+<td align="center">指定一张作为背景的图片</td>
+</tr>
+<tr>
+<td align="center"><a href="#3">background-position</a></td>
+<td align="center">指定背景图片的位置</td>
+</tr>
+<tr>
+<td align="center"><a href="#4">background-size</a></td>
+<td align="center">指定背景图片的大小</td>
+</tr>
+<tr>
+<td align="center"><a href="#5">background-origin</a></td>
+<td align="center">指定背景图片的定位区域</td>
+</tr>
+<tr>
+<td align="center"><a href="#6">background-repeat</a></td>
+<td align="center">指定背景图片是否应该重复显示</td>
+</tr>
+<tr>
+<td align="center"><a href="#7">background-clip</a></td>
+<td align="center">指定背景的绘制区域</td>
+</tr>
+<tr>
+<td align="center"><a href="#8">background-attachment</a></td>
+<td align="center">指定背景图片应该固定于页面中的某个位置，以及在用户向下滚动页面时是否留在原地</td>
+</tr>
+</tbody></table>
+<h2 id="1-background-color-属性"><a href="#1-background-color-属性" class="headerlink" title="1. background-color 属性"></a><a id="1">1. background-color 属性</a></h2><p>background-color 属性能够为任何元素指定单一实体色背景，取值与 color 属性值一样，可以有多种模式。</p>
+<h2 id="2-background-image-属性"><a href="#2-background-image-属性" class="headerlink" title="2. background-image 属性"></a><a id="2">2. background-image 属性</a></h2><p>background-image 属性用于为元素设置背景图像，<span style="color:green;font-size:16px"><strong>元素的背景占据元素的全部尺寸，包括内边距和边框，但不包括外边框。</strong></span>默认情况背景图像位于元素的左上角，并在水平和垂直方向上重复。</p>
+<p>background-image 属性的值以字母 url 开头，用法如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">&quot;images/background.gif&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><span style="color:green;font-size:16px"><strong>如果同时使用 background-image 属性与 background-color 属性，则 background-image 属性拥有优先权。</strong></span></p>
+<h2 id="3-background-position-属性"><a href="#3-background-position-属性" class="headerlink" title="3. background-position 属性"></a><a id="3">3. background-position 属性</a></h2><p>background-position 属性用来设置背景图像 (background-image 属性定义) 的起始位置，background-position属性的可取值如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">top left<br>top center<br>top right<br>center left<br>center center<br>center right<br>bottom left<br>bottom center<br>bottom right</td>
+<td align="center">如果只规定了一个关键词，那么第二值是 “center”</td>
+</tr>
+<tr>
+<td align="center">x% y%</td>
+<td align="center">第一个值是水平位置，第二个是垂直位置，左上角是 0% 0%(默认值)，如果只规定了一个值，另一个值是 50%</td>
+</tr>
+<tr>
+<td align="center">xpos ypos</td>
+<td align="center">左上角是 0 0，单位是像素或任何其他 CSS 单位，如果只规定一个值，另一个值是 50%</td>
+</tr>
+</tbody></table>
+<h2 id="4-background-size-属性"><a href="#4-background-size-属性" class="headerlink" title="4. background-size 属性"></a><a id="4">4. background-size 属性</a></h2><p>background-size 属性用来控制背景图像的尺寸，该属性的取值如下：</p>
+<p><strong>(1) length ：设置背景图片的高度和宽度，包括两个值。第一个值设置宽度，第二个值设置高度，如果只设置一个值，另一个值会被设置为 auto</strong></p>
+<p><strong>(2) percentage ：以父元素的百分比来设置背景图像的宽度和高度，包括两个百分比值。第一个值设置宽度，第二个值设置高度，如果只设置一个值，另一个值会被设置为 auto</strong></p>
+<p><strong>(3) cover ：使背景图像完全覆盖背景区域</strong></p>
+<p><strong>(4) contain ：使背景图像完全适应内容区域</strong></p>
+<h2 id="5-background-origin-属性"><a href="#5-background-origin-属性" class="headerlink" title="5. background-origin 属性"></a><a id="5">5. background-origin 属性</a></h2><p>background-origin 属性规定 background-position 属性相对什么位置来定位。<span style="color:green;font-size:16px"><strong>如果背景图像的 background-attachment 属性为 fixed，该属性不生效。</strong></span>该属性的取值如下：</p>
+<p><strong>(1) padding-box ：指定背景图像相对于内边距来定位</strong></p>
+<p><strong>(2) border-box ：指定背景图像相对于边框来定位</strong></p>
+<p><strong>(3) content-box ：指定背景图像相对于内容来定位</strong></p>
+<h2 id="6-background-repeat-属性"><a href="#6-background-repeat-属性" class="headerlink" title="6. background-repeat 属性"></a><a id="6">6. background-repeat 属性</a></h2><p>background-repeat 属性规定图像的平铺模式，默认情况背景图像在水平和垂直方向上重复，背景图像的位置是根据 background-position 属性设置的。该属性可取值如下：</p>
+<p><strong>(1) repeat ：默认，背景图像在水平和垂直方向上重复</strong></p>
+<p><strong>(2) repeat-x ：背景图像在水平方向上重复</strong></p>
+<p><strong>(3) repeat-y ：背景图像在垂直方向上重复</strong></p>
+<p><strong>(4) no-repeat ：背景图像仅显示一次</strong></p>
+<h3 id="7-background-clip-属性"><a href="#7-background-clip-属性" class="headerlink" title="7. background-clip 属性"></a><a id="7">7. background-clip 属性</a></h3><p>background-clip 属性用来规定背景的绘制区域，取值与 background-origin 属性相同，表示背景图像被剪裁到相应的边框处。</p>
+<h2 id="8-background-attachment-属性"><a href="#8-background-attachment-属性" class="headerlink" title="8. background-attachment 属性"></a><a id="8">8. background-attachment 属性</a></h2><p>background-attachment 属性用于设置背景图像是否固定或随着页面的其余部分滚动，该属性取值如下：</p>
+<p><strong>(1) scroll ：默认值，背景图像会随着页面其余部分的滚动而移动</strong></p>
+<p><strong>(2) fixed ：当页面的其余部分滚动时，背景图像不会移动</strong></p>
+<h5 id="例"><a href="#例" class="headerlink" title="例"></a>例</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置元素的背景图像<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">body</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">&quot;img/5.jpg&quot;</span>);</span></span><br><span class="line"><span class="css">			<span class="attribute">background-size</span>:<span class="number">300px</span> <span class="number">510px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-repeat</span>:repeat-x;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-clip</span>:content-box;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#EF5B0B</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">padding</span>:<span class="number">30px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">&quot;img/7.jpg&quot;</span>);</span></span><br><span class="line"><span class="css">			<span class="attribute">background-size</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-repeat</span>:no-repeat;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-position</span><span class="selector-pseudo">:left</span>;	</span></span><br><span class="line">		&#125;</span><br><span class="line">		#div1 &#123;</span><br><span class="line"><span class="css">			backgruond-origin:border-box;</span></span><br><span class="line">		&#125;</span><br><span class="line">		#div2&#123;</span><br><span class="line"><span class="css">			<span class="attribute">background-origin</span>:content-box;</span></span><br><span class="line">		&#125;</span><br><span class="line">		#div3&#123;</span><br><span class="line"><span class="css">			<span class="attribute">background-position</span>:center;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>CSS设置背景图像<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">strong</span>&gt;</span>body背景仅横向平铺<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;font-size:25px;font-weight:bold;font-family:consolas&quot;</span>&gt;</span>background-origin:border-box;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div2&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;font-size:25px;font-weight:bold;font-family:consolas&quot;</span>&gt;</span>backgruond-origin:content-box;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div3&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;font-size:25px;font-weight:bold;font-family:consolas&quot;</span>&gt;</span>background-position:center;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a><span style="color:red;font-size:18px">效果如下</span></h6><img src="/2021/03/27/CSS%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF/CSS%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF.png" class title="CSS设置元素背景">
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>元素背景</tag>
+        <tag>background</tag>
       </tags>
   </entry>
 </search>
