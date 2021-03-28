@@ -3,7 +3,7 @@
   <entry>
     <title>CSS伪类选择器</title>
     <url>/2021/03/24/CSS%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">伪类选择器</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">伪类选择器</span></p>
 <h1 id="与链接相关的动态伪类"><a href="#与链接相关的动态伪类" class="headerlink" title="与链接相关的动态伪类"></a>与链接相关的动态伪类</h1><p>链接的不同状态可用不同的方式显示，可通过如下 4 个伪类选择器来控制：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span>&#123;<span class="attribute">color</span>:red;&#125; 		<span class="comment">/*未访问的链接*/</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;<span class="attribute">color</span>:blue;&#125;	<span class="comment">/*已访问的链接*/</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;<span class="attribute">color</span>:yellow;&#125;	<span class="comment">/*鼠标移到链接上时*/</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span>&#123;<span class="attribute">color</span>:green;&#125;	<span class="comment">/*选定的链接,点击链接时*/</span></span><br></pre></td></tr></table></figure>
 
@@ -119,7 +119,7 @@
   <entry>
     <title>CSS伪元素选择器</title>
     <url>/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">伪元素选择器</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">伪元素选择器</span></p>
 <p><span style="color:black;font-size:20px;"><strong>CSS 伪元素用来为一些选择器添加特殊效果，伪元素针对元素中的特定内容进行操作。它控制的内容实际上和元素是相同的，但是它本身只是基于元素的抽象，并不存在于文档中，所以叫伪元素，这样的选择器叫作伪元素选择器。</strong></span></p>
 <h1 id="first-letter-和-first-line"><a href="#first-letter-和-first-line" class="headerlink" title=":first-letter 和 :first-line"></a>:first-letter 和 :first-line</h1><p>:first-letter 伪元素用来向文本的第一个字母添加特殊样式，所有前导标点符号（如引号）都应与第一个字母一同应用该样式。</p>
 <p>:first-line 伪元素用于向文本的首行添加特殊样式，该伪元素只能与块级元素关联。</p>
@@ -165,7 +165,7 @@
   <entry>
     <title>CSS基本选择器和属性选择器</title>
     <url>/2021/03/22/CSS%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8C%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">CSS基本选择器和属性选择器</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS基本选择器和属性选择器</span></p>
 <h1 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h1><h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>标签选择器直接将 HTML 标签作为选择器，如果要将相同的规则应用于多个标签，则可用逗号分隔。</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>,<span class="selector-tag">h2</span>,<span class="selector-tag">h3</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -230,7 +230,7 @@
   <entry>
     <title>CSS文本格式化</title>
     <url>/2021/03/26/CSS%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">CSS 文本格式化</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS 文本格式化</span></p>
 <table>
 <thead>
 <tr>
@@ -483,7 +483,7 @@
   <entry>
     <title>CSS派生选择器</title>
     <url>/2021/03/24/CSS%E6%B4%BE%E7%94%9F%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">CSS 派生选择器</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS 派生选择器</span></p>
 <h1 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h1><p><span style="color:green;font-size:16px;"><strong>子选择器只能匹配某一元素的直接子元素，写法是使用一个大于号 “&gt;” 分隔父子元素，</strong></span>父元素在前，子元素在后。</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &gt; <span class="selector-tag">strong</span> &#123;</span><br><span class="line"> <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -530,7 +530,7 @@
   <entry>
     <title>CSS设置元素背景</title>
     <url>/2021/03/27/CSS%E8%AE%BE%E7%BD%AE%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">CSS 设置元素背景</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS 设置元素背景</span></p>
 <table>
 <thead>
 <tr>
@@ -635,7 +635,7 @@
   <entry>
     <title>CSS设置文本字体</title>
     <url>/2021/03/26/CSS%E8%AE%BE%E7%BD%AE%E6%96%87%E6%9C%AC%E5%AD%97%E4%BD%93/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">CSS设置文本字体</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS设置文本字体</span></p>
 <table>
 <thead>
 <tr>
@@ -720,7 +720,7 @@
   <entry>
     <title>HTML input元素的其他属性</title>
     <url>/2021/03/19/HTML-input%E5%85%83%E7%B4%A0%E7%9A%84%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML input元素的其他属性</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML input元素的其他属性</span></p>
 <h1 id="form-属性"><a href="#form-属性" class="headerlink" title="form 属性"></a>form 属性</h1><p>使用 form 属性，从属于表单的元素可以放在页面的任何地方。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">&quot;f1&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">form</span>=<span class="string">&quot;f1&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -752,7 +752,7 @@
   <entry>
     <title>HTML下拉列表</title>
     <url>/2021/03/19/HTML%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML下拉列表</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML下拉列表</span></p>
 <h1 id="创建下拉列表"><a href="#创建下拉列表" class="headerlink" title="创建下拉列表"></a>创建下拉列表</h1><p>下拉列表包含于 &lt;select&gt; 元素内，下拉列表中的每一个选项是一个&lt;option&gt;元素，位于&lt;option&gt;开闭标签之间的文本会作为选项的标签显示给用户。提交表单时所选选项的 value 属性值将作为 &lt;select&gt;元素的值传送到服务器。&lt;option&gt;元素的 selected 属性可设置一个默认选中的选项。</p>
 <p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>下拉列表<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;color.aspx&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>手机品牌:<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;brand&quot;</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>请选择手机品牌<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Huawei&quot;</span>&gt;</span>华为<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Mi&quot;</span>&gt;</span>小米<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Oppo&quot;</span>&gt;</span>OPPO<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Vivo&quot;</span>&gt;</span>VIVO<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Other&quot;</span>&gt;</span>其他<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -795,7 +795,7 @@
   <entry>
     <title>HTML列表</title>
     <url>/2021/03/13/HTML%E5%88%97%E8%A1%A8/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML列表</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML列表</span></p>
 <h1 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h1><p><span style="color:green;font-size:16px;"><strong>无序列表的创建标签是&lt;ul&gt; (unordered list的英文缩写)，在&lt;ul&gt;中写的内容都应该位于开标签&lt;li&gt;和闭标签&lt;/li&gt;之间。</strong></span>(list item的英文缩写)</p>
 <h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p><span style="color:green;font-size:16px;"><strong>有序列表使用的是&lt;ol&gt;标签，</strong></span>有序列表默认使用从1开始的数字标识每个项目。如果想使用其他序列标识项目，可以使用type属性，该属性使用如下</p>
 <table>
@@ -858,7 +858,7 @@
   <entry>
     <title>HTML块级元素</title>
     <url>/2021/03/17/HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML块级元素</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML块级元素</span></p>
 <p><span style="color:black;font-size:20px;"><strong>块级元素主要用于 Web 页面的区域划分，这类元素如下：</strong></span></p>
 <table>
 <thead>
@@ -934,7 +934,7 @@
   <entry>
     <title>HTML基本语法</title>
     <url>/2021/03/13/HTML%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML基本语法</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML基本语法</span></p>
 <hr>
 <h1 id="标签与元素"><a href="#标签与元素" class="headerlink" title="标签与元素"></a>标签与元素</h1><p>HTML 文档中尖括号括起来的字符就是 HTML 的“标签”。且标签大多成对出现，它们中有开标签和闭标签</p>
 <p>​                开标签:&lt;html&gt;    闭标签：&lt;/html&gt; 以”/“开头</p>
@@ -1405,7 +1405,7 @@
   <entry>
     <title>HTML结构元素</title>
     <url>/2021/03/16/HTML%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML结构元素</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML结构元素</span></p>
 <p><span style="color:black;font-size:20px;"><strong>在HTML5对分组元素进行扩展之前，最常用的组容器就是 div 元素。针对文章的不同部分，需要很多的 div 元素，HTML5引入了一些结构性元素改变了这种情况。</strong></span></p>
 <table>
 <thead>
@@ -1501,7 +1501,7 @@
   <entry>
     <title>HTML行内语义元素</title>
     <url>/2021/03/17/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML行内语义元素</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML行内语义元素</span></p>
 <h1 id="行内语义元素主要完成对-Web-页面具体内容的引用和表述，这类元素如下："><a href="#行内语义元素主要完成对-Web-页面具体内容的引用和表述，这类元素如下：" class="headerlink" title="行内语义元素主要完成对 Web 页面具体内容的引用和表述，这类元素如下："></a><span style="color:black;font-size:20px;"><strong>行内语义元素主要完成对 Web 页面具体内容的引用和表述，这类元素如下：</strong></span></h1><table>
 <thead>
 <tr>
@@ -1565,7 +1565,7 @@
   <entry>
     <title>HTML表单--创建表单</title>
     <url>/2021/03/18/HTML%E8%A1%A8%E5%8D%95-%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML表单–创建表单</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML表单–创建表单</span></p>
 <p><span style="color:black;font-size:20px;"><strong>在网页中，用&lt;form&gt;和&lt;/form&gt;这对标签来创建表单，&lt;form&gt;元素通常是一些用来采集用户输入信息的表单控件，&lt;form&gt;元素不能嵌套使用，一般&lt;form&gt;标签应该至少带有 action 和 method 两个属性，还可包含以下属性：enctype、novalidate、target、autocomplete 和 accept-charset。</strong></span></p>
 <h1 id="action-属性"><a href="#action-属性" class="headerlink" title="action 属性"></a>action 属性</h1><p>action 属性指明表单提交后对数据的处理，通常该属性的值是一个地址，也就是表单收集到的信息将要被传递到的地址。列如，对于登录表单，用户输入的登录名和密码信息可能被传送到 Web 服务器上一个以 ASP.NET 编写的页面，叫作 login.aspx。若该页面与当前页面在同一目录下，使用如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span> = <span class="string">&quot;login.aspx&quot;</span>&gt;</span>	</span><br></pre></td></tr></table></figure>
@@ -1638,7 +1638,7 @@
   <entry>
     <title>HTML表单结构</title>
     <url>/2021/03/19/HTML%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML表单结构</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML表单结构</span></p>
 <p>​    <span style="color:black;font-size:20px;"><strong>&lt;fieldset&gt;和&lt;legend&gt;两个元素可以将相关表单控件组织到一起</strong></span></p>
 <ul>
 <li><strong>&lt;fieldset&gt;元素在表单控件组的四周添加边框</strong></li>
@@ -1705,7 +1705,7 @@
   <entry>
     <title>HTML表格</title>
     <url>/2021/03/14/HTML%E8%A1%A8%E6%A0%BC/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML表格</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML表格</span></p>
 <h1 id="创建表格"><a href="#创建表格" class="headerlink" title="创建表格"></a>创建表格</h1><h2 id="创建基本表格"><a href="#创建基本表格" class="headerlink" title="创建基本表格"></a>创建基本表格</h2><p><span style="color:green;font-size:16px;"><strong>HTML表格由4个标签创建，分别是表格标签&lt;table&gt;、行标签&lt;tr&gt;、表头标签&lt;th&gt;、和表格数据标签&lt;td&gt;。</strong></span> 表格中每一行都包含在一个 &lt;tr&gt; 元素中。</p>
 <h2 id="表格边框"><a href="#表格边框" class="headerlink" title="表格边框"></a>表格边框</h2><p>可以<span style="color:green;font-size:16px"><strong>使用 border 属性设置表格的边框宽度。</strong></span>默认情况下不指定该属性，表格边框为0，浏览器不显示表格边框。</p>
 <p>border 属性的值表示边框的宽度，<span style="color:green;font-size:16px;"><strong>单位为像素</strong></span>。</p>
@@ -1771,7 +1771,7 @@
   <entry>
     <title>HTML链接与导航</title>
     <url>/2021/03/14/HTML%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%AF%BC%E8%88%AA/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML链接与导航</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML链接与导航</span></p>
 <h1 id="基本链接"><a href="#基本链接" class="headerlink" title="基本链接"></a>基本链接</h1><p>创建链接使用 &lt;a&gt; 元素，应包含两部分：</p>
 <ul>
 <li><p>&lt;a&gt; 元素的 href 属性，即链接的目标，可以是某个网址或文件的路径</p>
@@ -1876,7 +1876,7 @@
 <td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
 </tr>
 </tbody></table>
-<p>对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#x31;&#50;&#x33;&#52;&#x35;&#x36;&#64;&#113;&#113;&#46;&#99;&#x6f;&#x6d;">&#x31;&#50;&#x33;&#52;&#x35;&#x36;&#64;&#113;&#113;&#46;&#99;&#x6f;&#x6d;</a>“ 和 “<a href="mailto:&#x36;&#53;&#x34;&#x33;&#50;&#x31;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#x36;&#53;&#x34;&#x33;&#50;&#x31;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>“</p>
+<p>对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#x32;&#x33;&#52;&#x35;&#54;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;">&#49;&#x32;&#x33;&#52;&#x35;&#54;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;</a>“ 和 “<a href="mailto:&#54;&#53;&#52;&#x33;&#x32;&#49;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#54;&#53;&#52;&#x33;&#x32;&#49;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>“</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
@@ -1925,7 +1925,7 @@
   <entry>
     <title>在HTML中使用CSS</title>
     <url>/2021/03/21/%E5%9C%A8HTML%E4%B8%AD%E4%BD%BF%E7%94%A8CSS/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">在 HTML 中使用 CSS</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">在 HTML 中使用 CSS</span></p>
 <h1 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h1><p>CSS 的中文全称是层叠样式表（Cascading Style Sheets）,是一种用来表现 HTML 或 XML 等文件样式的编程语言。CSS 不仅可静态修饰网页，还可以配合各种脚本语言动态对网页中元素进行格式化。</p>
 <h1 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h1><p>​    如果只是简单的对某个元素单独定义样式，可以使用内联样式。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&quot;font-size:50px;font-family: 楷体;color:green;background-color:red;&quot;</span>&gt;</span>内联样式<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1984,7 +1984,7 @@
   <entry>
     <title>网页多媒体</title>
     <url>/2021/03/21/%E7%BD%91%E9%A1%B5%E5%A4%9A%E5%AA%92%E4%BD%93/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">向网页中添加图片、音频及视频</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">向网页中添加图片、音频及视频</span></p>
 <h1 id="使用-lt-img-gt-元素"><a href="#使用-lt-img-gt-元素" class="headerlink" title="使用&lt;img&gt;元素"></a>使用&lt;img&gt;元素</h1><p>&lt;img&gt;元素是一个独立标签，该元素必须包含两个元素：src 和 alt 。src 属性指定图片的来源，值是个 URL；alt 属性是对图片进行描述的文本，图片无法显示就用该文本代替。除此之外，还常用带 width 和 height 属性，用来指定图片的宽和高，值通常以像素为单位，也可以是百分比。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;logo.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;网站logo&quot;</span> <span class="attr">height</span>=<span class="string">&quot;40&quot;</span> <span class="attr">width</span>=<span class="string">&quot;40&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -2094,7 +2094,7 @@
   <entry>
     <title>HTML表单--input元素</title>
     <url>/2021/03/18/HTML%E8%A1%A8%E5%8D%95input%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:50px;font-weight:bold">HTML表单–input元素</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML表单–input元素</span></p>
 <p><span style="color:black;font-size:20px;"><strong>在表单中，用户输入数据时使用的文本框、复选框等都是通过&lt;input&gt;元素创建的，<span style="color:green;font-size:20px;"><strong>该元素必须在&lt;form&gt;元素中使用，</strong></span>用来创建表单的输入元素，如果不在&lt;form&gt;中使用，那么输入元素不会被&lt;form&gt;元素收集并传给服务器。<span style="color:green;font-size:20px;"><strong>&lt;input&gt;元素是空的，所以一般不需要闭标签，通常直接在开标签的后面加一个斜线。</strong></span></strong></span></p>
 <p><span style="color:black;font-size:20px;"><strong>&lt;input&gt;标签的 type 属性用来指定输入控件的类型，type 属性的值如下：</strong></span></p>
 <table>
@@ -2445,6 +2445,166 @@
         <tag>HTML表单</tag>
         <tag>input元素</tag>
         <tag>button元素</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS边框与边距</title>
+    <url>/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/</url>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS边框与边距</span></p>
+<h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" class title="盒子模型">
+
+<p>盒子模型的重要属性如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">border</td>
+<td align="center">边框，用来将一个盒子的边界与周围其他盒子相分离，即使不可见，每个盒子都有边框</td>
+</tr>
+<tr>
+<td align="center">margin</td>
+<td align="center">从盒子边框到下一个盒子的距离(外边距)</td>
+</tr>
+<tr>
+<td align="center">padding</td>
+<td align="center">元素内容与盒子边距的距离(内边距)</td>
+</tr>
+</tbody></table>
+<h1 id="border-属性"><a href="#border-属性" class="headerlink" title="border 属性"></a>border 属性</h1><p>border 属性用来指定代表某一元素的盒子的边框应如何呈现，有如下 3 个可修改的属性：</p>
+<p><strong>(1) border-color ：指定边框的颜色</strong></p>
+<p><strong>(2) border-style ：指定边框应为实线、虚线还是双股线等</strong></p>
+<p><strong>(3) border-width ：指定边框具有的宽度</strong>  </p>
+<h2 id="border-width-属性"><a href="#border-width-属性" class="headerlink" title="border-width 属性"></a>border-width 属性</h2><p>border-width 属性用来设置边框的宽度，通常以像素为单位，也可使用任何绝对或相对单位，但不能使用百分比。还可使用：thin、medium 和 thick。使用以下属性分别指定盒子边框的底部、右侧、顶部和左侧宽度：border-bottom-width、border-right-width、border-top-width 和 border-left-width。</p>
+<h2 id="border-style-属性"><a href="#border-style-属性" class="headerlink" title="border-style 属性"></a>border-style 属性</h2><p>border-style 属性用来指定边框的线性样式，可取值如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">none</td>
+<td align="center">默认值，不存在边框</td>
+</tr>
+<tr>
+<td align="center">solid</td>
+<td align="center">边框是一条实心线</td>
+</tr>
+<tr>
+<td align="center">dotted</td>
+<td align="center">边框是一系列的点</td>
+</tr>
+<tr>
+<td align="center">dashed</td>
+<td align="center">边框是一系列短线</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">边框是两条实心线</td>
+</tr>
+<tr>
+<td align="center">groove</td>
+<td align="center">边框具有切入效果</td>
+</tr>
+<tr>
+<td align="center">ridge</td>
+<td align="center">边框效果与groove相反</td>
+</tr>
+<tr>
+<td align="center">inset</td>
+<td align="center">边框使盒子看起来内嵌于页面中</td>
+</tr>
+<tr>
+<td align="center">outset</td>
+<td align="center">边框使盒子看起来突出于画布外</td>
+</tr>
+<tr>
+<td align="center">hidden</td>
+<td align="center">与 none 相同，但用于作为表格元素的边框冲突解决方案</td>
+</tr>
+</tbody></table>
+<p>也可使用以下属性分别指定盒子边框的底部、右侧、顶部和左侧的样式：border-bottom-style、border-right-style、border-top-style 和 border-left-style。</p>
+<h2 id="border-color-属性"><a href="#border-color-属性" class="headerlink" title="border-color 属性"></a>border-color 属性</h2><p>border-color 属性能够改变盒子周围边框的颜色，取值与 color 属性相同，还可为每侧边框指定不同颜色：border-bottom-color、border-right-color、border-top-color 和 border-left-color。</p>
+<h2 id="使用缩略形式表达边框属性"><a href="#使用缩略形式表达边框属性" class="headerlink" title="使用缩略形式表达边框属性"></a>使用缩略形式表达边框属性</h2><p>与 font、background 等属性一样，可使用 border 属性同时指定边框的宽度、颜色和样式，顺序为 border-width、border-style 和 border-color，如果不指定某个值可以省略。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">5px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还可为每侧边框指定不同的宽度、颜色和样式：border-bottom、border-right、border-top 和 border-left。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置边框效果<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		.sub&#123;</span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-bottom</span>:dotted yellow;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-top</span>:<span class="number">4px</span> double blue;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-left</span>:medium outset green;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-right</span>:thick groove orange;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">border</span>:<span class="number">2px</span> dashed red;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.onlystyle&#123;</span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">40px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-style</span>:inset;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>设置元素边框<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;sub&quot;</span>&gt;</span>边框每个侧面分别设置不同样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;onlystyle&quot;</span>&gt;</span>仅设置border-style<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-1.png" class title="CSS边框与边距-1">
+
+<hr>
+
+<h1 id="padding-属性"><a href="#padding-属性" class="headerlink" title="padding 属性"></a>padding 属性</h1><p>padding 属性用来指定元素内容与边框之间的距离，也叫作内边距，该属性的值可取：像素、长度单位、百分比或关键字 inherit。</p>
+<p><span style="color:green;font-size:16px;"><strong>如果使用百分比，则以包含盒子的百分比计算，如果指定为 10%，则每一边取盒子的 5% 作为内边距。</strong></span></p>
+<p><span style="color:green;font-size:16px;"><strong>元素的内边距默认不会继承，只有 padding 属性值为 inherit 的元素才会继承父元素的内边距。</strong></span></p>
+<p>与边框一样，也可分别指定每侧的内边距大小：padding-bottom、padding-top、padding-right、padding-left。</p>
+<h1 id="margin-属性"><a href="#margin-属性" class="headerlink" title="margin 属性"></a>margin 属性</h1><p>margin 属性用来控制盒子之间的空间，取值可是长度、百分比或关键字 inherit，也可分别指定每侧的外边距大小：margin-bottom、margin-top、margin-right、margin-left。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置内外边距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-top</span>:<span class="number">30px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-bottom</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-left</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-right</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-style</span>:outset;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-width</span>:<span class="number">2px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-color</span>:red;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">em</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-left</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-right</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">strong</span> &#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>:silver;		</span></span><br><span class="line">		&#125;</span><br><span class="line">		.padding&#123;</span><br><span class="line"><span class="css">			padiing:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.padding2&#123;</span><br><span class="line"><span class="css">			<span class="attribute">padding-top</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>元素的<span class="tag">&lt;<span class="name">em</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>、<span class="tag">&lt;<span class="name">em</span>&gt;</span>边框<span class="tag">&lt;/<span class="name">em</span>&gt;</span>和<span class="tag">&lt;<span class="name">em</span>&gt;</span>外边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>属性会影响整个文档的布局，而且会影响给定元素的<span class="tag">&lt;<span class="name">strong</span>&gt;</span>外观<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;padding&quot;</span>&gt;</span>顶部的<span class="tag">&lt;<span class="name">em</span>&gt;</span>外边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>高于<span class="tag">&lt;<span class="name">em</span>&gt;</span>底部<span class="tag">&lt;/<span class="name">em</span>&gt;</span>，当两个盒子相遇时，底部的外边距会被<span class="tag">&lt;<span class="name">strong</span>&gt;</span>忽略<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>，即发生了外边距压缩<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;padding2&quot;</span>&gt;</span>元素的<span class="tag">&lt;<span class="name">em</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>默认不会<span class="tag">&lt;<span class="name">strong</span>&gt;</span>继承<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>，只有 padding 属性值为<span class="tag">&lt;<span class="name">strong</span>&gt;</span>inherit<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>的元素才会继承<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-2.png" class title="CSS边框与边距-2">
+
+<hr>
+
+<p><span style="color:green;font-size:16px;"><strong>顶部的外边距(30px)要高于底部(10px)，当两个盒子相遇时，底部的外边距会被忽略，外边距发生压缩，这种情况只发生于垂直外边距，而不存在于左右边距。</strong></span></p>
+<h1 id="border-radius-属性"><a href="#border-radius-属性" class="headerlink" title="border-radius 属性"></a>border-radius 属性</h1><p>border-radius 用于将边框设置为圆角矩形，该属性可分别设置 4 个角的效果半径，分别对应：border-top-left-radius(左上角)、border-top-right-radius(右上角)、border-bottom-right-radius(右下角) 和 border-bottom-left-radius(左下角)。使用该属性如果省略值时，将采用对角线原则，不同数目的值对角产生的影响如下：</p>
+<p><strong>(1) 一个值 ：所有四个角都有相同的半径</strong></p>
+<p><strong>(2) 两个值 ：第一个值时左上角和右下角，第二值是右上角和左下角</strong></p>
+<p><strong>(3) 三个值 ：第一个是左上角，第二个值是右上角和左下角，第三个值是右下角</strong></p>
+<p><strong>(4) 四个值 ：依次是左上角、右上角、右下角和左下角</strong></p>
+<p>border-radius 属性的值可以用 em、像素和百分比作为单位。也可设置椭圆角效果，即给出两组长度值：一组针对 X 轴，另一组针对 Y 轴，水平和垂直方向的值用斜线(/)分隔。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置内外边距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	#test1 &#123;</span><br><span class="line"><span class="css">    	<span class="attribute">border</span>: <span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">    	<span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">    	<span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">    	<span class="attribute">border-radius</span>: <span class="number">50px</span> <span class="number">0px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">200px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-radius</span>:<span class="number">2em</span> <span class="number">4em</span> <span class="number">2em</span> <span class="number">8em</span> / <span class="number">5em</span> <span class="number">7em</span> <span class="number">5em</span> <span class="number">3em</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>对角相同的圆角边框<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>4个角不同的边框<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-3.png" class title="CSS边框与边距-3">
+
+<hr>
+
+<h1 id="border-image-属性"><a href="#border-image-属性" class="headerlink" title="border-image 属性"></a>border-image 属性</h1><p>border-image 属性用来为边框添加背景图片，边框图像可由单幅图像创建，这幅图像可在元素周边的边框中沿着不同的轴向进行裁剪或拉伸，图像被 4 条线分成 9 个切片，4个角切片用于创建元素边框的 4 个角，剩下 4 个边切片由 border-image 属性用来填充元素边框的 4 条边。border-image 属性基本语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">border-image:source slice width outset repeat|initial|inherit;</span><br></pre></td></tr></table></figure>
+
+<p><strong>source 是准备用来作边框图像的文件 URL 地址</strong></p>
+<p><strong>slice 由 4 个值决定，决定了切片的尺寸，值可以是百分比或数字，也可像 border-radius 一样省略一些值</strong></p>
+<p><strong>repeat 是指边框进行平铺的方式，可使用 round、stretch、space 和 repeat 中的两个值</strong></p>
+<p>​    <strong>(1) round ：图像会被平铺，直至铺满整个区域，如果平铺后切片的数量与区域不匹配，就会对图像进行相应的缩放</strong></p>
+<p>​    <strong>(2) stretch ：图像会被拉伸，直至填满整个区域</strong></p>
+<p>​    <strong>(3) repeat ：图像会被平铺，直至填满整个区域</strong></p>
+<p>​    <strong>(4) space ：图像会被平铺，直至填满整个区域。如果平铺后切片的数目与区域不匹配，就会调整图像之间的间距以填满整个区域</strong> </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#bdimage</span>&#123;</span><br><span class="line">	<span class="attribute">border-width</span>:<span class="number">15px</span>;</span><br><span class="line">	<span class="attribute">border-image</span>:<span class="built_in">url</span>(<span class="string">img/border.png</span>) <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="box-shadow-属性"><a href="#box-shadow-属性" class="headerlink" title="box-shadow 属性"></a>box-shadow 属性</h1><p>box-shadow 属性用法和text-shadow 属性相似，可以使用一个或多个投影，用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">box-shadow:h-shadow v-shadow blur spread color inset;</span><br></pre></td></tr></table></figure>
+
+<p><strong>(1) h-shadow ：指定阴影的水平偏移量</strong></p>
+<p><strong>(2) v-shadow ：指定阴影的垂直偏移量</strong></p>
+<p><strong>(3) blur ：可选参数，只能为正值，标志阴影模糊效果，值越大越模糊</strong></p>
+<p><strong>(4) spread ：可选参数，如果为正值，那么整个阴影将延展扩大，为负值，则阴影缩小</strong></p>
+<p><strong>(5) color ：可选参数，指定阴影颜色</strong></p>
+<p><strong>(6) inset ：可选参数，表示将外部阴影改为内部阴影</strong></p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例4</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>添加阴影边框<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">		<span class="attribute">padding</span> :<span class="number">0</span> <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-radius</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">box-shadow</span>:-<span class="number">3px</span> -<span class="number">3px</span> <span class="number">3px</span> <span class="number">2px</span> green inset,</span></span><br><span class="line">					-10px -10px 10px 5px orange;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-4.png" class title="CSS边框与边距-4">
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>边框边距</tag>
+        <tag>盒子模型</tag>
       </tags>
   </entry>
 </search>
