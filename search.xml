@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS伪元素选择器</title>
+    <url>/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">伪元素选择器</span></p>
+<p><span style="color:black;font-size:20px;"><strong>CSS 伪元素用来为一些选择器添加特殊效果，伪元素针对元素中的特定内容进行操作。它控制的内容实际上和元素是相同的，但是它本身只是基于元素的抽象，并不存在于文档中，所以叫伪元素，这样的选择器叫作伪元素选择器。</strong></span></p>
+<h1 id="first-letter-和-first-line"><a href="#first-letter-和-first-line" class="headerlink" title=":first-letter 和 :first-line"></a>:first-letter 和 :first-line</h1><p>:first-letter 伪元素用来向文本的第一个字母添加特殊样式，所有前导标点符号（如引号）都应与第一个字母一同应用该样式。</p>
+<p>:first-line 伪元素用于向文本的首行添加特殊样式，该伪元素只能与块级元素关联。</p>
+<p>在 CSS 3 中，伪元素的语法修改为使用两个冒号，即 ::first-letter，但该用法未得到广泛支持，所以以下使用 CSS 2.0 语法。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;:first-letter :first-line&lt;&#x2F;title&gt;</span><br><span class="line">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">	pre:first-letter,p:first-letter&#123;</span><br><span class="line">		color:red;</span><br><span class="line">		font-size:25px;</span><br><span class="line">	&#125;</span><br><span class="line">	p:first-line&#123;</span><br><span class="line">		background-color:#E6F510;</span><br><span class="line">		font-size:18px;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。</span><br><span class="line">	&lt;&#x2F;p&gt;</span><br><span class="line">	&lt;pre&gt;内容内容内容内容内容内容内容内容内容。</span><br><span class="line">	&lt;&#x2F;pre&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-1.png" class title="CSS伪元素选择器-1">
+
+<hr>
+
+<h1 id="before-和-after"><a href="#before-和-after" class="headerlink" title=":before 和 :after"></a>:before 和 :after</h1><p>它们用于在元素之前或之后增加内容，<span style="color:green;font-size:16px;"><strong>这两个伪元素基本上总是与 content 属性一同使用，</strong></span>用于动态生成的内容。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>:before :after<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	.warning:before&#123;</span><br><span class="line"><span class="css">		<span class="attribute">content</span>:<span class="string">&quot;警告!&quot;</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">font-size</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>:red;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:yellow;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-style</span>:dashed;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-width</span>:<span class="number">1px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">margin-right</span>:<span class="number">1em</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	.warning:after&#123;</span><br><span class="line"><span class="css">		<span class="attribute">content</span>:<span class="built_in">url</span>(<span class="string">&quot;img/18 small.png&quot;</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>使用:before和:after<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>给这两个伪元素生成的内容由 content 属性提供，content 可用于指定对象，例如图像，也可用于指定一般的文本内容。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-2.png" class title="CSS伪元素选择器-2">
+
+<hr>
+
+<h1 id="3-selection"><a href="#3-selection" class="headerlink" title="3. ::selection"></a>3. ::selection</h1><p>CSS 3 引入了伪元素 ::selection ，::selection 匹配元素中被用户选中或处于高亮状态的部分，::selection 只可用于少数几个 CSS 属性：color、background、cursor 和 outline。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>::selection<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-id">#select1</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#select2</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>:red;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;select1&quot;</span>&gt;</span>选中有背景颜色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;select2&quot;</span>&gt;</span>选中字体变色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">选中前</span></p>
+<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-3.png" class title="CSS伪元素选择器-3">
+
+<hr>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">选中后</span></p>
+<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-4.png" class title="CSS伪元素选择器-4">
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>CSS选择器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS伪类选择器</title>
     <url>/2021/03/24/CSS%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8/</url>
     <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">伪类选择器</span></p>
@@ -117,41 +163,46 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS伪元素选择器</title>
-    <url>/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/</url>
-    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">伪元素选择器</span></p>
-<p><span style="color:black;font-size:20px;"><strong>CSS 伪元素用来为一些选择器添加特殊效果，伪元素针对元素中的特定内容进行操作。它控制的内容实际上和元素是相同的，但是它本身只是基于元素的抽象，并不存在于文档中，所以叫伪元素，这样的选择器叫作伪元素选择器。</strong></span></p>
-<h1 id="first-letter-和-first-line"><a href="#first-letter-和-first-line" class="headerlink" title=":first-letter 和 :first-line"></a>:first-letter 和 :first-line</h1><p>:first-letter 伪元素用来向文本的第一个字母添加特殊样式，所有前导标点符号（如引号）都应与第一个字母一同应用该样式。</p>
-<p>:first-line 伪元素用于向文本的首行添加特殊样式，该伪元素只能与块级元素关联。</p>
-<p>在 CSS 3 中，伪元素的语法修改为使用两个冒号，即 ::first-letter，但该用法未得到广泛支持，所以以下使用 CSS 2.0 语法。</p>
+    <title>CSS变形处理</title>
+    <url>/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS变形处理</span></p>
+<p><span style="color:black;font-size:20px;"><strong>CSS 增加了 transform 属性，可以实现文字或图像的变形操作，主要包括旋转、倾斜、缩放和移动。该属性接收一个或多个由空格分隔的应用于元素的变形函数。</strong></span></p>
+<h1 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h1><p>旋转通过 rotate() 函数来实现，在旋转之前可使用 transform-origin 属性定义旋转的基点，rotate() 函数的参数是旋转角度，可以是正值（顺时针旋转）或负值（逆时针旋转）。</p>
+<p>在三维变形中，还有三个旋转函数：rotateX()、rotateY()、rotateZ(),可让元素在任何轴上旋转。也可使用 rotate3d() 函数同时指定沿 3 个维度旋转，使用方法如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">rotate3d(x,y,z,<span class="selector-tag">a</span>)	<span class="comment">/* x,y,z是一个介于0和1之间的数值，用来描述元素围绕各轴旋转的矢量值</span></span><br><span class="line"><span class="comment">						a是一个角度值，用来指定元素在三维空间中的旋转角度	*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h1><p>倾斜可通过 skew() 函数来实现。skew() 函数可以带一个或两个参数，只有一个参数会使元素在 X 轴倾斜，第二个参数控制在 Y 轴上倾斜。skew() 可接收负值和较大的值，skew(90deg) 会让元素消失，大于90deg（或小于-90deg）的值会产生镜像效果，倾斜没有3d函数。</p>
 <p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;:first-letter :first-line&lt;&#x2F;title&gt;</span><br><span class="line">&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">	pre:first-letter,p:first-letter&#123;</span><br><span class="line">		color:red;</span><br><span class="line">		font-size:25px;</span><br><span class="line">	&#125;</span><br><span class="line">	p:first-line&#123;</span><br><span class="line">		background-color:#E6F510;</span><br><span class="line">		font-size:18px;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;p&gt;内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span><br><span class="line">		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容。</span><br><span class="line">	&lt;&#x2F;p&gt;</span><br><span class="line">	&lt;pre&gt;内容内容内容内容内容内容内容内容内容。</span><br><span class="line">	&lt;&#x2F;pre&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>旋转和倾斜<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;	</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">60px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	.before&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:green;	</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#rotateafter</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(.<span class="number">6</span>,<span class="number">1</span>,.<span class="number">6</span>,<span class="number">45deg</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#skewafter</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">skew</span>(<span class="number">30deg</span>,-<span class="number">20deg</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>旋转<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;before&quot;</span>&gt;</span>旋转前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;rotateafter&quot;</span>&gt;</span>鼠标悬停时旋转<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>倾斜<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;before&quot;</span>&gt;</span>倾斜前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;skewafter&quot;</span>&gt;</span>鼠标悬停时切斜<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-1.png" class title="CSS伪元素选择器-1">
+<p><span style="color:red;font-size:18px;font-weight:bold">旋转效果如下</span></p>
+<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-1.png" class title="CSS变形处理-1">
 
 <hr>
 
-<h1 id="before-和-after"><a href="#before-和-after" class="headerlink" title=":before 和 :after"></a>:before 和 :after</h1><p>它们用于在元素之前或之后增加内容，<span style="color:green;font-size:16px;"><strong>这两个伪元素基本上总是与 content 属性一同使用，</strong></span>用于动态生成的内容。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">倾斜效果如下</span></p>
+<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-2.png" class title="CSS变形处理-2">
+
+<hr>
+
+<h1 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h1><p>对元素的缩放可通过 scale() 函数来实现，该函数接收无参数的数字，scale(1) 是元素的默认尺寸，小于 1 的值使元素变小，大于 1 使元素变大。如果参数值为负值，则进行反转。</p>
+<p>也可指定两个参数 scale(x,y)，使元素在水平和垂直方向上同时缩放，对于元素的 3D 缩放，有 scaleZ(sz) 和 scale3d(sx,sy,sz)两个函数，这两个函数单独使用时没有任何效果，需要配合其他变形函数一起使用。</p>
 <p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>:before :after<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	.warning:before&#123;</span><br><span class="line"><span class="css">		<span class="attribute">content</span>:<span class="string">&quot;警告!&quot;</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">font-size</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>:red;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:yellow;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-style</span>:dashed;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-width</span>:<span class="number">1px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">margin-right</span>:<span class="number">1em</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	.warning:after&#123;</span><br><span class="line"><span class="css">		<span class="attribute">content</span>:<span class="built_in">url</span>(<span class="string">&quot;img/18 small.png&quot;</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>使用:before和:after<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>给这两个伪元素生成的内容由 content 属性提供，content 可用于指定对象，例如图像，也可用于指定一般的文本内容。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>缩放<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;	</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">80px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#scale1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:green;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">scale</span>(<span class="number">0.5</span>,<span class="number">1.2</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#scale2</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">scale</span>(<span class="number">1.5</span>,-<span class="number">0.8</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;scale1&quot;</span>&gt;</span>鼠标悬停时宽变成原来的0.5倍 高变成原来的1.2倍<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;scale2&quot;</span>&gt;</span>鼠标悬停时反转<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">缩放效果如下</span></p>
+<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-3.png" class title="CSS变形处理-4">
+
+<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-4.png" class title="CSS变形处理-4">
+
+<hr>
+
+<h1 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h1><p>元素的移动通过 translate() 函数来实现，沿着X、Y 轴往给定的位置移动。另外还有 translateZ() 和 translate3d() 函数用于元素的 3D 位移操作。沿着 Z 轴移动就是以方框中心为原点变大，Z 轴值越大，从视觉上元素就变的更大。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>移动<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;	</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">80px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test1&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:green;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">translateX</span>(<span class="number">200%</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test3&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:orangered;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">translate</span>(<span class="number">150px</span>,-<span class="number">60px</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test4&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:deeppink;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">translateY</span>(-<span class="number">120px</span>) <span class="built_in">scale</span>(<span class="number">0.8</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>原始段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>沿X轴移动200%<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test3&quot;</span>&gt;</span>沿X轴移动150px，Y轴移动-60px<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test4&quot;</span>&gt;</span>沿Y轴移动-120px，并缩小为0.8<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-2.png" class title="CSS伪元素选择器-2">
-
-<hr>
-
-<h1 id="3-selection"><a href="#3-selection" class="headerlink" title="3. ::selection"></a>3. ::selection</h1><p>CSS 3 引入了伪元素 ::selection ，::selection 匹配元素中被用户选中或处于高亮状态的部分，::selection 只可用于少数几个 CSS 属性：color、background、cursor 和 outline。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>::selection<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-id">#select1</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#select2</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>:red;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;select1&quot;</span>&gt;</span>选中有背景颜色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;select2&quot;</span>&gt;</span>选中字体变色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">选中前</span></p>
-<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-3.png" class title="CSS伪元素选择器-3">
-
-<hr>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">选中后</span></p>
-<img src="/2021/03/24/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8/CSS%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8-4.png" class title="CSS伪元素选择器-4">
+<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-5.png" class title="CSS变形处理-5">
 
 <hr>]]></content>
       <categories>
@@ -159,7 +210,7 @@
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>CSS选择器</tag>
+        <tag>变形处理</tag>
       </tags>
   </entry>
   <entry>
@@ -715,6 +766,166 @@
         <tag>CSS</tag>
         <tag>文本字体</tag>
         <tag>font</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS边框与边距</title>
+    <url>/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/</url>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS边框与边距</span></p>
+<h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" class title="盒子模型">
+
+<p>盒子模型的重要属性如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">border</td>
+<td align="center">边框，用来将一个盒子的边界与周围其他盒子相分离，即使不可见，每个盒子都有边框</td>
+</tr>
+<tr>
+<td align="center">margin</td>
+<td align="center">从盒子边框到下一个盒子的距离(外边距)</td>
+</tr>
+<tr>
+<td align="center">padding</td>
+<td align="center">元素内容与盒子边距的距离(内边距)</td>
+</tr>
+</tbody></table>
+<h1 id="border-属性"><a href="#border-属性" class="headerlink" title="border 属性"></a>border 属性</h1><p>border 属性用来指定代表某一元素的盒子的边框应如何呈现，有如下 3 个可修改的属性：</p>
+<p><strong>(1) border-color ：指定边框的颜色</strong></p>
+<p><strong>(2) border-style ：指定边框应为实线、虚线还是双股线等</strong></p>
+<p><strong>(3) border-width ：指定边框具有的宽度</strong>  </p>
+<h2 id="border-width-属性"><a href="#border-width-属性" class="headerlink" title="border-width 属性"></a>border-width 属性</h2><p>border-width 属性用来设置边框的宽度，通常以像素为单位，也可使用任何绝对或相对单位，但不能使用百分比。还可使用：thin、medium 和 thick。使用以下属性分别指定盒子边框的底部、右侧、顶部和左侧宽度：border-bottom-width、border-right-width、border-top-width 和 border-left-width。</p>
+<h2 id="border-style-属性"><a href="#border-style-属性" class="headerlink" title="border-style 属性"></a>border-style 属性</h2><p>border-style 属性用来指定边框的线性样式，可取值如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">none</td>
+<td align="center">默认值，不存在边框</td>
+</tr>
+<tr>
+<td align="center">solid</td>
+<td align="center">边框是一条实心线</td>
+</tr>
+<tr>
+<td align="center">dotted</td>
+<td align="center">边框是一系列的点</td>
+</tr>
+<tr>
+<td align="center">dashed</td>
+<td align="center">边框是一系列短线</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">边框是两条实心线</td>
+</tr>
+<tr>
+<td align="center">groove</td>
+<td align="center">边框具有切入效果</td>
+</tr>
+<tr>
+<td align="center">ridge</td>
+<td align="center">边框效果与groove相反</td>
+</tr>
+<tr>
+<td align="center">inset</td>
+<td align="center">边框使盒子看起来内嵌于页面中</td>
+</tr>
+<tr>
+<td align="center">outset</td>
+<td align="center">边框使盒子看起来突出于画布外</td>
+</tr>
+<tr>
+<td align="center">hidden</td>
+<td align="center">与 none 相同，但用于作为表格元素的边框冲突解决方案</td>
+</tr>
+</tbody></table>
+<p>也可使用以下属性分别指定盒子边框的底部、右侧、顶部和左侧的样式：border-bottom-style、border-right-style、border-top-style 和 border-left-style。</p>
+<h2 id="border-color-属性"><a href="#border-color-属性" class="headerlink" title="border-color 属性"></a>border-color 属性</h2><p>border-color 属性能够改变盒子周围边框的颜色，取值与 color 属性相同，还可为每侧边框指定不同颜色：border-bottom-color、border-right-color、border-top-color 和 border-left-color。</p>
+<h2 id="使用缩略形式表达边框属性"><a href="#使用缩略形式表达边框属性" class="headerlink" title="使用缩略形式表达边框属性"></a>使用缩略形式表达边框属性</h2><p>与 font、background 等属性一样，可使用 border 属性同时指定边框的宽度、颜色和样式，顺序为 border-width、border-style 和 border-color，如果不指定某个值可以省略。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">5px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>还可为每侧边框指定不同的宽度、颜色和样式：border-bottom、border-right、border-top 和 border-left。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置边框效果<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		.sub&#123;</span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-bottom</span>:dotted yellow;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-top</span>:<span class="number">4px</span> double blue;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-left</span>:medium outset green;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-right</span>:thick groove orange;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">border</span>:<span class="number">2px</span> dashed red;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.onlystyle&#123;</span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">40px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-style</span>:inset;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>设置元素边框<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;sub&quot;</span>&gt;</span>边框每个侧面分别设置不同样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;onlystyle&quot;</span>&gt;</span>仅设置border-style<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-1.png" class title="CSS边框与边距-1">
+
+<hr>
+
+<h1 id="padding-属性"><a href="#padding-属性" class="headerlink" title="padding 属性"></a>padding 属性</h1><p>padding 属性用来指定元素内容与边框之间的距离，也叫作内边距，该属性的值可取：像素、长度单位、百分比或关键字 inherit。</p>
+<p><span style="color:green;font-size:16px;"><strong>如果使用百分比，则以包含盒子的百分比计算，如果指定为 10%，则每一边取盒子的 5% 作为内边距。</strong></span></p>
+<p><span style="color:green;font-size:16px;"><strong>元素的内边距默认不会继承，只有 padding 属性值为 inherit 的元素才会继承父元素的内边距。</strong></span></p>
+<p>与边框一样，也可分别指定每侧的内边距大小：padding-bottom、padding-top、padding-right、padding-left。</p>
+<h1 id="margin-属性"><a href="#margin-属性" class="headerlink" title="margin 属性"></a>margin 属性</h1><p>margin 属性用来控制盒子之间的空间，取值可是长度、百分比或关键字 inherit，也可分别指定每侧的外边距大小：margin-bottom、margin-top、margin-right、margin-left。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置内外边距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-top</span>:<span class="number">30px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-bottom</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-left</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-right</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-style</span>:outset;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-width</span>:<span class="number">2px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-color</span>:red;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">em</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-left</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-right</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">strong</span> &#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>:silver;		</span></span><br><span class="line">		&#125;</span><br><span class="line">		.padding&#123;</span><br><span class="line"><span class="css">			padiing:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.padding2&#123;</span><br><span class="line"><span class="css">			<span class="attribute">padding-top</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>元素的<span class="tag">&lt;<span class="name">em</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>、<span class="tag">&lt;<span class="name">em</span>&gt;</span>边框<span class="tag">&lt;/<span class="name">em</span>&gt;</span>和<span class="tag">&lt;<span class="name">em</span>&gt;</span>外边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>属性会影响整个文档的布局，而且会影响给定元素的<span class="tag">&lt;<span class="name">strong</span>&gt;</span>外观<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;padding&quot;</span>&gt;</span>顶部的<span class="tag">&lt;<span class="name">em</span>&gt;</span>外边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>高于<span class="tag">&lt;<span class="name">em</span>&gt;</span>底部<span class="tag">&lt;/<span class="name">em</span>&gt;</span>，当两个盒子相遇时，底部的外边距会被<span class="tag">&lt;<span class="name">strong</span>&gt;</span>忽略<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>，即发生了外边距压缩<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;padding2&quot;</span>&gt;</span>元素的<span class="tag">&lt;<span class="name">em</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>默认不会<span class="tag">&lt;<span class="name">strong</span>&gt;</span>继承<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>，只有 padding 属性值为<span class="tag">&lt;<span class="name">strong</span>&gt;</span>inherit<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>的元素才会继承<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-2.png" class title="CSS边框与边距-2">
+
+<hr>
+
+<p><span style="color:green;font-size:16px;"><strong>顶部的外边距(30px)要高于底部(10px)，当两个盒子相遇时，底部的外边距会被忽略，外边距发生压缩，这种情况只发生于垂直外边距，而不存在于左右边距。</strong></span></p>
+<h1 id="border-radius-属性"><a href="#border-radius-属性" class="headerlink" title="border-radius 属性"></a>border-radius 属性</h1><p>border-radius 用于将边框设置为圆角矩形，该属性可分别设置 4 个角的效果半径，分别对应：border-top-left-radius(左上角)、border-top-right-radius(右上角)、border-bottom-right-radius(右下角) 和 border-bottom-left-radius(左下角)。使用该属性如果省略值时，将采用对角线原则，不同数目的值对角产生的影响如下：</p>
+<p><strong>(1) 一个值 ：所有四个角都有相同的半径</strong></p>
+<p><strong>(2) 两个值 ：第一个值时左上角和右下角，第二值是右上角和左下角</strong></p>
+<p><strong>(3) 三个值 ：第一个是左上角，第二个值是右上角和左下角，第三个值是右下角</strong></p>
+<p><strong>(4) 四个值 ：依次是左上角、右上角、右下角和左下角</strong></p>
+<p>border-radius 属性的值可以用 em、像素和百分比作为单位。也可设置椭圆角效果，即给出两组长度值：一组针对 X 轴，另一组针对 Y 轴，水平和垂直方向的值用斜线(/)分隔。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置内外边距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	#test1 &#123;</span><br><span class="line"><span class="css">    	<span class="attribute">border</span>: <span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">    	<span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">    	<span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">    	<span class="attribute">border-radius</span>: <span class="number">50px</span> <span class="number">0px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">200px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-radius</span>:<span class="number">2em</span> <span class="number">4em</span> <span class="number">2em</span> <span class="number">8em</span> / <span class="number">5em</span> <span class="number">7em</span> <span class="number">5em</span> <span class="number">3em</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>对角相同的圆角边框<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>4个角不同的边框<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-3.png" class title="CSS边框与边距-3">
+
+<hr>
+
+<h1 id="border-image-属性"><a href="#border-image-属性" class="headerlink" title="border-image 属性"></a>border-image 属性</h1><p>border-image 属性用来为边框添加背景图片，边框图像可由单幅图像创建，这幅图像可在元素周边的边框中沿着不同的轴向进行裁剪或拉伸，图像被 4 条线分成 9 个切片，4个角切片用于创建元素边框的 4 个角，剩下 4 个边切片由 border-image 属性用来填充元素边框的 4 条边。border-image 属性基本语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">border-image:source slice width outset repeat|initial|inherit;</span><br></pre></td></tr></table></figure>
+
+<p><strong>source 是准备用来作边框图像的文件 URL 地址</strong></p>
+<p><strong>slice 由 4 个值决定，决定了切片的尺寸，值可以是百分比或数字，也可像 border-radius 一样省略一些值</strong></p>
+<p><strong>repeat 是指边框进行平铺的方式，可使用 round、stretch、space 和 repeat 中的两个值</strong></p>
+<p>​    <strong>(1) round ：图像会被平铺，直至铺满整个区域，如果平铺后切片的数量与区域不匹配，就会对图像进行相应的缩放</strong></p>
+<p>​    <strong>(2) stretch ：图像会被拉伸，直至填满整个区域</strong></p>
+<p>​    <strong>(3) repeat ：图像会被平铺，直至填满整个区域</strong></p>
+<p>​    <strong>(4) space ：图像会被平铺，直至填满整个区域。如果平铺后切片的数目与区域不匹配，就会调整图像之间的间距以填满整个区域</strong> </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#bdimage</span>&#123;</span><br><span class="line">	<span class="attribute">border-width</span>:<span class="number">15px</span>;</span><br><span class="line">	<span class="attribute">border-image</span>:<span class="built_in">url</span>(<span class="string">img/border.png</span>) <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="box-shadow-属性"><a href="#box-shadow-属性" class="headerlink" title="box-shadow 属性"></a>box-shadow 属性</h1><p>box-shadow 属性用法和text-shadow 属性相似，可以使用一个或多个投影，用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">box-shadow:h-shadow v-shadow blur spread color inset;</span><br></pre></td></tr></table></figure>
+
+<p><strong>(1) h-shadow ：指定阴影的水平偏移量</strong></p>
+<p><strong>(2) v-shadow ：指定阴影的垂直偏移量</strong></p>
+<p><strong>(3) blur ：可选参数，只能为正值，标志阴影模糊效果，值越大越模糊</strong></p>
+<p><strong>(4) spread ：可选参数，如果为正值，那么整个阴影将延展扩大，为负值，则阴影缩小</strong></p>
+<p><strong>(5) color ：可选参数，指定阴影颜色</strong></p>
+<p><strong>(6) inset ：可选参数，表示将外部阴影改为内部阴影</strong></p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例4</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>添加阴影边框<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">		<span class="attribute">padding</span> :<span class="number">0</span> <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-radius</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">box-shadow</span>:-<span class="number">3px</span> -<span class="number">3px</span> <span class="number">3px</span> <span class="number">2px</span> green inset,</span></span><br><span class="line">					-10px -10px 10px 5px orange;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-4.png" class title="CSS边框与边距-4">
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>边框边距</tag>
+        <tag>盒子模型</tag>
       </tags>
   </entry>
   <entry>
@@ -1876,7 +2087,7 @@
 <td align="center">指定秘密抄送的电子邮件地址，秘密抄送的收件人之间互不可见。如果需要向多个电子邮件地址抄送，特性间使用 &amp; 符号分隔</td>
 </tr>
 </tbody></table>
-<p>对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#x32;&#x33;&#52;&#x35;&#54;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;">&#49;&#x32;&#x33;&#52;&#x35;&#54;&#x40;&#x71;&#x71;&#x2e;&#x63;&#111;&#x6d;</a>“ 和 “<a href="mailto:&#54;&#53;&#52;&#x33;&#x32;&#49;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;">&#54;&#53;&#52;&#x33;&#x32;&#49;&#64;&#x71;&#113;&#46;&#x63;&#111;&#109;</a>“</p>
+<p>对个特性之间用”&amp;”分隔，例如以下，默认主题为“读者来信”，抄送给”<a href="mailto:&#49;&#x32;&#51;&#x34;&#x35;&#54;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#49;&#x32;&#51;&#x34;&#x35;&#54;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a>“ 和 “<a href="mailto:&#54;&#53;&#x34;&#x33;&#50;&#49;&#64;&#113;&#113;&#x2e;&#99;&#111;&#x6d;">&#54;&#53;&#x34;&#x33;&#50;&#49;&#64;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a>“</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:123456789@qq.com?subject=读者来信&amp;cc=123456@qq.com&amp;cc=654321@qq.com&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>如果需要在主题中使用空格，不能直接使用空格而应该使用转义字符“%20”。</p>
@@ -2445,217 +2656,6 @@
         <tag>HTML表单</tag>
         <tag>input元素</tag>
         <tag>button元素</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS边框与边距</title>
-    <url>/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/</url>
-    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS边框与边距</span></p>
-<h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.png" class title="盒子模型">
-
-<p>盒子模型的重要属性如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">属性</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">border</td>
-<td align="center">边框，用来将一个盒子的边界与周围其他盒子相分离，即使不可见，每个盒子都有边框</td>
-</tr>
-<tr>
-<td align="center">margin</td>
-<td align="center">从盒子边框到下一个盒子的距离(外边距)</td>
-</tr>
-<tr>
-<td align="center">padding</td>
-<td align="center">元素内容与盒子边距的距离(内边距)</td>
-</tr>
-</tbody></table>
-<h1 id="border-属性"><a href="#border-属性" class="headerlink" title="border 属性"></a>border 属性</h1><p>border 属性用来指定代表某一元素的盒子的边框应如何呈现，有如下 3 个可修改的属性：</p>
-<p><strong>(1) border-color ：指定边框的颜色</strong></p>
-<p><strong>(2) border-style ：指定边框应为实线、虚线还是双股线等</strong></p>
-<p><strong>(3) border-width ：指定边框具有的宽度</strong>  </p>
-<h2 id="border-width-属性"><a href="#border-width-属性" class="headerlink" title="border-width 属性"></a>border-width 属性</h2><p>border-width 属性用来设置边框的宽度，通常以像素为单位，也可使用任何绝对或相对单位，但不能使用百分比。还可使用：thin、medium 和 thick。使用以下属性分别指定盒子边框的底部、右侧、顶部和左侧宽度：border-bottom-width、border-right-width、border-top-width 和 border-left-width。</p>
-<h2 id="border-style-属性"><a href="#border-style-属性" class="headerlink" title="border-style 属性"></a>border-style 属性</h2><p>border-style 属性用来指定边框的线性样式，可取值如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">值</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">none</td>
-<td align="center">默认值，不存在边框</td>
-</tr>
-<tr>
-<td align="center">solid</td>
-<td align="center">边框是一条实心线</td>
-</tr>
-<tr>
-<td align="center">dotted</td>
-<td align="center">边框是一系列的点</td>
-</tr>
-<tr>
-<td align="center">dashed</td>
-<td align="center">边框是一系列短线</td>
-</tr>
-<tr>
-<td align="center">double</td>
-<td align="center">边框是两条实心线</td>
-</tr>
-<tr>
-<td align="center">groove</td>
-<td align="center">边框具有切入效果</td>
-</tr>
-<tr>
-<td align="center">ridge</td>
-<td align="center">边框效果与groove相反</td>
-</tr>
-<tr>
-<td align="center">inset</td>
-<td align="center">边框使盒子看起来内嵌于页面中</td>
-</tr>
-<tr>
-<td align="center">outset</td>
-<td align="center">边框使盒子看起来突出于画布外</td>
-</tr>
-<tr>
-<td align="center">hidden</td>
-<td align="center">与 none 相同，但用于作为表格元素的边框冲突解决方案</td>
-</tr>
-</tbody></table>
-<p>也可使用以下属性分别指定盒子边框的底部、右侧、顶部和左侧的样式：border-bottom-style、border-right-style、border-top-style 和 border-left-style。</p>
-<h2 id="border-color-属性"><a href="#border-color-属性" class="headerlink" title="border-color 属性"></a>border-color 属性</h2><p>border-color 属性能够改变盒子周围边框的颜色，取值与 color 属性相同，还可为每侧边框指定不同颜色：border-bottom-color、border-right-color、border-top-color 和 border-left-color。</p>
-<h2 id="使用缩略形式表达边框属性"><a href="#使用缩略形式表达边框属性" class="headerlink" title="使用缩略形式表达边框属性"></a>使用缩略形式表达边框属性</h2><p>与 font、background 等属性一样，可使用 border 属性同时指定边框的宽度、颜色和样式，顺序为 border-width、border-style 和 border-color，如果不指定某个值可以省略。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">border</span>:<span class="number">5px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>还可为每侧边框指定不同的宽度、颜色和样式：border-bottom、border-right、border-top 和 border-left。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置边框效果<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">		.sub&#123;</span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-bottom</span>:dotted yellow;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-top</span>:<span class="number">4px</span> double blue;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-left</span>:medium outset green;	</span></span><br><span class="line"><span class="css">			<span class="attribute">border-right</span>:thick groove orange;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">border</span>:<span class="number">2px</span> dashed red;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.onlystyle&#123;</span><br><span class="line"><span class="css">			<span class="attribute">font-size</span>:<span class="number">40px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-style</span>:inset;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>设置元素边框<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;sub&quot;</span>&gt;</span>边框每个侧面分别设置不同样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;onlystyle&quot;</span>&gt;</span>仅设置border-style<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-1.png" class title="CSS边框与边距-1">
-
-<hr>
-
-<h1 id="padding-属性"><a href="#padding-属性" class="headerlink" title="padding 属性"></a>padding 属性</h1><p>padding 属性用来指定元素内容与边框之间的距离，也叫作内边距，该属性的值可取：像素、长度单位、百分比或关键字 inherit。</p>
-<p><span style="color:green;font-size:16px;"><strong>如果使用百分比，则以包含盒子的百分比计算，如果指定为 10%，则每一边取盒子的 5% 作为内边距。</strong></span></p>
-<p><span style="color:green;font-size:16px;"><strong>元素的内边距默认不会继承，只有 padding 属性值为 inherit 的元素才会继承父元素的内边距。</strong></span></p>
-<p>与边框一样，也可分别指定每侧的内边距大小：padding-bottom、padding-top、padding-right、padding-left。</p>
-<h1 id="margin-属性"><a href="#margin-属性" class="headerlink" title="margin 属性"></a>margin 属性</h1><p>margin 属性用来控制盒子之间的空间，取值可是长度、百分比或关键字 inherit，也可分别指定每侧的外边距大小：margin-bottom、margin-top、margin-right、margin-left。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置内外边距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-top</span>:<span class="number">30px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-bottom</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-left</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-right</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-style</span>:outset;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-width</span>:<span class="number">2px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">border-color</span>:red;	</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">em</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-left</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin-right</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line"><span class="css">		<span class="selector-tag">strong</span> &#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">margin</span>:<span class="number">25px</span>;</span></span><br><span class="line"><span class="css">			<span class="attribute">background-color</span>:silver;		</span></span><br><span class="line">		&#125;</span><br><span class="line">		.padding&#123;</span><br><span class="line"><span class="css">			padiing:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">		.padding2&#123;</span><br><span class="line"><span class="css">			<span class="attribute">padding-top</span>:<span class="number">20px</span>;</span></span><br><span class="line">		&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>元素的<span class="tag">&lt;<span class="name">em</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>、<span class="tag">&lt;<span class="name">em</span>&gt;</span>边框<span class="tag">&lt;/<span class="name">em</span>&gt;</span>和<span class="tag">&lt;<span class="name">em</span>&gt;</span>外边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>属性会影响整个文档的布局，而且会影响给定元素的<span class="tag">&lt;<span class="name">strong</span>&gt;</span>外观<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;padding&quot;</span>&gt;</span>顶部的<span class="tag">&lt;<span class="name">em</span>&gt;</span>外边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>高于<span class="tag">&lt;<span class="name">em</span>&gt;</span>底部<span class="tag">&lt;/<span class="name">em</span>&gt;</span>，当两个盒子相遇时，底部的外边距会被<span class="tag">&lt;<span class="name">strong</span>&gt;</span>忽略<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>，即发生了外边距压缩<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;padding2&quot;</span>&gt;</span>元素的<span class="tag">&lt;<span class="name">em</span>&gt;</span>内边距<span class="tag">&lt;/<span class="name">em</span>&gt;</span>默认不会<span class="tag">&lt;<span class="name">strong</span>&gt;</span>继承<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>，只有 padding 属性值为<span class="tag">&lt;<span class="name">strong</span>&gt;</span>inherit<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>的元素才会继承<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-2.png" class title="CSS边框与边距-2">
-
-<hr>
-
-<p><span style="color:green;font-size:16px;"><strong>顶部的外边距(30px)要高于底部(10px)，当两个盒子相遇时，底部的外边距会被忽略，外边距发生压缩，这种情况只发生于垂直外边距，而不存在于左右边距。</strong></span></p>
-<h1 id="border-radius-属性"><a href="#border-radius-属性" class="headerlink" title="border-radius 属性"></a>border-radius 属性</h1><p>border-radius 用于将边框设置为圆角矩形，该属性可分别设置 4 个角的效果半径，分别对应：border-top-left-radius(左上角)、border-top-right-radius(右上角)、border-bottom-right-radius(右下角) 和 border-bottom-left-radius(左下角)。使用该属性如果省略值时，将采用对角线原则，不同数目的值对角产生的影响如下：</p>
-<p><strong>(1) 一个值 ：所有四个角都有相同的半径</strong></p>
-<p><strong>(2) 两个值 ：第一个值时左上角和右下角，第二值是右上角和左下角</strong></p>
-<p><strong>(3) 三个值 ：第一个是左上角，第二个值是右上角和左下角，第三个值是右下角</strong></p>
-<p><strong>(4) 四个值 ：依次是左上角、右上角、右下角和左下角</strong></p>
-<p>border-radius 属性的值可以用 em、像素和百分比作为单位。也可设置椭圆角效果，即给出两组长度值：一组针对 X 轴，另一组针对 Y 轴，水平和垂直方向的值用斜线(/)分隔。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>设置内外边距<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	#test1 &#123;</span><br><span class="line"><span class="css">    	<span class="attribute">border</span>: <span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">    	<span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">    	<span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">    	<span class="attribute">border-radius</span>: <span class="number">50px</span> <span class="number">0px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">200px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-radius</span>:<span class="number">2em</span> <span class="number">4em</span> <span class="number">2em</span> <span class="number">8em</span> / <span class="number">5em</span> <span class="number">7em</span> <span class="number">5em</span> <span class="number">3em</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>对角相同的圆角边框<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>4个角不同的边框<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-3.png" class title="CSS边框与边距-3">
-
-<hr>
-
-<h1 id="border-image-属性"><a href="#border-image-属性" class="headerlink" title="border-image 属性"></a>border-image 属性</h1><p>border-image 属性用来为边框添加背景图片，边框图像可由单幅图像创建，这幅图像可在元素周边的边框中沿着不同的轴向进行裁剪或拉伸，图像被 4 条线分成 9 个切片，4个角切片用于创建元素边框的 4 个角，剩下 4 个边切片由 border-image 属性用来填充元素边框的 4 条边。border-image 属性基本语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">border-image:source slice width outset repeat|initial|inherit;</span><br></pre></td></tr></table></figure>
-
-<p><strong>source 是准备用来作边框图像的文件 URL 地址</strong></p>
-<p><strong>slice 由 4 个值决定，决定了切片的尺寸，值可以是百分比或数字，也可像 border-radius 一样省略一些值</strong></p>
-<p><strong>repeat 是指边框进行平铺的方式，可使用 round、stretch、space 和 repeat 中的两个值</strong></p>
-<p>​    <strong>(1) round ：图像会被平铺，直至铺满整个区域，如果平铺后切片的数量与区域不匹配，就会对图像进行相应的缩放</strong></p>
-<p>​    <strong>(2) stretch ：图像会被拉伸，直至填满整个区域</strong></p>
-<p>​    <strong>(3) repeat ：图像会被平铺，直至填满整个区域</strong></p>
-<p>​    <strong>(4) space ：图像会被平铺，直至填满整个区域。如果平铺后切片的数目与区域不匹配，就会调整图像之间的间距以填满整个区域</strong> </p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#bdimage</span>&#123;</span><br><span class="line">	<span class="attribute">border-width</span>:<span class="number">15px</span>;</span><br><span class="line">	<span class="attribute">border-image</span>:<span class="built_in">url</span>(<span class="string">img/border.png</span>) <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> <span class="number">15</span> repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="box-shadow-属性"><a href="#box-shadow-属性" class="headerlink" title="box-shadow 属性"></a>box-shadow 属性</h1><p>box-shadow 属性用法和text-shadow 属性相似，可以使用一个或多个投影，用法如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">box-shadow:h-shadow v-shadow blur spread color inset;</span><br></pre></td></tr></table></figure>
-
-<p><strong>(1) h-shadow ：指定阴影的水平偏移量</strong></p>
-<p><strong>(2) v-shadow ：指定阴影的垂直偏移量</strong></p>
-<p><strong>(3) blur ：可选参数，只能为正值，标志阴影模糊效果，值越大越模糊</strong></p>
-<p><strong>(4) spread ：可选参数，如果为正值，那么整个阴影将延展扩大，为负值，则阴影缩小</strong></p>
-<p><strong>(5) color ：可选参数，指定阴影颜色</strong></p>
-<p><strong>(6) inset ：可选参数，表示将外部阴影改为内部阴影</strong></p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例4</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>添加阴影边框<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">3px</span> solid red;</span></span><br><span class="line"><span class="css">		<span class="attribute">padding</span> :<span class="number">0</span> <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">border-radius</span>:<span class="number">20px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">box-shadow</span>:-<span class="number">3px</span> -<span class="number">3px</span> <span class="number">3px</span> <span class="number">2px</span> green inset,</span></span><br><span class="line">					-10px -10px 10px 5px orange;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span>&gt;</span>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/28/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D/CSS%E8%BE%B9%E6%A1%86%E4%B8%8E%E8%BE%B9%E8%B7%9D-4.png" class title="CSS边框与边距-4">
-
-<hr>]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>边框边距</tag>
-        <tag>盒子模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS变形处理</title>
-    <url>/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/</url>
-    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS变形处理</span></p>
-<p><span style="color:black;font-size:20px;"><strong>CSS 增加了 transform 属性，可以实现文字或图像的变形操作，主要包括旋转、倾斜、缩放和移动。该属性接收一个或多个由空格分隔的应用于元素的变形函数。</strong></span></p>
-<h1 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h1><p>旋转通过 rotate() 函数来实现，在旋转之前可使用 transform-origin 属性定义旋转的基点，rotate() 函数的参数是旋转角度，可以是正值（顺时针旋转）或负值（逆时针旋转）。</p>
-<p>在三维变形中，还有三个旋转函数：rotateX()、rotateY()、rotateZ(),可让元素在任何轴上旋转。也可使用 rotate3d() 函数同时指定沿 3 个维度旋转，使用方法如下：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">rotate3d(x,y,z,<span class="selector-tag">a</span>)	<span class="comment">/* x,y,z是一个介于0和1之间的数值，用来描述元素围绕各轴旋转的矢量值</span></span><br><span class="line"><span class="comment">						a是一个角度值，用来指定元素在三维空间中的旋转角度	*/</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="倾斜"><a href="#倾斜" class="headerlink" title="倾斜"></a>倾斜</h1><p>倾斜可通过 skew() 函数来实现。skew() 函数可以带一个或两个参数，只有一个参数会使元素在 X 轴倾斜，第二个参数控制在 Y 轴上倾斜。skew() 可接收负值和较大的值，skew(90deg) 会让元素消失，大于90deg（或小于-90deg）的值会产生镜像效果，倾斜没有3d函数。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>旋转和倾斜<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;	</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">60px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	.before&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:green;	</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#rotateafter</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">rotate3d</span>(.<span class="number">6</span>,<span class="number">1</span>,.<span class="number">6</span>,<span class="number">45deg</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#skewafter</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">skew</span>(<span class="number">30deg</span>,-<span class="number">20deg</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>旋转<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;before&quot;</span>&gt;</span>旋转前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;rotateafter&quot;</span>&gt;</span>鼠标悬停时旋转<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>倾斜<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;before&quot;</span>&gt;</span>倾斜前<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;skewafter&quot;</span>&gt;</span>鼠标悬停时切斜<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">旋转效果如下</span></p>
-<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-1.png" class title="CSS变形处理-1">
-
-<hr>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">倾斜效果如下</span></p>
-<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-2.png" class title="CSS变形处理-2">
-
-<hr>
-
-<h1 id="缩放"><a href="#缩放" class="headerlink" title="缩放"></a>缩放</h1><p>对元素的缩放可通过 scale() 函数来实现，该函数接收无参数的数字，scale(1) 是元素的默认尺寸，小于 1 的值使元素变小，大于 1 使元素变大。如果参数值为负值，则进行反转。</p>
-<p>也可指定两个参数 scale(x,y)，使元素在水平和垂直方向上同时缩放，对于元素的 3D 缩放，有 scaleZ(sz) 和 scale3d(sx,sy,sz)两个函数，这两个函数单独使用时没有任何效果，需要配合其他变形函数一起使用。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>缩放<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;	</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">80px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#scale1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:green;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">scale</span>(<span class="number">0.5</span>,<span class="number">1.2</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#scale2</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:yellow;	</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">scale</span>(<span class="number">1.5</span>,-<span class="number">0.8</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;scale1&quot;</span>&gt;</span>鼠标悬停时宽变成原来的0.5倍 高变成原来的1.2倍<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;scale2&quot;</span>&gt;</span>鼠标悬停时反转<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">缩放效果如下</span></p>
-<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-3.png" class title="CSS变形处理-4">
-
-<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-4.png" class title="CSS变形处理-4">
-
-<hr>
-
-<h1 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h1><p>元素的移动通过 translate() 函数来实现，沿着X、Y 轴往给定的位置移动。另外还有 translateZ() 和 translate3d() 函数用于元素的 3D 位移操作。沿着 Z 轴移动就是以方框中心为原点变大，Z 轴值越大，从视觉上元素就变的更大。</p>
-<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>移动<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;	</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">80px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test1&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:green;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">translateX</span>(<span class="number">200%</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test3&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:orangered;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">translate</span>(<span class="number">150px</span>,-<span class="number">60px</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test4&#123;</span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:deeppink;</span></span><br><span class="line"><span class="css">		<span class="attribute">transform</span>:<span class="built_in">translateY</span>(-<span class="number">120px</span>) <span class="built_in">scale</span>(<span class="number">0.8</span>);</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>原始段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>沿X轴移动200%<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test3&quot;</span>&gt;</span>沿X轴移动150px，Y轴移动-60px<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test4&quot;</span>&gt;</span>沿Y轴移动-120px，并缩小为0.8<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
-<img src="/2021/03/28/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86/CSS%E5%8F%98%E5%BD%A2%E5%A4%84%E7%90%86-5.png" class title="CSS变形处理-5">
-
-<hr>]]></content>
-      <categories>
-        <category>CSS</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>变形处理</tag>
       </tags>
   </entry>
 </search>
