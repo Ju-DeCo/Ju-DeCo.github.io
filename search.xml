@@ -25,7 +25,7 @@
 
 <hr>
 
-<h1 id="3-selection"><a href="#3-selection" class="headerlink" title="3. ::selection"></a>3. ::selection</h1><p>CSS 3 引入了伪元素 ::selection ，::selection 匹配元素中被用户选中或处于高亮状态的部分，::selection 只可用于少数几个 CSS 属性：color、background、cursor 和 outline。</p>
+<h1 id="selection"><a href="#selection" class="headerlink" title="::selection"></a>::selection</h1><p>CSS 3 引入了伪元素 ::selection ，::selection 匹配元素中被用户选中或处于高亮状态的部分，::selection 只可用于少数几个 CSS 属性：color、background、cursor 和 outline。</p>
 <p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>::selection<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="selector-id">#select1</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">background-color</span>:blue;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#select2</span><span class="selector-pseudo">::selection</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">color</span>:red;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;select1&quot;</span>&gt;</span>选中有背景颜色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;select2&quot;</span>&gt;</span>选中字体变色<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -679,8 +679,7 @@
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>元素背景</tag>
-        <tag>background</tag>
+        <tag>background属性</tag>
       </tags>
   </entry>
   <entry>
@@ -764,8 +763,8 @@
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>文本字体</tag>
-        <tag>font</tag>
+        <tag>设置文本字体</tag>
+        <tag>font属性</tag>
       </tags>
   </entry>
   <entry>
@@ -1067,10 +1066,10 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML块级元素</title>
+    <title>HTML新增的块级元素</title>
     <url>/2021/03/17/HTML%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML块级元素</span></p>
-<p><span style="color:black;font-size:20px;"><strong>块级元素主要用于 Web 页面的区域划分，这类元素如下：</strong></span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML新增的块级元素</span></p>
+<p><span style="color:black;font-size:20px;"><strong>块级元素主要用于 Web 页面的区域划分，每个块级元素独自占一行，这类元素如下：</strong></span></p>
 <table>
 <thead>
 <tr>
@@ -1139,7 +1138,8 @@
       </categories>
       <tags>
         <tag>HTML</tag>
-        <tag>HTML元素</tag>
+        <tag>HTML块级元素</tag>
+        <tag>HTML新增元素</tag>
       </tags>
   </entry>
   <entry>
@@ -1610,13 +1610,13 @@
       </categories>
       <tags>
         <tag>HTML</tag>
-        <tag>HTML元素</tag>
+        <tag>HTML新增元素</tag>
       </tags>
   </entry>
   <entry>
-    <title>HTML结构元素</title>
+    <title>HTML新增的结构元素</title>
     <url>/2021/03/16/HTML%E7%BB%93%E6%9E%84%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML结构元素</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML新增的结构元素</span></p>
 <p><span style="color:black;font-size:20px;"><strong>在HTML5对分组元素进行扩展之前，最常用的组容器就是 div 元素。针对文章的不同部分，需要很多的 div 元素，HTML5引入了一些结构性元素改变了这种情况。</strong></span></p>
 <table>
 <thead>
@@ -1706,13 +1706,14 @@
       </categories>
       <tags>
         <tag>HTML</tag>
-        <tag>HTML元素</tag>
+        <tag>HTML新增元素</tag>
+        <tag>HTML结构元素</tag>
       </tags>
   </entry>
   <entry>
-    <title>HTML行内语义元素</title>
+    <title>HTML新增的行内语义元素</title>
     <url>/2021/03/17/HTML%E8%A1%8C%E5%86%85%E8%AF%AD%E4%B9%89%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML行内语义元素</span></p>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">HTML新增的行内语义元素</span></p>
 <h1 id="行内语义元素主要完成对-Web-页面具体内容的引用和表述，这类元素如下："><a href="#行内语义元素主要完成对-Web-页面具体内容的引用和表述，这类元素如下：" class="headerlink" title="行内语义元素主要完成对 Web 页面具体内容的引用和表述，这类元素如下："></a><span style="color:black;font-size:20px;"><strong>行内语义元素主要完成对 Web 页面具体内容的引用和表述，这类元素如下：</strong></span></h1><table>
 <thead>
 <tr>
@@ -1770,7 +1771,8 @@
       </categories>
       <tags>
         <tag>HTML</tag>
-        <tag>HTML元素</tag>
+        <tag>HTML新增元素</tag>
+        <tag>HTML行内语义元素</tag>
       </tags>
   </entry>
   <entry>
@@ -2705,6 +2707,65 @@
       <tags>
         <tag>CSS</tag>
         <tag>过渡动画</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS关键帧动画</title>
+    <url>/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/</url>
+    <content><![CDATA[<p><span style="font-size:40px;font-weight:bold">CSS关键帧动画</span></p>
+<p><span style="color:black;font-size:20px;"><strong>过渡动画只能定义第一帧和最后一帧两个关键帧，而关键帧动画能定义任意多的关键帧。关键帧动画使用 @keyframes 来定义，一般 0% (可用 from 代替) 和 100% (可用 to 代替)这两个关键帧是必须定义的，例如</strong></span></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> myAnimation&#123;		<span class="comment">/*关键帧动画名称：myAnimation*/</span></span><br><span class="line">    <span class="selector-tag">from</span>&#123;<span class="attribute">background</span>:red;&#125;	<span class="comment">/*定义开始关键帧*/</span></span><br><span class="line">    <span class="selector-tag">to</span>&#123;<span class="attribute">width</span>:<span class="number">300px</span>;<span class="attribute">background</span>:blue;&#125;	<span class="comment">/*定义结束关键帧*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="animation-name"><a href="#animation-name" class="headerlink" title="animation-name"></a>animation-name</h1><p>animation-name 用来定义动画的名称，该名称就是使用 @keyframes 关键字创建的动画名。若要使用多个动画，该属性后面的值要用逗号分隔。</p>
+<h1 id="animation-duration"><a href="#animation-duration" class="headerlink" title="animation-duration"></a>animation-duration</h1><p>animation-duration 属性用来定义动画播放的持续时间，单位为秒，默认值为 0 。</p>
+<h1 id="animation-timing-function"><a href="#animation-timing-function" class="headerlink" title="animation-timing-function"></a>animation-timing-function</h1><p>animation-timing-function 属性和过渡动画的 transition-timing-function 属性相同，用来控制动画的播放方式，并且接收的值也相同。</p>
+<h1 id="animation-delay"><a href="#animation-delay" class="headerlink" title="animation-delay"></a>animation-delay</h1><p>animation-delay 属性用来定义动画的延迟播放时间，单位为秒，默认值为 0 。</p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例1</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>关键帧动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="keyword">@keyframes</span> myAnimation&#123;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">from</span>&#123;<span class="attribute">background</span>:green;&#125;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">to</span>&#123;</span></span><br><span class="line"><span class="css">			<span class="attribute">background</span>:blue;</span></span><br><span class="line"><span class="css">			<span class="attribute">transform</span>:<span class="built_in">rotateY</span>(<span class="number">360deg</span>);</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">border</span>:<span class="number">2px</span> dotted red;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span> :<span class="number">150px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">60px</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#test1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-name</span>:myAnimation;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-duration</span>:<span class="number">3s</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-name</span>:myAnimation;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-duration</span>:<span class="number">3s</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-delay</span>:<span class="number">0.3s</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation</span>-timing-funciton:ease-in;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test3&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-name</span>:myAnimation;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-duration</span>:<span class="number">3s</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation</span>-timing-funciton:ease-out;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test4&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-name</span>:myAnimation;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-duration</span>:<span class="number">4s</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-delay</span>:-<span class="number">1s</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation</span>-timing-funciton:ease-in-out;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>鼠标悬停时沿Y轴旋转360°<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">hr</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>ease-in 延时0.3秒<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test3&quot;</span>&gt;</span>ease-out 无延时<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;test4&quot;</span>&gt;</span>ease-in-out 延时-1秒<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-1.png" class title="CSS关键帧动画-1">
+
+<img src="/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-2.png" class title="CSS关键帧动画-2">
+
+<hr>
+
+<h1 id="animation-iteration-count"><a href="#animation-iteration-count" class="headerlink" title="animation-iteration-count"></a>animation-iteration-count</h1><p>animation-iteration-count 属性用来指定动画播放的循环次数，默认值为 1，infinite 表示无限次。</p>
+<h1 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h1><p>animation-direction 属性用来指定动画播放的方向，可取值如下：</p>
+<p><strong>(1) normal ：表示动画按正常顺序播放，默认值</strong></p>
+<p><strong>(2) reverse ：表示动画反向播放</strong></p>
+<p><strong>(3) alternate ：动画在奇数次正向播放，偶数次反向播放</strong></p>
+<p><strong>(4) alternate-reverse ：动画在奇数次反向播放，在偶数次正向播放</strong></p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例2</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>关键帧动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="keyword">@keyframes</span> myAnimation&#123;</span></span><br><span class="line"><span class="css">		<span class="number">0%</span> &#123;<span class="attribute">background</span>:green;<span class="attribute">left</span>:<span class="number">0px</span>;&#125;</span></span><br><span class="line"><span class="css">		<span class="number">50%</span> &#123;balckground:red;<span class="attribute">left</span>:<span class="number">200px</span>;transrform:<span class="built_in">scale</span>(<span class="number">0.5</span>);&#125;</span></span><br><span class="line"><span class="css">		<span class="number">100%</span> &#123;backgrouond:blue;<span class="attribute">left</span>:<span class="number">400px</span>;&#125;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">60px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">margin</span>:<span class="number">5px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">background</span>:yellow;</span></span><br><span class="line"><span class="css">		<span class="attribute">position</span>:relative;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-name</span>:myAnimation;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-duration</span>:<span class="number">5s</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test1&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:infinite;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-direction</span>:normal;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:<span class="number">10</span>;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-direction</span>:reverse;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test3&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:infinite;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-direction</span>:alternate;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test4&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:infinite;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-direction</span>:alternate-reverse;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>正常播放<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>反向播放<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test3&quot;</span>&gt;</span>奇数次正向，偶数次反向<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test4&quot;</span>&gt;</span>奇数次反向，偶数次正向<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-3.png" class title="CSS关键帧动画-3">
+
+<img src="/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-4.png" class title="CSS关键帧动画-4">
+
+<hr>
+
+<h1 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h1><p>animation-play-state 属性可以用来暂停播放动画，该属性有两个值：running(默认) 和 paused(暂停正在播放的动画)。如果设置从 paused 改为 running 时，动画就会从暂停处继续播放。</p>
+<h1 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h1><p>animation-fill-mode 属性用来控制当动画不播放时(播放完或有延迟未开始播放)，要应用到元素的样式。默认值为 none，还有如下取值：</p>
+<p><strong>(1) forwards ：产生动画的元素会保持最后一个关键帧属性，通常为from 或 to 关键帧</strong></p>
+<p><strong>(2) backwards ：正向播放使用 from 关键帧定义的属性值，反向播放使用 to 关键帧定义的属性值</strong></p>
+<p><strong>(3) both ：相当于 backwards 和 forwards 的组合，意味着在动画等待和动画结束状态，元素将分别应用动画第一帧和最后一帧的样式</strong></p>
+<p><span style="color:red;font-size:18px;font-weight:bold">例3</span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>关键帧动画<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">	<span class="keyword">@keyframes</span> myAnimation&#123;</span></span><br><span class="line"><span class="css">		<span class="number">0%</span> &#123;<span class="attribute">background</span>:green;<span class="attribute">left</span>:<span class="number">0px</span>;&#125;</span></span><br><span class="line"><span class="css">		<span class="number">50%</span> &#123;balckground:red;<span class="attribute">left</span>:<span class="number">200px</span>;transrform:<span class="built_in">scale</span>(<span class="number">0.5</span>);&#125;</span></span><br><span class="line"><span class="css">		<span class="number">100%</span> &#123;backgrouond:blue;<span class="attribute">left</span>:<span class="number">400px</span>;&#125;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-tag">div</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">width</span>:<span class="number">130px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">height</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">margin</span>:<span class="number">5px</span>;</span></span><br><span class="line"><span class="css">		<span class="attribute">background</span>:yellow;</span></span><br><span class="line"><span class="css">		<span class="attribute">position</span>:relative;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-name</span>:myAnimation;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-duration</span>:<span class="number">5s</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test1&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:infinite;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-direction</span>:normal;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-id">#test1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-play-state</span>: paused;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test2&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:<span class="number">3</span>;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-direction</span>:reverse;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-fill-mode</span>:backwards;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test3&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:<span class="number">3</span>;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-fill-mode</span>:forwards;</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-delay</span>:<span class="number">2s</span>;</span></span><br><span class="line">	&#125;</span><br><span class="line">	#test4&#123;</span><br><span class="line"><span class="css">		<span class="attribute">animation-iteration-count</span>:<span class="number">3</span>;	</span></span><br><span class="line"><span class="css">		<span class="attribute">animation-fill-mode</span>:both;</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test1&quot;</span>&gt;</span>鼠标悬停时暂停播放<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test2&quot;</span>&gt;</span>反向播放3次animation-fill-mode:backwards<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test3&quot;</span>&gt;</span>延时2s播放3次animation-fill-mode:forwards<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;test4&quot;</span>&gt;</span>animation-fill-mode:both<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><span style="color:red;font-size:18px;font-weight:bold">效果如下</span></p>
+<img src="/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-5.png" class title="CSS关键帧动画-5">
+
+<img src="/2021/04/03/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB/CSS%E5%85%B3%E9%94%AE%E5%B8%A7%E5%8A%A8%E7%94%BB-6.png" class title="CSS关键帧动画-6">
+
+<hr>]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>关键帧动画</tag>
       </tags>
   </entry>
 </search>
